@@ -116,3 +116,4 @@ Desktop.ini
 # Vite specific
 dist-ssr/
 *.local
+.vercel
