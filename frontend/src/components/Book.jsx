@@ -10,16 +10,21 @@ import { Part6_SmartInnovation } from "./parts/Part6_SmartInnovation";
 import { Part8_Conclusion } from "./parts/Part8_Conclusion";
 import QuestionNotebook from "./QuestionNotebook";
 import QuestionButton from "./QuestionButton";
-import ChatBot from "./ChatBot_new";
+import ChatBot from "./ChatBot";
 import BookmarkPanel, { BookmarkButton } from "./BookmarkPanel";
 import TableOfContents from "./TableOfContents";
 import FontSizeControl from "./FontSizeControl";
 import NotesHighlights from "./NotesHighlights";
+import config from "../config/environment";
 
 function Book() {
   const [currentPage, setCurrentPage] = useState(0);
   const [showNotebook, setShowNotebook] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(null);
+  const [chatOpen, setChatOpen] = useState(false);
+
+  // Debug log để kiểm tra state
+  console.log('Chat is open:', chatOpen);
   const [bookmarks, setBookmarks] = useState(() => {
     const saved = localStorage.getItem("bookmarks");
     return saved ? JSON.parse(saved) : [];
@@ -390,7 +395,14 @@ function Book() {
   }, []);
 
   return (
-    <div className="relative w-full flex justify-center items-center">
+    <div className="flex w-full h-screen overflow-hidden">
+      <div
+        className="flex-1 flex items-center justify-center"
+        style={{
+          marginLeft: chatOpen ? '-300px' : '0px',
+          transition: 'margin-left 0.3s ease-in-out'
+        }}
+      >
       {/* Table of Contents */}
       <TableOfContents
         allPages={allPages}
@@ -566,7 +578,12 @@ function Book() {
       )}
 
       {/* ChatBot - AI Trợ lý */}
-      <ChatBot bookRef={flipBookRef} />
+      <ChatBot
+        onToggle={setChatOpen}
+        isOpen={chatOpen}
+        backendUrl={config.backendUrl}
+      />
+      </div>
     </div>
   );
 }
