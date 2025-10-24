@@ -11,7 +11,7 @@ API_URL = os.getenv("API_URL")
 MODEL_NAME = os.getenv("MODEL_NAME")
 
 
-path = "D:/SESSION 8/MLN111/Ebook/backend-mln/src/knowledge/ktct_chapter6.txt"
+path = os.path.join(os.path.dirname(__file__), "knowledge", "ktct_chapter6.txt")
 MAX_WORDS = 150
 
 base_prompt = f"""
