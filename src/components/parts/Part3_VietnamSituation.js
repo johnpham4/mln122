@@ -91,6 +91,9 @@ export const Part3_VietnamSituation = (startId) => {
         • Chính sách khuyến khích đầu tư:
         Nhà nước có nhiều chính sách ưu đãi đầu tư, đặc biệt cho công nghệ cao và công nghiệp hỗ trợ.
 
+
+
+        
         ĐÁNH GIÁ CHẤT LƯỢNG TĂNG TRƯỞNG CÔNG NGHIỆP:
 
         1. Năng suất lao động:

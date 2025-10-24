@@ -1,37 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { HelpCircle } from "lucide-react";
 
-const QuestionButton = ({ pageId, currentPageIndex, questions, onClick, bookRef }) => {
-  // CHỈ hiển thị button trên những trang có câu hỏi được định nghĩa trong questions
+const QuestionButton = ({
+  pageId,
+  currentPageIndex,
+  questions,
+  onClick,
+  bookRef,
+}) => {
   if (!questions[pageId]) {
     return null;
   }
 
   if (!bookRef.current) {
-    // Fallback: hiển thị ở vị trí cố định nếu không có bookRef
-    // Sử dụng currentPageIndex trực tiếp thay vì pageId + 1
     const actualPageNumber = currentPageIndex + 1;
     const isOddPage = actualPageNumber % 2 === 1;
 
     return ReactDOM.createPortal(
-      <div
+      <button
+        className="fixed top-[2%] z-[10000] w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
         style={{
-          position: 'fixed',
-          top: '1%', // Cao hơn trong fallback
-          left: isOddPage ? '65%' : '35%', // Trang lẻ: phải, chẵn: trái
-          transform: 'translateX(-50%)',
-          width: '35px',
-          height: '35px',
-          background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '18px',
-          zIndex: 10000,
-          boxShadow: '0 6px 12px rgba(0,0,0,0.4)',
-          border: '2px solid #fff'
+          left: isOddPage ? "65%" : "35%",
+          transform: "translateX(-50%)",
         }}
         onClick={(e) => {
           e.preventDefault();
@@ -40,63 +31,65 @@ const QuestionButton = ({ pageId, currentPageIndex, questions, onClick, bookRef 
         }}
         title="Câu hỏi về nội dung này"
       >
-        ❓
-      </div>,
+        <HelpCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+      </button>,
       document.body
     );
   }
 
-  // Tìm vị trí của book container
-  const bookContainer = bookRef.current.querySelector('.book-container') || bookRef.current;
-  const bookRect = bookContainer.getBoundingClientRect();
+  // Use document.querySelector instead of bookRef.current.querySelector
+  const bookContainer = document.querySelector(".book-container");
 
-  // Tính toán vị trí dựa trên trang lẻ/chẵn
-  // Sử dụng currentPageIndex trực tiếp để tính trang thực tế
+  if (!bookContainer) {
+    // Fallback if book container not found
+    const actualPageNumber = currentPageIndex + 1;
+    const isOddPage = actualPageNumber % 2 === 1;
+
+    return ReactDOM.createPortal(
+      <button
+        className="fixed top-[2%] z-[10000] w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-glow group"
+        style={{
+          left: isOddPage ? "65%" : "35%",
+          transform: "translateX(-50%)",
+        }}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          onClick(pageId);
+        }}
+        title="Câu hỏi về nội dung này"
+      >
+        <HelpCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+      </button>,
+      document.body
+    );
+  }
+
+  const bookRect = bookContainer.getBoundingClientRect();
   const actualPageNumber = currentPageIndex + 1;
   const isOddPage = actualPageNumber % 2 === 1;
-
-  // Trang lẻ: bên phải, Trang chẵn: bên trái
   const leftPosition = isOddPage
-    ? bookRect.left + (bookRect.width * 0.75) // Góc trên phải (75% width)
-    : bookRect.left + (bookRect.width * 0.25); // Góc trên trái (25% width)
+    ? bookRect.left + bookRect.width * 0.75
+    : bookRect.left + bookRect.width * 0.25;
 
-  const buttonStyle = {
-    position: 'fixed',
-    top: bookRect.top - 15, // Lên trên ngoài sách (âm 15px)
-    left: leftPosition,
-    transform: 'translateX(-50%)',
-    width: '35px',
-    height: '35px',
-    background: 'linear-gradient(135deg, #ffd700, #ffed4e)',
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-    fontSize: '18px',
-    zIndex: 10000,
-    boxShadow: '0 6px 12px rgba(0,0,0,0.4)',
-    border: '2px solid #fff',
-    userSelect: 'none',
-    animation: 'pulse 2s infinite'
-  };
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    onClick(pageId);
-  };
-
-  // Render button vào document.body (ngoài hoàn toàn DOM tree của flipbook)
   return ReactDOM.createPortal(
-    <div
-      style={buttonStyle}
-      onClick={handleClick}
+    <button
+      className="fixed z-[10000] w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-pulse-glow group border-2 border-white"
+      style={{
+        top: `${bookRect.top - 20}px`,
+        left: `${leftPosition}px`,
+        transform: "translateX(-50%)",
+      }}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onClick(pageId);
+      }}
       onMouseDown={(e) => e.stopPropagation()}
       title="Câu hỏi về nội dung này"
     >
-      ❓
-    </div>,
+      <HelpCircle className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+    </button>,
     document.body
   );
 };
