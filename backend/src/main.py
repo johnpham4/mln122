@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from dto import ChatRequest
-from service import chat_service, chat_service_streaming
+from service.service import chat_service, chat_service_streaming
 import uvicorn
 
 
@@ -26,8 +26,9 @@ def index():
     return FileResponse("static/index.html")
 
 @app.post("/chat")
-def chat_endpoint(request: ChatRequest):
-    return chat_service(request)
+async def chat_endpoint(request: ChatRequest):
+    result = await chat_service(request)
+    return {"final": result}
 
 @app.post("/chat/stream")
 async def chat_stream_endpoint(request: ChatRequest):
