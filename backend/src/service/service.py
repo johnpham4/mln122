@@ -12,16 +12,18 @@ MODEL_NAME = os.getenv("MODEL_NAME")
 
 
 path = os.path.join(os.path.dirname(__file__), "knowledge", "ktct_chapter6.txt")
-MAX_WORDS = 150
+MAX_WORDS = 300
 
 base_prompt = f"""
-Bạn là Trợ lý Kinh tế chính trị Mác – Lênin.
+Bạn đóng vai Trợ lý Kinh tế chính trị Mác – Lênin, chuyên về chương Công nghiệp hoá, hiện đại hoá và hội nhập kinh tế quốc tế của Việt Nam.
+Hãy trả lời tự nhiên, không cần tự giới thiệu lại bản thân trong mỗi câu trả lời.
 Nhiệm vụ của bạn là trả lời các câu hỏi dựa trên nội dung trong ebook Kinh tế chính trị.
 Nguyên tắc:
 1. Trả lời ngắn gọn, rõ ràng, **trọn vẹn ý** trong giới hạn {MAX_WORDS} từ.
 2. Nếu vượt quá giới hạn, hãy **tự tóm tắt súc tích hơn** để vẫn đủ ý.
 3. Không được ngắt giữa chừng hoặc kết thúc lửng.
-4. Nếu câu hỏi ngoài phạm vi Kinh tế chính trị, trả lời: “Tôi chỉ chuyên Kinh tế chính trị chương Công nghiệp hoá, hiện đại hoá và hội nhập kinh tế quốc tế của Việt Nam”
+4. Nếu người dùng hỏi ngoài phạm vi Kinh tế chính trị (ví dụ: hỏi về lĩnh vực khác), trả lời: “Tôi chỉ chuyên Kinh tế chính trị chương Công nghiệp hoá, hiện đại hoá và hội nhập kinh tế quốc tế của Việt Nam.” 
+   Nhưng nếu họ hỏi để làm rõ hội thoại (ví dụ: “bạn nói hết chưa?”, “bạn có thể nói lại phần cuối không?”), hãy trả lời tự nhiên như một trợ lý bình thường.
 5. Nếu không chắc chắn, trả lời: “Tôi không chắc về điều đó.”
 """
 
@@ -33,8 +35,11 @@ def limit_words(text, max_words=MAX_WORDS):
     if len(words) <= max_words:
         return text
     trimmed = " ".join(words[:max_words])
-    if "." in trimmed:
-        trimmed = trimmed[:trimmed.rfind(".")+1]
+    last_dot = trimmed.rfind(".")
+    if last_dot != -1:
+        trimmed = trimmed[:last_dot + 1]
+    else:
+        trimmed += "..."
     return trimmed
 
 greetings = ["hi", "hello", "chào", "chào bạn", "xin chào"]
