@@ -21,6 +21,7 @@ export const Part3_VietnamSituation = (startId) => {
 
         Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung"
 
+        [IMAGE:co.png|Cre: Từ bài viết của Tổng Bí thư Tô Lâm, nghĩ về tư duy hội nhập trong kỷ nguyên mới (baochinhphu.vn)]
 
         **2.1.2. Tính tất yếu khách quan của hội nhập kinh tế quốc tế**
 
@@ -29,6 +30,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Các yếu tố sản xuất được lưu thông trên phạm vi toàn cầu
         • Sự phát triển của công nghệ thông tin, giao thông vận tải làm rút ngắn khoảng cách
         • Không một quốc gia nào có thể phát triển biệt lập
+
+        [IMAGE:vn.png|Cre: Kinh tế Việt Nam trong bối cảnh toàn cầu hóa và hội nhập quốc tế (vietq.vn)]
 
         2. Hội nhập kinh tế quốc tế là phương thức phát triển phổ biến của các nước:
         • Giúp các nước đang và kém phát triển tận dụng thời cơ
@@ -52,6 +55,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Mở cửa thị trường, giảm rào cản thương mại
         • Thu hút đầu tư trực tiếp nước ngoài (FDI)
         • Hợp tác song phương và đa phương
+
+        [IMAGE:Wto.png|Năm 2006, Việt Nam chính thức ký Nghị định thư gia nhập WTO.]
       `;
 
   pages.push(...createMultiplePages("2.1. Khái niệm và nội dung", section2_1, currentId));
@@ -100,14 +105,12 @@ export const Part3_VietnamSituation = (startId) => {
         • Dẫn đến phân phối không công bằng lợi ích và rủi ro:
         - Lợi ích hội nhập phân bổ không đều giữa các vùng, miền
         - Chênh lệch giàu nghèo có thể gia tăng
-        - Một số nhóm lao động bị ảnh hưởng tiêu cực
         - Mất cân đối trong phát triển
 
         • Các nước đang phát triển phải đối mặt với nguy cơ chuyển dịch cơ cấu kinh tế tự nhiên:
         - Mất cân đối trong cơ cấu kinh tế
         - Phát triển thiếu bền vững
         - Phụ thuộc vào xuất khẩu nguyên liệu thô, gia công giá trị thấp
-        - Thiếu chủ động trong phát triển
 
         • Tạo ra thách thức đối với quyền lực nhà nước, chủ quyền quốc gia:
         - Áp lực về cam kết quốc tế, tuân thủ luật chơi chung
@@ -119,7 +122,6 @@ export const Part3_VietnamSituation = (startId) => {
         - Biên giới mở rộng tạo điều kiện cho tội phạm xuyên quốc gia
         - Buôn lậu, trốn thuế gia tăng
         - Các vấn đề an ninh phi truyền thống
-        - Khủng bố, ma túy, mại dâm xuyên quốc gia
       `;
 
   pages.push(...createMultiplePages("2.2. Tác động của hội nhập", section2_2, currentId));
@@ -136,6 +138,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Đánh giá đúng tác động của hội nhập đến từng ngành, lĩnh vực
         • Chuẩn bị tốt để tận dụng cơ hội và hạn chế thách thức
         • Nâng cao nhận thức của toàn xã hội về hội nhập
+
+        [IMAGE:co2.png|Cre: Một số vấn đề về hội nhập kinh tế quốc tế của Việt Nam (tcnn.vn)]
 
 
         **2.3.2. Xây dựng chiến lược và lộ trình hội nhập kinh tế phù hợp**
@@ -157,6 +161,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Tạo sự tin cậy, tôn trọng của cộng đồng quốc tế
         • Tranh thủ sự ủng hộ của cộng đồng quốc tế
 
+        [IMAGE:co3.png|Cre: Nâng cao hội nhập kinh tế quốc tế, thúc đẩy kinh tế phát triển nhanh và bền vững (baochinhphu.vn)]
+
 
         **2.3.4. Hoàn thiện thể chế kinh tế và pháp luật**
 
@@ -166,6 +172,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Hoàn thiện hệ thống pháp luật phù hợp với cam kết quốc tế
         • Cải cách hành chính, tạo môi trường kinh doanh thuận lợi
         • Nâng cao hiệu lực, hiệu quả quản lý nhà nước
+
+        [IMAGE:toa.png|Cre: Tăng cường công tác xây dựng pháp luật, hoàn thiện các dự án Luật trình Quốc hội (haiduong.baohiemxahoi.gov.vn)]
 
 
         **2.3.5. Nâng cao năng lực cạnh tranh quốc tế của nền kinh tế**
@@ -177,6 +185,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Đầu tư mạnh vào nghiên cứu, phát triển, đổi mới công nghệ
         • Xây dựng thương hiệu quốc gia, thương hiệu sản phẩm
 
+        [IMAGE:co4.png|Cre: Để doanh nghiệp Việt Nam tận dụng cơ hội khi hội nhập (baochinhphu.vn)]
+
 
         **2.3.6. Xây dựng nền kinh tế độc lập, tự chủ của Việt Nam**
 
@@ -185,6 +195,8 @@ export const Part3_VietnamSituation = (startId) => {
         • Xây dựng ngành công nghiệp chủ lực, công nghiệp phụ trợ
         • Đảm bảo an ninh lương thực, an ninh năng lượng
         • Giữ vững độc lập, tự chủ trong hội nhập
+
+        [IMAGE:co5.png|Cre: Về xây dựng nền kinh tế độc lập tự chủ và chủ động, tích cực hội nhập quốc tế trong kỷ nguyên mới (btgdvtukhanhhoa.vn)]
 
 
         **2.3.7. Biện pháp để xây dựng nền kinh tế độc lập tự chủ**

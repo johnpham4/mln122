@@ -267,13 +267,13 @@ function Book() {
         if (match) {
           const [, filename, caption] = match;
           elements.push(
-            <div key={index} className="my-2 text-center">
+            <div key={index} className="my-3 text-center">
               <img
                 src={`/${filename}`}
                 alt={caption}
-                className="max-w-[80%] max-h-[100px] mx-auto object-contain border border-slate-200 rounded"
+                className="max-w-[80%] max-h-[150px] mx-auto object-contain border border-slate-200 rounded"
               />
-              <div className="text-[9px] italic text-slate-500 mt-1">
+              <div className="text-[13px] italic text-slate-600 mt-1">
                 {caption}
               </div>
             </div>
@@ -284,7 +284,7 @@ function Book() {
         const parseBold = (text) => {
           const parts = text.split(/(\*\*[^*]+\*\*)/);
           return parts.map((part, i) => {
-            if (part.startsWith('**') && part.endsWith('**')) {
+            if (part.startsWith("**") && part.endsWith("**")) {
               return <strong key={i}>{part.slice(2, -2)}</strong>;
             }
             return part;

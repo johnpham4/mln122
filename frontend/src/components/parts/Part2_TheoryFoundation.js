@@ -26,16 +26,26 @@ export const Part2_TheoryFoundation = (startId) => {
         1. Cách mạng công nghiệp lần thứ nhất (thế kỷ XVIII đến giữa thế kỷ XIX):
         • Khởi phát ở Anh
         • Diễn ra trước hết trong lĩnh vực dệt vải
-        • Nội dung: Chuyển từ lao động thủ công sang lao động sử dụng máy móc, cơ giới hóa sản xuất bằng năng lượng nước và hơi nước
+        • Nội dung cơ bản là chuyển từ lao động thủ công sang lao động sử dụng máy móc, thực hiện cơ giới hóa sản xuất bằng việc sử dụng năng lượng nước và hơi nước
+
+        [IMAGE:nhamaydetAnh.png|Nhà máy dệt cơ giới hóa ở Anh trong thời kỳ Cách mạng công nghiệp lần thứ nhất]
 
         2. Cách mạng công nghiệp lần thứ hai (nửa cuối thế kỷ XIX đến đầu thế kỷ XX):
-        • Nội dung: Chuyển nền sản xuất cơ khí sang nền sản xuất điện – cơ khí và tự động hóa cục bộ
+        • Nội dung của cách mạng công nghiệp lần thứ hai thể hiện ở việc chuyển từ cơ khí sang điện – cơ khí, mở đầu cho thời kỳ tự động hóa cục bộ trong sản xuất.
+        • Đây là giai đoạn chứng kiến sự ra đời của điện năng, động cơ đốt trong, dây chuyền sản xuất hàng loạt, và sự bùng nổ của các ngành công nghiệp nặng như luyện kim, hóa chất, cơ khí chế tạo, và giao thông vận tải.
+
+        [IMAGE:LoLucyFurnace.png|Lò Lucy Furnace của Carnegie Steel Company (Cuối thế kỷ 19, khoảng năm 1900) Một trong những lò luyện gang hiện đại của Carnegie Steel Company tại Pittsburgh (Mỹ), tiêu biểu cho Cách mạng công nghiệp lần thứ hai (nửa cuối thế kỷ XIX – đầu thế kỷ XX).]
 
         3. Cách mạng công nghiệp lần thứ ba (đầu thập niên 60 đến cuối thế kỷ XX):
         • Đặc trưng: Sự xuất hiện công nghệ thông tin, tự động hóa sản xuất
 
+        [IMAGE:Robot.png|Robot Unimate của George Devol – robot công nghiệp đầu tiên trên thế giới được sử dụng trong dây chuyền sản xuất ô tô (General Motors, Hoa Kỳ, năm 1961).]
+
         4. Cách mạng công nghiệp lần thứ tư (2010s - đang diễn ra):
+        • Được đề cập lần đầu tiên tại hội chơi triển lãm công nghệ Hannover (CHLB Đức) năm 2011 và được chính phủ Đức đưa vào “kế hoạch hành động chiến lược công nghệ cao” năm 2012
         • Đặc trưng: Sự xuất hiện của trí tuệ nhân tạo, big data, in 3D...
+
+        [IMAGE:LaprapOto.png|Dây chuyền lắp ráp ô tô tại nhà máy của Công ty cổ phần Ô tô Trường Hải (Thaco) trong Khu kinh tế mở Chu Lai, huyện Núi Thành, tỉnh Quảng Nam]
 
 
         **Vai trò của cách mạng công nghiệp đối với phát triển:**
@@ -62,8 +72,9 @@ export const Part2_TheoryFoundation = (startId) => {
         1. Mô hình công nghiệp hóa cổ điển (Giữa TK XVIII - 60 đến 80 năm):
         • Gắn liền với cách mạng công nghiệp lần thứ nhất
         • Bắt đầu từ công nghiệp nhẹ
-        • Thời gian dài (60-80 năm)
         • Điển hình: Anh, Pháp, Đức
+
+        [IMAGE:Nhamay.png|Cre: Công nghiệp hóa ở Việt Nam và quá trình phát triển kinh tế xã hội (moit.gov.vn)]
 
         2. Mô hình công nghiệp hóa kiểu Liên Xô (cũ) (1930s):
         • Ưu tiên phát triển công nghiệp nặng
@@ -142,6 +153,8 @@ export const Part2_TheoryFoundation = (startId) => {
         - Đào tạo nguồn nhân lực đáp ứng yêu cầu CMCN 4.0
         - Ứng dụng công nghệ mới như AI, IoT, Big Data, blockchain
         - Chuyển đổi số toàn diện trong doanh nghiệp và xã hội
+
+        [IMAGE:nhamay2.png|Cre: Công nghiệp hóa là gì? Tác động của quá trình công nghiệp hóa ở nước ta (luatvietnam.vn)]
       `;
 
   pages.push(...createMultiplePages("1.2. Tính tất yếu và nội dung", section1_2, currentId));
