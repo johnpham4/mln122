@@ -24,15 +24,13 @@ export const Part2_TheoryFoundation = (startId) => {
 
         • Thay đổi cơ cấu kinh tế: Từ nông nghiệp sang công nghiệp
 
-        Việc chuyển đổi này không chỉ đơn thuần là thay đổi tỷ trọng các ngành trong cơ cấu kinh tế
-        mà còn là sự biến đổi căn bản về phương thức sản xuất.
+        Việc chuyển đổi này không chỉ đơn thuần là thay đổi tỷ trọng các ngành trong cơ cấu kinh tế mà còn là sự biến đổi căn bản về phương thức sản xuất.
         Từ sản xuất nông nghiệp nhỏ lẻ, phân tán sang sản xuất công nghiệp tập trung, quy mô lớn với năng suất cao.
 
         • Nâng cao năng suất lao động: Thông qua ứng dụng khoa học kỹ thuật
 
         Marx đã chỉ ra rằng năng suất lao động là yếu tố quyết định sự phát triển của xã hội.
-        Trong quá trình công nghiệp hóa, việc ứng dụng khoa học kỹ thuật vào sản xuất
-        giúp nâng cao năng suất lao động một cách đáng kể.
+        Trong quá trình công nghiệp hóa, việc ứng dụng khoa học kỹ thuật vào sản xuất giúp nâng cao năng suất lao động một cách đáng kể.
 
         [IMAGE:industrial-revolution.jpg|Hình 1.1: Quá trình công nghiệp hóa thay đổi phương thức sản xuất]
 
@@ -52,14 +50,14 @@ export const Part2_TheoryFoundation = (startId) => {
 
         • Đô thị hóa: Tập trung dân cư và hoạt động kinh tế
 
-        Quá trình công nghiệp hóa đi đôi với đô thị hóa.
-        Các thành phố công nghiệp ra đời và phát triển, thu hút dân cư từ nông thôn,
-        tạo thành các trung tâm kinh tế - xã hội lớn.
+        Quá trình công nghiệp hóa đi đôi với đô thị hóa. Các thành phố công nghiệp ra đời và phát triển, thu hút dân cư từ nông thôn, tạo thành các trung tâm kinh tế - xã hội lớn.
 
-        Quá trình này phải đảm bảo sự phát triển hài hòa giữa các ngành, các vùng
-        và phục vụ lợi ích của nhân dân. Không được hy sinh môi trường và phúc lợi xã hội
-        để đổi lấy tăng trưởng kinh tế đơn thuần.
+        Quá trình này phải đảm bảo sự phát triển hài hòa giữa các ngành, các vùng và phục vụ lợi ích của nhân dân. Không được hy sinh môi trường và phúc lợi xã hội để đổi lấy tăng trưởng kinh tế đơn thuần.
 
+
+
+
+        
         NGUYÊN LÝ PHÁT TRIỂN CÔNG NGHIỆP THEO MÁC-LÊNIN:
 
         1. Nguyên lý ưu tiên phát triển công nghiệp nặng

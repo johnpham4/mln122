@@ -32,10 +32,19 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
+/* Chat open state - đẩy toàn bộ container sách qua trái */
+.chat-open {
+  transform: translateX(-200px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Smooth transition cho book container */
 .book-container {
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease-in-out;
 }
 
 .page {

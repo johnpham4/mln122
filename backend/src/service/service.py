@@ -73,6 +73,7 @@ def chat_service_streaming(request: ChatRequest):
         yield f"data: {json.dumps({'token': greeting_msg}, ensure_ascii=False)}\n\n"
         yield f"data: {json.dumps({'final': greeting_msg}, ensure_ascii=False)}\n\n"
         return
+
     relevant_context = get_relevant_paragraphs(request.message, context_text)
     system_prompt = base_prompt + "\n\nTài liệu tham khảo liên quan:\n" + relevant_context
     buffer = ""
