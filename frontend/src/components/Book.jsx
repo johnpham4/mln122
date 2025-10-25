@@ -255,7 +255,7 @@ function Book() {
     },
   };
 
-  // Helper function để render nội dung có hình ảnh
+  // Helper function để render nội dung có hình ảnh và markdown
   const renderContentWithImages = (content) => {
     const lines = content.split("\n");
     const elements = [];
@@ -280,9 +280,20 @@ function Book() {
           );
         }
       } else if (line.trim()) {
+        // Parse markdown bold formatting **text**
+        const parseBold = (text) => {
+          const parts = text.split(/(\*\*[^*]+\*\*)/);
+          return parts.map((part, i) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+              return <strong key={i}>{part.slice(2, -2)}</strong>;
+            }
+            return part;
+          });
+        };
+
         elements.push(
           <p key={index} className="mb-1 text-justify">
-            {line}
+            {parseBold(line)}
           </p>
         );
       } else {

@@ -8,21 +8,21 @@ export const Part3_VietnamSituation = (startId) => {
   pages.push({
     id: currentId++,
     type: "chapter",
-    title: "2. HỘI NHẬP KINH TẾ QUỐC TẾ Ở VIỆT NAM",
+    title: "2. Hội nhập kinh tế quốc tế ở Việt Nam",
     subtitle: "",
     content: ""
   });
 
   // 2.1. Khái niệm và nội dung hội nhập kinh tế quốc tế
   const section2_1 = `
-        2.1. KHÁI NIỆM VÀ NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ
+        **2.1. Khái niệm và nội dung hội nhập kinh tế quốc tế**
 
-        2.1.1. KHÁI NIỆM VÀ SỰ CẦN THIẾT KHÁCH QUAN HỘI NHẬP KINH TẾ QUỐC TẾ
+        **2.1.1. Khái niệm và sự cần thiết khách quan hội nhập kinh tế quốc tế**
 
         Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung"
 
 
-        2.1.2. TÍNH TẤT YẾU KHÁCH QUAN CỦA HỘI NHẬP KINH TẾ QUỐC TẾ
+        **2.1.2. Tính tất yếu khách quan của hội nhập kinh tế quốc tế**
 
         1. Do xu thế khách quan trong bối cảnh toàn cầu hóa kinh tế:
         • Toàn cầu hóa tạo ra liên kết và sự phụ thuộc lẫn nhau
@@ -37,7 +37,7 @@ export const Part3_VietnamSituation = (startId) => {
         • Tham gia phân công lao động quốc tế, chuỗi giá trị toàn cầu
 
 
-        2.1.3. NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ
+        **2.1.3. Nội dung hội nhập kinh tế quốc tế**
 
         1. Chuẩn bị đầy đủ các điều kiện để thực hiện hội nhập thành công:
         • Quá trình hội nhập phải được cân nhắc với lộ trình và cách thức tối ưu
@@ -59,9 +59,9 @@ export const Part3_VietnamSituation = (startId) => {
 
   // 2.2. Tác động của hội nhập kinh tế quốc tế
   const section2_2 = `
-        2.2. TÁC ĐỘNG CỦA HỘI NHẬP KINH TẾ QUỐC TẾ ĐẾN PHÁT TRIỂN CỦA VIỆT NAM
+        **2.2. Tác động của hội nhập kinh tế quốc tế đến phát triển của Việt Nam**
 
-        2.2.1. TÁC ĐỘNG TÍCH CỰC
+        **2.2.1. Tác động tích cực**
 
         • Tạo điều kiện mở rộng thị trường, tiếp thu khoa học công nghệ, vốn:
         - Mở rộng thị trường xuất khẩu hàng hóa, dịch vụ
@@ -83,7 +83,7 @@ export const Part3_VietnamSituation = (startId) => {
         - Giao lưu văn hóa, học tập kinh nghiệm quản trị xã hội
 
 
-        2.2.2. TÁC ĐỘNG TIÊU CỰC
+        **2.2.2. Tác động tiêu cực**
 
         • Gia tăng cạnh tranh gay gắt:
         - Hàng hóa, dịch vụ nước ngoài gia tăng trên thị trường nội địa
@@ -127,9 +127,9 @@ export const Part3_VietnamSituation = (startId) => {
 
   // 2.3. Phương hướng nâng cao hiệu quả hội nhập kinh tế quốc tế
   const section2_3 = `
-        2.3. PHƯƠNG HƯỚNG NÂNG CAO HIỆU QUẢ HỘI NHẬP KINH TẾ QUỐC TẾ TRONG PHÁT TRIỂN CỦA VIỆT NAM
+        **2.3. Phương hướng nâng cao hiệu quả hội nhập kinh tế quốc tế trong phát triển của Việt Nam**
 
-        2.3.1. NHẬN THỨC SÂU SẮC VỀ THỜI CƠ VÀ THÁCH THỨC
+        **2.3.1. Nhận thức sâu sắc về thời cơ và thách thức**
 
         • Hội nhập là xu thế khách quan, không thể né tránh
         • Cần thấy rõ cả mặt tích cực và tiêu cực
@@ -138,7 +138,7 @@ export const Part3_VietnamSituation = (startId) => {
         • Nâng cao nhận thức của toàn xã hội về hội nhập
 
 
-        2.3.2. XÂY DỰNG CHIẾN LƯỢC VÀ LỘ TRÌNH HỘI NHẬP KINH TẾ PHÙ HỢP
+        **2.3.2. Xây dựng chiến lược và lộ trình hội nhập kinh tế phù hợp**
 
         Cần thực hiện:
         1. Đánh giá đúng bối cảnh quốc tế
@@ -149,7 +149,7 @@ export const Part3_VietnamSituation = (startId) => {
         6. Xác định lộ trình rõ ràng từng bước, có trọng tâm, trọng điểm
 
 
-        2.3.3. TÍCH CỰC, CHỦ ĐỘNG THAM GIA VÀ THỰC HIỆN ĐẦY ĐỦ CÁC CAM KẾT
+        **2.3.3. Tích cực, chủ động tham gia và thực hiện đầy đủ các cam kết**
 
         • Tham gia tích cực các tổ chức kinh tế quốc tế
         • Thực hiện nghiêm túc các cam kết đã ký kết
@@ -158,7 +158,7 @@ export const Part3_VietnamSituation = (startId) => {
         • Tranh thủ sự ủng hộ của cộng đồng quốc tế
 
 
-        2.3.4. HOÀN THIỆN THỂ CHẾ KINH TẾ VÀ PHÁP LUẬT
+        **2.3.4. Hoàn thiện thể chế kinh tế và pháp luật**
 
         • Hoàn thiện cơ chế thị trường, đổi mới cơ chế quản lý của nhà nước
         • Rà soát, hoàn thiện hệ thống pháp luật (đất đai, đầu tư, thương mại, thuế...)
@@ -168,7 +168,7 @@ export const Part3_VietnamSituation = (startId) => {
         • Nâng cao hiệu lực, hiệu quả quản lý nhà nước
 
 
-        2.3.5. NÂNG CAO NĂNG LỰC CẠNH TRANH QUỐC TẾ CỦA NỀN KINH TẾ
+        **2.3.5. Nâng cao năng lực cạnh tranh quốc tế của nền kinh tế**
 
         • Hiệu quả hội nhập phụ thuộc vào năng lực cạnh tranh
         • Nhà nước cần tăng cường hỗ trợ các doanh nghiệp
@@ -178,7 +178,7 @@ export const Part3_VietnamSituation = (startId) => {
         • Xây dựng thương hiệu quốc gia, thương hiệu sản phẩm
 
 
-        2.3.6. XÂY DỰNG NỀN KINH TẾ ĐỘC LẬP, TỰ CHỦ CỦA VIỆT NAM
+        **2.3.6. Xây dựng nền kinh tế độc lập, tự chủ của Việt Nam**
 
         • Là nền kinh tế không bị lệ thuộc, phụ thuộc vào nước khác, không bị áp đặt, khống chế
         • Phát triển kinh tế dựa vào nội lực là chính, kết hợp với nguồn lực bên ngoài
@@ -187,7 +187,7 @@ export const Part3_VietnamSituation = (startId) => {
         • Giữ vững độc lập, tự chủ trong hội nhập
 
 
-        2.3.7. BIỆN PHÁP ĐỂ XÂY DỰNG NỀN KINH TẾ ĐỘC LẬP TỰ CHỦ
+        **2.3.7. Biện pháp để xây dựng nền kinh tế độc lập tự chủ**
 
         1. Hoàn thiện, bổ sung đường lối phát triển đất nước:
         • Xây dựng chiến lược phát triển kinh tế - xã hội dài hạn

@@ -8,16 +8,16 @@ export const Part2_TheoryFoundation = (startId) => {
   pages.push({
     id: currentId++,
     type: "chapter",
-    title: "1. CÔNG NGHIỆP HÓA, HIỆN ĐẠI HÓA Ở VIỆT NAM",
+    title: "1. Công nghiệp hóa, hiện đại hóa ở Việt Nam",
     subtitle: "",
     content: ``
   });
 
   // 1.1. Khái quát về cách mạng công nghiệp và công nghiệp hóa
   const section1_1 = `
-        1.1. KHÁI QUÁT VỀ CÁCH MẠNG CÔNG NGHIỆP VÀ CÔNG NGHIỆP HÓA
+        **1.1. Khái quát về cách mạng công nghiệp và công nghiệp hóa**
 
-        1.1.1. KHÁI QUÁT VỀ CÁCH MẠNG CÔNG NGHIỆP
+        **1.1.1. Khái quát về cách mạng công nghiệp**
 
         Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Cách mạng công nghiệp là những bước phát triển nhảy vọt về chất trình độ của tư liệu lao động trên cơ sở những phát minh đột phá về kỹ thuật và công nghệ trong quá trình phát triển của nhân loại kéo theo sự thay đổi căn bản về phân công lao động xã hội cũng như tạo bước phát triển năng suất lao động cao hơn hẳn nhờ áp dụng một cách phổ biến những tính năng mới trong kỹ thuật – công nghệ đó vào đời sống xã hội"
 
@@ -38,7 +38,7 @@ export const Part2_TheoryFoundation = (startId) => {
         • Đặc trưng: Sự xuất hiện của trí tuệ nhân tạo, big data, in 3D...
 
 
-        VAI TRÒ CỦA CÁCH MẠNG CÔNG NGHIỆP ĐỐI VỚI PHÁT TRIỂN:
+        **Vai trò của cách mạng công nghiệp đối với phát triển:**
 
         1. Thúc đẩy sự phát triển của lực lượng sản xuất:
         Tác động to lớn đến lực lượng sản xuất, cấu trúc và vai trò của các nhân tố. Các cuộc cách mạng công nghiệp tạo ra những bước nhảy vọt về năng suất lao động, mở ra những khả năng sản xuất mới.
@@ -52,7 +52,7 @@ export const Part2_TheoryFoundation = (startId) => {
 
         1.1.2. CÔNG NGHIỆP HÓA VÀ CÁC MÔ HÌNH CÔNG NGHIỆP HÓA TRÊN THẾ GIỚI
 
-        KHÁI NIỆM CÔNG NGHIỆP HÓA:
+        **Khái niệm công nghiệp hóa:**
 
         Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Công nghiệp hóa là quá trình chuyển đổi nền sản xuất xã hội từ dựa trên lao động thủ công là chính sang nền sản xuất xã hội chủ yếu dựa trên lao động máy móc nhằm tạo ra năng suất lao động xã hội cao"
 

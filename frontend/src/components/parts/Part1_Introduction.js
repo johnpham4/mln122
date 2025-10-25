@@ -8,7 +8,7 @@ export const Part1_Introduction = (startId) => {
   pages.push({
     id: currentId++,
     type: "cover",
-    title: "CHƯƠNG 6: CÔNG NGHIỆP HÓA, HIỆN ĐẠI HÓA VÀ HỘI NHẬP KINH TẾ QUỐC TẾ CỦA VIỆT NAM",
+    title: "Chương 6: Công nghiệp hóa, hiện đại hóa và hội nhập kinh tế quốc tế của Việt Nam",
     subtitle: "Giáo trình Kinh tế chính trị Mác – Lênin",
     author: "Bộ Giáo dục và Đào tạo - Năm 2019"
   });

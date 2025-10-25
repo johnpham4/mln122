@@ -8,21 +8,21 @@ export const Part4_Integration = (startId) => {
   pages.push({
     id: currentId++,
     type: "chapter",
-    title: "3. HỘI NHẬP KINH TẾ QUỐC TẾ Ở VIỆT NAM",
+    title: "3. Hội nhập kinh tế quốc tế ở Việt Nam",
     subtitle: "",
     content: ``
   });
 
   // 3.1. Khái niệm và nội dung hội nhập kinh tế quốc tế
   const section3_1 = `
-        3.1. KHÁI NIỆM VÀ NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ
+        **3.1. Khái niệm và nội dung hội nhập kinh tế quốc tế**
 
-        KHÁI NIỆM VÀ SỰ CẦN THIẾT KHÁCH QUAN HỘI NHẬP KINH TẾ QUỐC TẾ:
+        **Khái niệm và sự cần thiết khách quan hội nhập kinh tế quốc tế:**
 
         Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung".
 
 
-        TÍNH TẤT YẾU KHÁCH QUAN CỦA HỘI NHẬP KINH TẾ QUỐC TẾ:
+        **Tính tất yếu khách quan của hội nhập kinh tế quốc tế:**
 
         1. Do xu thế khách quan trong bối cảnh toàn cầu hóa kinh tế:
         • Toàn cầu hóa là xu hướng tất yếu của phát triển kinh tế thế giới
@@ -37,7 +37,7 @@ export const Part4_Integration = (startId) => {
         • Tiếp cận thị trường, công nghệ, vốn, nguồn nhân lực quốc tế
 
 
-        NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ:
+        **Nội dung hội nhập kinh tế quốc tế:**
 
         1. Chuẩn bị đầy đủ các điều kiện để thực hiện hội nhập thành công:
         • Xây dựng nền kinh tế độc lập, tự chủ làm cơ sở
@@ -58,9 +58,9 @@ export const Part4_Integration = (startId) => {
 
   // 3.2. Tác động của hội nhập kinh tế quốc tế đến phát triển của Việt Nam
   const section3_2 = `
-        3.2. TÁC ĐỘNG CỦA HỘI NHẬP KINH TẾ QUỐC TẾ ĐẾN PHÁT TRIỂN CỦA VIỆT NAM
+        **3.2. Tác động của hội nhập kinh tế quốc tế đến phát triển của Việt Nam**
 
-        TÁC ĐỘNG TÍCH CỰC:
+        **Tác động tích cực:**
 
         • Tạo điều kiện mở rộng thị trường, tiếp thu khoa học công nghệ, vốn:
         - Mở rộng thị trường xuất khẩu hàng hóa, dịch vụ
@@ -81,7 +81,7 @@ export const Part4_Integration = (startId) => {
         - Giao lưu văn hóa, học tập kinh nghiệm quản trị xã hội
 
 
-        TÁC ĐỘNG TIÊU CỰC:
+        **Tác động tiêu cực:**
 
         • Gia tăng cạnh tranh gay gắt:
         - Hàng hóa, dịch vụ nước ngoài gia tăng trên thị trường nội địa
@@ -119,7 +119,7 @@ export const Part4_Integration = (startId) => {
 
   // 3.3. Phương hướng nâng cao hiệu quả hội nhập kinh tế quốc tế
   const section3_3 = `
-        3.3. PHƯƠNG HƯỚNG NÂNG CAO HIỆU QUẢ HỘI NHẬP KINH TẾ QUỐC TẾ TRONG PHÁT TRIỂN CỦA VIỆT NAM
+        **3.3. Phương hướng nâng cao hiệu quả hội nhập kinh tế quốc tế trong phát triển của Việt Nam**
 
         1. Nhận thức sâu sắc về thời cơ và thách thức do hội nhập kinh tế quốc tế mang lại:
         • Đánh giá đúng tác động tích cực và tiêu cực của hội nhập
