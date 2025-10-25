@@ -18,10 +18,22 @@ function FontSizeControl() {
     setFontSize(newSize);
     localStorage.setItem("fontSize", newSize.toString());
 
-    // Apply to all book pages
+    // Set CSS variable for font size
+    document.documentElement.style.setProperty(
+      "--book-font-size",
+      `${newSize}px`
+    );
+
+    // Apply to all book pages (fallback)
     const bookPages = document.querySelectorAll(".book-page-content");
     bookPages.forEach((page) => {
       page.style.fontSize = `${newSize}px`;
+    });
+
+    // Apply to .section-content pre (override CSS)
+    const sectionPres = document.querySelectorAll(".section-content pre");
+    sectionPres.forEach((pre) => {
+      pre.style.fontSize = `${newSize}px`;
     });
   };
 

@@ -4,16 +4,40 @@ import { Menu, X, ChevronRight, Book } from "lucide-react";
 function TableOfContents({ allPages, onNavigate, currentPage }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Extract chapters from pages
+  // Extract chapters and sections from pages
   const chapters = allPages
     .map((page, index) => {
+      // Include chapter pages, TOC, and content pages with numbered sections (1.1, 1.2, 2.1, etc.)
       if (page.type === "chapter" || page.type === "toc") {
         return {
           index,
           title: page.title,
           subtitle: page.subtitle,
           type: page.type,
+          level: 0, // Main chapter
         };
+      }
+
+      // Include content pages that start with section numbers like "1.1.", "2.1.", etc.
+      // Skip pages with "(tiếp)" in the title
+      if (
+        page.type === "content" &&
+        page.title &&
+        !page.title.includes("(tiếp)")
+      ) {
+        const match = page.title.match(/^(\d+\.\d+)/); // Match patterns like "1.1", "2.1"
+        if (match) {
+          const sectionNumber = match[1];
+          const level = sectionNumber.split(".").length - 1; // 1.1 = level 1, 1.1.1 = level 2
+          return {
+            index,
+            title: page.title,
+            subtitle: page.subtitle,
+            type: "section",
+            level: level,
+            sectionNumber: sectionNumber,
+          };
+        }
       }
       return null;
     })
@@ -63,14 +87,21 @@ function TableOfContents({ allPages, onNavigate, currentPage }) {
 
             {/* Content */}
             <div className="p-4 max-h-[calc(80vh-80px)] overflow-y-auto custom-scrollbar">
-              <div className="space-y-2">
+              <div className="space-y-1">
                 {chapters.map((chapter, idx) => {
                   const isActive = currentPage === chapter.index;
+                  const isSection = chapter.type === "section";
+                  const indentClass = isSection
+                    ? chapter.level === 1
+                      ? "ml-4"
+                      : "ml-8"
+                    : "";
+
                   return (
                     <button
                       key={chapter.index}
                       onClick={() => handleNavigate(chapter.index)}
-                      className={`w-full p-4 rounded-xl transition-all duration-200 text-left group border ${
+                      className={`w-full p-3 rounded-lg transition-all duration-200 text-left group border ${indentClass} ${
                         isActive
                           ? "bg-gradient-to-r from-blue-500/20 to-indigo-600/20 border-blue-500/50"
                           : "bg-slate-700/50 hover:bg-slate-700 border-slate-600/30 hover:border-blue-500/50"
@@ -87,12 +118,14 @@ function TableOfContents({ allPages, onNavigate, currentPage }) {
                                     : "bg-slate-600 text-slate-300"
                                 }`}
                               >
-                                Chương {idx}
+                                Chương {idx + 1}
                               </span>
                             </div>
                           )}
                           <div
-                            className={`text-sm font-bold mb-1 ${
+                            className={`${
+                              isSection ? "text-xs" : "text-sm"
+                            } font-bold mb-1 ${
                               isActive ? "text-blue-400" : "text-white"
                             }`}
                           >
@@ -103,12 +136,12 @@ function TableOfContents({ allPages, onNavigate, currentPage }) {
                               {chapter.subtitle}
                             </div>
                           )}
-                          <div className="text-xs text-slate-500 mt-2">
+                          <div className="text-xs text-slate-500 mt-1">
                             Trang {chapter.index + 1}
                           </div>
                         </div>
                         <ChevronRight
-                          className={`w-5 h-5 transition-colors ${
+                          className={`w-4 h-4 transition-colors flex-shrink-0 ${
                             isActive
                               ? "text-blue-400"
                               : "text-slate-400 group-hover:text-blue-400"

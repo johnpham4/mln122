@@ -197,7 +197,7 @@ html {
 
 .section-content pre {
   font-family: "Crimson Text", serif;
-  font-size: 12px;
+  font-size: 15px; /* Thay đổi từ 12px thành 15px mặc định */
   line-height: 1.4;
   color: #2c3e50;
   white-space: pre-wrap;

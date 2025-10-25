@@ -4,131 +4,231 @@ export const Part3_VietnamSituation = (startId) => {
   const pages = [];
   let currentId = startId;
 
-  // Trang chương (trống)
+  // Trang chương
   pages.push({
     id: currentId++,
     type: "chapter",
-    title: "CHƯƠNG II",
-    subtitle: "THỰC TRẠNG CÔNG NGHIỆP HÓA VIỆT NAM",
+    title: "2. HỘI NHẬP KINH TẾ QUỐC TẾ Ở VIỆT NAM",
+    subtitle: "",
     content: ""
   });
 
-  // Nội dung chính
-  const mainContent = `
-        Việt Nam đã trải qua hơn 35 năm đổi mới (1986-2021) với những thành tựu đáng kể trong công nghiệp hóa:
+  // 2.1. Khái niệm và nội dung hội nhập kinh tế quốc tế
+  const section2_1 = `
+        2.1. KHÁI NIỆM VÀ NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ
 
-        THÀNH TỰU ĐẠT ĐƯỢC:
-        • GDP tăng trưởng bình quân 6-7%/năm
-        • Tỷ trọng công nghiệp-xây dựng đạt 33.7% GDP
-        • Xuất khẩu hàng công nghiệp chiếm 85% tổng xuất khẩu
-        • Thu hút được 400 tỷ USD FDI
-        • Hình thành một số ngành công nghiệp mũi nhọn
+        2.1.1. KHÁI NIỆM VÀ SỰ CẦN THIẾT KHÁCH QUAN HỘI NHẬP KINH TẾ QUỐC TẾ
 
-        HẠN CHẾ TỒN TẠI:
-        • Chưa có ngành công nghiệp nặng mạnh
-        • Phụ thuộc vào công nghệ nước ngoài
-        • Ô nhiễm môi trường nghiêm trọng
-        • Thiếu nhân lực chất lượng cao
-
-        CƠ CẤU CÔNG NGHIỆP VIỆT NAM HIỆN TẠI:
-
-        Công nghiệp chế biến, chế tạo: 75.2%
-        - Điện tử, viễn thông: 28.5%
-        - Dệt may, da giày: 15.3%
-        - Thực phẩm đồ uống: 12.8%
-        - Hóa chất, cao su: 8.9%
-        - Cơ khí, kim loại: 9.7%
-
-        Công nghiệp khai khoáng: 8.6%
-        - Dầu khí: 5.2%
-        - Than: 2.1%
-        - Khác: 1.3%
-
-        Sản xuất và phân phối điện, khí, nước: 16.2%
-
-        PHÂN TÍCH CHI TIẾT:
-
-        1. Công nghiệp điện tử - viễn thông:
-        Đây là ngành có tốc độ tăng trưởng cao nhất, chủ yếu dựa vào đầu tư FDI từ các tập đoàn công nghệ như Samsung, Intel, LG. Tuy nhiên, Việt Nam chủ yếu tham gia khâu lắp ráp, gia công với giá trị gia tăng thấp.
-
-        2. Công nghiệp dệt may - da giày:
-        Là ngành truyền thống của Việt Nam với lợi thế về lao động và nguyên liệu. Tuy nhiên, ngành này đang đối mặt với áp lực cạnh tranh từ các nước có chi phí lao động thấp hơn.
-
-        3. Công nghiệp thực phẩm - đồ uống:
-        Có lợi thế về nguyên liệu nông sản nhưng chưa phát huy được hết tiềm năng do công nghệ chế biến chưa cao, thương hiệu chưa mạnh.
-
-        4. Công nghiệp hóa chất - cao su:
-        Việt Nam có lợi thế về cao su tự nhiên nhưng chủ yếu xuất khẩu nguyên liệu thô, chưa phát triển mạnh công nghiệp chế biến sâu.
-
-        5. Công nghiệp cơ khí - kim loại:
-        Đây là điểm yếu lớn của công nghiệp Việt Nam. Chưa có công nghiệp cơ khí nặng, phụ thuộc nhiều vào nhập khẩu máy móc, thiết bị.
-
-        NHỮNG THÁCH THỨC CHÍNH:
-
-        • Thiếu công nghiệp phụ trợ phát triển:
-        Tỷ lệ nội địa hóa trong các ngành công nghiệp chủ lực còn thấp. Phần lớn linh kiện, phụ tùng phải nhập khẩu.
-
-        • Công nghệ lạc hậu:
-        Nhiều doanh nghiệp trong nước vẫn sử dụng công nghệ cũ, năng suất thấp, không cạnh tranh được với sản phẩm nước ngoài.
-
-        • Ô nhiễm môi trường:
-        Nhiều khu công nghiệp gây ô nhiễm nghiêm trọng, đặc biệt ở các tỉnh có nhiều nhà máy xi măng, thép, hóa chất.
-
-        • Thiếu nhân lực chất lượng cao:
-        Tỷ lệ lao động qua đào tạo còn thấp, thiếu kỹ sư, kỹ thuật viên có trình độ cao.
-
-        CƠ HỘI PHÁT TRIỂN:
-
-        • Vị trí địa lý thuận lợi:
-        Việt Nam nằm trên tuyến đường hàng hải quốc tế quan trọng, thuận lợi cho xuất nhập khẩu.
-
-        • Nguồn nhân lực dồi dào:
-        Dân số trẻ, tỷ lệ biết chữ cao, chi phí lao động cạnh tranh.
-
-        • Thị trường trong nước lớn:
-        Với gần 100 triệu dân và thu nhập tăng nhanh, thị trường trong nước có tiềm năng lớn.
-
-        • Chính sách khuyến khích đầu tư:
-        Nhà nước có nhiều chính sách ưu đãi đầu tư, đặc biệt cho công nghệ cao và công nghiệp hỗ trợ.
+        Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung"
 
 
+        2.1.2. TÍNH TẤT YẾU KHÁCH QUAN CỦA HỘI NHẬP KINH TẾ QUỐC TẾ
 
-        
-        ĐÁNH GIÁ CHẤT LƯỢNG TĂNG TRƯỞNG CÔNG NGHIỆP:
+        1. Do xu thế khách quan trong bối cảnh toàn cầu hóa kinh tế:
+        • Toàn cầu hóa tạo ra liên kết và sự phụ thuộc lẫn nhau
+        • Các yếu tố sản xuất được lưu thông trên phạm vi toàn cầu
+        • Sự phát triển của công nghệ thông tin, giao thông vận tải làm rút ngắn khoảng cách
+        • Không một quốc gia nào có thể phát triển biệt lập
 
-        1. Năng suất lao động:
-        Năng suất lao động công nghiệp Việt Nam đã tăng đáng kể nhưng vẫn thấp so với khu vực:
-        - Năng suất lao động công nghiệp: khoảng 4.200 USD/người/năm
-        - So với Singapore: 1/10
-        - So với Malaysia: 1/3
-        - So với Thái Lan: 2/3
+        2. Hội nhập kinh tế quốc tế là phương thức phát triển phổ biến của các nước:
+        • Giúp các nước đang và kém phát triển tận dụng thời cơ
+        • Giúp mở cửa thị trường, thu hút vốn, thúc đẩy công nghiệp hóa, tạo việc làm
+        • Các nước thành công đều chủ động hội nhập quốc tế
+        • Tham gia phân công lao động quốc tế, chuỗi giá trị toàn cầu
 
-        2. Giá trị gia tăng:
-        - Giá trị gia tăng bình quân của công nghiệp Việt Nam khoảng 15-20%
-        - Trong khi các nước phát triển đạt 30-40%
-        - Nguyên nhân: chủ yếu tham gia khâu gia công, lắp ráp
 
-        3. Tiêu thụ năng lượng:
-        - Việt Nam tiêu thụ 1.5-2 lần năng lượng so với trung bình thế giới để tạo ra 1 USD GDP
-        - Chủ yếu sử dụng năng lượng hóa thạch, gây ô nhiễm môi trường
+        2.1.3. NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ
 
-        4. Khả năng đổi mới sáng tạo:
-        - Chi phí R&D chỉ chiếm 0.44% GDP (mục tiêu 2% GDP)
-        - Số bằng sáng chế/1 triệu dân: 0.3 (Singapore: 261, Hàn Quốc: 325)
+        1. Chuẩn bị đầy đủ các điều kiện để thực hiện hội nhập thành công:
+        • Quá trình hội nhập phải được cân nhắc với lộ trình và cách thức tối ưu
+        • Xây dựng nền kinh tế độc lập, tự chủ làm cơ sở
+        • Hoàn thiện thể chế kinh tế thị trường phù hợp với chuẩn mực quốc tế
+        • Nâng cao năng lực cạnh tranh của nền kinh tế
+        • Đào tạo nguồn nhân lực đáp ứng yêu cầu hội nhập
 
-        ĐỊNH HƯỚNG PHÁT TRIỂN:
-
-        Để nâng cao chất lượng công nghiệp hóa, Việt Nam cần:
-
-        • Chuyển từ gia công sang sản xuất có giá trị gia tăng cao
-        • Phát triển công nghiệp phụ trợ
-        • Tăng cường đầu tư R&D
-        • Áp dụng công nghệ xanh, tiết kiệm năng lượng
-        • Đào tạo nhân lực chất lượng cao
-        • Xây dựng thương hiệu quốc gia
+        2. Thực hiện đa dạng các hình thức, các mức độ hội nhập kinh tế quốc tế:
+        • Giúp các nước đang và kém phát triển phát triển rút ngắn, thu hẹp khoảng cách
+        • Tham gia các tổ chức kinh tế quốc tế: WTO, ASEAN, APEC, CPTPP, RCEP, EVFTA...
+        • Mở cửa thị trường, giảm rào cản thương mại
+        • Thu hút đầu tư trực tiếp nước ngoài (FDI)
+        • Hợp tác song phương và đa phương
       `;
 
-  pages.push(...createMultiplePages("Chương II: Thực trạng công nghiệp hóa Việt Nam", mainContent, currentId));
+  pages.push(...createMultiplePages("2.1. Khái niệm và nội dung", section2_1, currentId));
+  currentId = startId + pages.length;
+
+  // 2.2. Tác động của hội nhập kinh tế quốc tế
+  const section2_2 = `
+        2.2. TÁC ĐỘNG CỦA HỘI NHẬP KINH TẾ QUỐC TẾ ĐẾN PHÁT TRIỂN CỦA VIỆT NAM
+
+        2.2.1. TÁC ĐỘNG TÍCH CỰC
+
+        • Tạo điều kiện mở rộng thị trường, tiếp thu khoa học công nghệ, vốn:
+        - Mở rộng thị trường xuất khẩu hàng hóa, dịch vụ
+        - Thu hút vốn đầu tư nước ngoài (FDI, ODA)
+        - Tiếp cận và chuyển giao công nghệ tiên tiến
+        - Học hỏi kinh nghiệm quản lý, điều hành hiện đại
+        - Chuyển dịch cơ cấu kinh tế theo hướng hiện đại
+
+        • Tạo cơ hội để nâng cao chất lượng nguồn nhân lực:
+        - Đào tạo theo tiêu chuẩn quốc tế
+        - Học hỏi kỹ năng, kinh nghiệm từ chuyên gia nước ngoài
+        - Tiếp cận tri thức, khoa học kỹ thuật tiên tiến
+        - Nâng cao trình độ chuyên môn và tay nghề
+
+        • Tạo điều kiện để thúc đẩy hội nhập các lĩnh vực văn hóa, chính trị, củng cố an ninh quốc phòng:
+        - Tăng cường quan hệ hợp tác quốc tế toàn diện
+        - Nâng cao vị thế của Việt Nam trên trường quốc tế
+        - Củng cố an ninh, quốc phòng thông qua hợp tác
+        - Giao lưu văn hóa, học tập kinh nghiệm quản trị xã hội
+
+
+        2.2.2. TÁC ĐỘNG TIÊU CỰC
+
+        • Gia tăng cạnh tranh gay gắt:
+        - Hàng hóa, dịch vụ nước ngoài gia tăng trên thị trường nội địa
+        - Doanh nghiệp trong nước phải đối mặt với áp lực cạnh tranh lớn
+        - Một số ngành sản xuất yếu kém có nguy cơ bị đào thải
+        - Phải đáp ứng tiêu chuẩn quốc tế ngày càng cao
+
+        • Gia tăng sự phụ thuộc nền kinh tế quốc gia vào thị trường bên ngoài:
+        - Phụ thuộc vào xuất khẩu và đầu tư nước ngoài
+        - Dễ bị tác động bởi biến động kinh tế thế giới
+        - Nguy cơ mất tự chủ về kinh tế
+        - Phụ thuộc vào công nghệ nước ngoài
+
+        • Dẫn đến phân phối không công bằng lợi ích và rủi ro:
+        - Lợi ích hội nhập phân bổ không đều giữa các vùng, miền
+        - Chênh lệch giàu nghèo có thể gia tăng
+        - Một số nhóm lao động bị ảnh hưởng tiêu cực
+        - Mất cân đối trong phát triển
+
+        • Các nước đang phát triển phải đối mặt với nguy cơ chuyển dịch cơ cấu kinh tế tự nhiên:
+        - Mất cân đối trong cơ cấu kinh tế
+        - Phát triển thiếu bền vững
+        - Phụ thuộc vào xuất khẩu nguyên liệu thô, gia công giá trị thấp
+        - Thiếu chủ động trong phát triển
+
+        • Tạo ra thách thức đối với quyền lực nhà nước, chủ quyền quốc gia:
+        - Áp lực về cam kết quốc tế, tuân thủ luật chơi chung
+        - Hạn chế quyền tự chủ trong một số chính sách
+        - Đòi hỏi phải cân đối giữa hội nhập và giữ vững độc lập
+        - Ảnh hưởng đến chủ quyền quốc gia trong một số lĩnh vực
+
+        • Hội nhập có thể làm gia tăng tình trạng khủng bố quốc tế, buôn lậu, tội phạm xuyên quốc gia:
+        - Biên giới mở rộng tạo điều kiện cho tội phạm xuyên quốc gia
+        - Buôn lậu, trốn thuế gia tăng
+        - Các vấn đề an ninh phi truyền thống
+        - Khủng bố, ma túy, mại dâm xuyên quốc gia
+      `;
+
+  pages.push(...createMultiplePages("2.2. Tác động của hội nhập", section2_2, currentId));
+  currentId = startId + pages.length;
+
+  // 2.3. Phương hướng nâng cao hiệu quả hội nhập kinh tế quốc tế
+  const section2_3 = `
+        2.3. PHƯƠNG HƯỚNG NÂNG CAO HIỆU QUẢ HỘI NHẬP KINH TẾ QUỐC TẾ TRONG PHÁT TRIỂN CỦA VIỆT NAM
+
+        2.3.1. NHẬN THỨC SÂU SẮC VỀ THỜI CƠ VÀ THÁCH THỨC
+
+        • Hội nhập là xu thế khách quan, không thể né tránh
+        • Cần thấy rõ cả mặt tích cực và tiêu cực
+        • Đánh giá đúng tác động của hội nhập đến từng ngành, lĩnh vực
+        • Chuẩn bị tốt để tận dụng cơ hội và hạn chế thách thức
+        • Nâng cao nhận thức của toàn xã hội về hội nhập
+
+
+        2.3.2. XÂY DỰNG CHIẾN LƯỢC VÀ LỘ TRÌNH HỘI NHẬP KINH TẾ PHÙ HỢP
+
+        Cần thực hiện:
+        1. Đánh giá đúng bối cảnh quốc tế
+        2. Đánh giá được những điều kiện khách quan và chủ quan
+        3. Nghiên cứu kinh nghiệm của các nước
+        4. Xây dựng phương hướng, mục tiêu, giải pháp hiệu quả
+        5. Chiến lược hội nhập phải gắn với tiến trình hội nhập toàn diện
+        6. Xác định lộ trình rõ ràng từng bước, có trọng tâm, trọng điểm
+
+
+        2.3.3. TÍCH CỰC, CHỦ ĐỘNG THAM GIA VÀ THỰC HIỆN ĐẦY ĐỦ CÁC CAM KẾT
+
+        • Tham gia tích cực các tổ chức kinh tế quốc tế
+        • Thực hiện nghiêm túc các cam kết đã ký kết
+        • Nâng cao uy tín, vai trò của Việt Nam
+        • Tạo sự tin cậy, tôn trọng của cộng đồng quốc tế
+        • Tranh thủ sự ủng hộ của cộng đồng quốc tế
+
+
+        2.3.4. HOÀN THIỆN THỂ CHẾ KINH TẾ VÀ PHÁP LUẬT
+
+        • Hoàn thiện cơ chế thị trường, đổi mới cơ chế quản lý của nhà nước
+        • Rà soát, hoàn thiện hệ thống pháp luật (đất đai, đầu tư, thương mại, thuế...)
+        • Xây dựng thể chế kinh tế thị trường đồng bộ, hiện đại
+        • Hoàn thiện hệ thống pháp luật phù hợp với cam kết quốc tế
+        • Cải cách hành chính, tạo môi trường kinh doanh thuận lợi
+        • Nâng cao hiệu lực, hiệu quả quản lý nhà nước
+
+
+        2.3.5. NÂNG CAO NĂNG LỰC CẠNH TRANH QUỐC TẾ CỦA NỀN KINH TẾ
+
+        • Hiệu quả hội nhập phụ thuộc vào năng lực cạnh tranh
+        • Nhà nước cần tăng cường hỗ trợ các doanh nghiệp
+        • Cơ cấu lại nền kinh tế, đổi mới mô hình tăng trưởng
+        • Phát triển nguồn nhân lực chất lượng cao
+        • Đầu tư mạnh vào nghiên cứu, phát triển, đổi mới công nghệ
+        • Xây dựng thương hiệu quốc gia, thương hiệu sản phẩm
+
+
+        2.3.6. XÂY DỰNG NỀN KINH TẾ ĐỘC LẬP, TỰ CHỦ CỦA VIỆT NAM
+
+        • Là nền kinh tế không bị lệ thuộc, phụ thuộc vào nước khác, không bị áp đặt, khống chế
+        • Phát triển kinh tế dựa vào nội lực là chính, kết hợp với nguồn lực bên ngoài
+        • Xây dựng ngành công nghiệp chủ lực, công nghiệp phụ trợ
+        • Đảm bảo an ninh lương thực, an ninh năng lượng
+        • Giữ vững độc lập, tự chủ trong hội nhập
+
+
+        2.3.7. BIỆN PHÁP ĐỂ XÂY DỰNG NỀN KINH TẾ ĐỘC LẬP TỰ CHỦ
+
+        1. Hoàn thiện, bổ sung đường lối phát triển đất nước:
+        • Xây dựng chiến lược phát triển kinh tế - xã hội dài hạn
+        • Định hướng rõ ràng cho từng giai đoạn phát triển
+
+        2. Đẩy mạnh công nghiệp hóa, hiện đại hóa:
+        • Phát triển công nghiệp làm nền tảng cho nền kinh tế độc lập
+        • Ưu tiên phát triển công nghiệp công nghệ cao
+
+        3. Đẩy mạnh quan hệ kinh tế đối ngoại và chủ động hội nhập:
+        • Mở rộng quan hệ kinh tế với nhiều quốc gia, vùng lãnh thổ
+        • Đa dạng hóa thị trường và đối tác
+
+        4. Tăng cường năng lực cạnh tranh bằng đổi mới:
+        • Đổi mới sáng tạo trong sản xuất, kinh doanh
+        • Nâng cao chất lượng sản phẩm, dịch vụ
+
+        5. Kết hợp chặt chẽ quốc phòng, an ninh và đối ngoại:
+        • Đảm bảo an ninh quốc gia trong hội nhập
+        • Bảo vệ lợi ích quốc gia trong mọi điều kiện
+
+
+        ---
+
+        NGUỒN THAM KHẢO:
+
+        Sách, giáo trình chính:
+        Giáo trình Kinh tế chính trị Mác – Lênin (giáo trình tập huấn năm 2019 - Bộ GDĐT)
+      `;
+
+  pages.push(...createMultiplePages("2.3. Phương hướng nâng cao hiệu quả", section2_3, currentId));
+  currentId = startId + pages.length;
+
+  // Trang bìa cuối
+  pages.push({
+    id: currentId++,
+    type: "cover",
+    title: "CHƯƠNG 6: CÔNG NGHIỆP HÓA, HIỆN ĐẠI HÓA VÀ HỘI NHẬP KINH TẾ QUỐC TẾ CỦA VIỆT NAM",
+    subtitle: "Hoàn thành nghiên cứu",
+    author: "Giáo trình Kinh tế chính trị Mác – Lênin (Bộ GDĐT - 2019)"
+  });
 
   return pages;
 };

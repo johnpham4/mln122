@@ -4,10 +4,6 @@ import HTMLFlipBook from "react-pageflip";
 import { Part1_Introduction } from "./parts/Part1_Introduction";
 import { Part2_TheoryFoundation } from "./parts/Part2_TheoryFoundation";
 import { Part3_VietnamSituation } from "./parts/Part3_VietnamSituation";
-import { Part4_Integration } from "./parts/Part4_Integration";
-import { Part5_GreenIndustrialization } from "./parts/Part5_GreenIndustrialization";
-import { Part6_SmartInnovation } from "./parts/Part6_SmartInnovation";
-import { Part8_Conclusion } from "./parts/Part8_Conclusion";
 import QuestionNotebook from "./QuestionNotebook";
 import QuestionButton from "./QuestionButton";
 import ChatBot from "./ChatBot";
@@ -24,7 +20,7 @@ function Book() {
   const [chatOpen, setChatOpen] = useState(false);
 
   // Debug log để kiểm tra state
-  console.log('Chat is open:', chatOpen);
+  console.log("Chat is open:", chatOpen);
   const [bookmarks, setBookmarks] = useState(() => {
     const saved = localStorage.getItem("bookmarks");
     return saved ? JSON.parse(saved) : [];
@@ -309,26 +305,7 @@ function Book() {
   const part3Pages = Part3_VietnamSituation(currentId);
   currentId += part3Pages.length;
 
-  const part4Pages = Part4_Integration(currentId);
-  currentId += part4Pages.length;
-
-  const part5Pages = Part5_GreenIndustrialization(currentId);
-  currentId += part5Pages.length;
-
-  const part6Pages = Part6_SmartInnovation(currentId);
-  currentId += part6Pages.length;
-
-  const part8Pages = Part8_Conclusion(currentId);
-
-  const allPages = [
-    ...part1Pages,
-    ...part2Pages,
-    ...part3Pages,
-    ...part4Pages,
-    ...part5Pages,
-    ...part6Pages,
-    ...part8Pages,
-  ];
+  const allPages = [...part1Pages, ...part2Pages, ...part3Pages];
 
   // Xử lý khi click vào question button (từ portal)
   const handleQuestionClick = (pageId) => {
@@ -386,12 +363,25 @@ function Book() {
   // Apply saved font size on mount
   useEffect(() => {
     const savedSize = localStorage.getItem("fontSize");
-    if (savedSize) {
-      const bookPages = document.querySelectorAll(".book-page-content");
-      bookPages.forEach((page) => {
-        page.style.fontSize = `${savedSize}px`;
-      });
-    }
+    const defaultSize = savedSize ? savedSize : "15"; // Mặc định 15px nếu chưa có trong localStorage
+
+    // Set CSS variable for font size
+    document.documentElement.style.setProperty(
+      "--book-font-size",
+      `${defaultSize}px`
+    );
+
+    // Apply to .book-page-content (fallback)
+    const bookPages = document.querySelectorAll(".book-page-content");
+    bookPages.forEach((page) => {
+      page.style.fontSize = `${defaultSize}px`;
+    });
+
+    // Apply to .section-content pre (override CSS)
+    const sectionPres = document.querySelectorAll(".section-content pre");
+    sectionPres.forEach((pre) => {
+      pre.style.fontSize = `${defaultSize}px`;
+    });
   }, []);
 
   return (
@@ -399,190 +389,193 @@ function Book() {
       <div
         className="flex-1 flex items-center justify-center"
         style={{
-          marginLeft: chatOpen ? '-300px' : '0px',
-          transition: 'margin-left 0.3s ease-in-out'
+          marginLeft: chatOpen ? "-300px" : "0px",
+          transition: "margin-left 0.3s ease-in-out",
         }}
       >
-      {/* Table of Contents */}
-      <TableOfContents
-        allPages={allPages}
-        onNavigate={navigateToPage}
-        currentPage={currentPage}
-      />
+        {/* Table of Contents */}
+        <TableOfContents
+          allPages={allPages}
+          onNavigate={navigateToPage}
+          currentPage={currentPage}
+        />
 
-      {/* Bookmark Panel */}
-      <BookmarkPanel
-        allPages={allPages}
-        onNavigate={navigateToPage}
-        bookmarks={bookmarks}
-      />
+        {/* Bookmark Panel */}
+        <BookmarkPanel
+          allPages={allPages}
+          onNavigate={navigateToPage}
+          bookmarks={bookmarks}
+        />
 
-      {/* Font Size Control */}
-      <FontSizeControl />
+        {/* Font Size Control */}
+        <FontSizeControl />
 
-      {/* Notes & Highlights */}
-      <NotesHighlights currentPage={currentPage} />
+        {/* Notes & Highlights */}
+        <NotesHighlights currentPage={currentPage} />
 
-      <HTMLFlipBook
-        ref={flipBookRef}
-        width={500}
-        height={680}
-        maxShadowOpacity={0.3}
-        drawShadow={true}
-        showCover={true}
-        size="fixed"
-        className="book-container"
-        onFlip={handlePageFlip}
-      >
-        {allPages.map((page, pageIndex) => (
-          <div className="page" key={`page-${pageIndex}`}>
-            <div className={`page-content ${page.type}`}>
-              {/* Bookmark Button on each page */}
-              {page.type !== "cover" && page.type !== "back-cover" && (
-                <BookmarkButton
-                  pageIndex={pageIndex}
-                  isBookmarked={bookmarks.includes(pageIndex)}
-                  onToggle={toggleBookmark}
-                />
-              )}
-              {/* Cover Page */}
-              {(page.type === "cover" || page.type === "back-cover") && (
-                <div className="h-full bg-gradient-to-br from-red-600 via-red-700 to-red-800 flex flex-col justify-between p-8 text-white">
-                  <div className="flex-1 flex flex-col justify-center items-center text-center space-y-6">
-                    <div className="w-20 h-1 bg-yellow-400 rounded-full"></div>
-                    <h1
-                      className="text-2xl font-bold leading-tight tracking-tight"
-                      style={{ fontFamily: "'Times New Roman', serif" }}
-                    >
-                      {page.title}
-                    </h1>
-                    <div className="w-16 h-0.5 bg-yellow-400/50 rounded-full"></div>
+        <HTMLFlipBook
+          ref={flipBookRef}
+          width={500}
+          height={680}
+          maxShadowOpacity={0.3}
+          drawShadow={true}
+          showCover={true}
+          size="fixed"
+          className="book-container"
+          onFlip={handlePageFlip}
+        >
+          {allPages.map((page, pageIndex) => (
+            <div className="page" key={`page-${pageIndex}`}>
+              <div className={`page-content ${page.type}`}>
+                {/* Bookmark Button on each page */}
+                {page.type !== "cover" && page.type !== "back-cover" && (
+                  <BookmarkButton
+                    pageIndex={pageIndex}
+                    isBookmarked={bookmarks.includes(pageIndex)}
+                    onToggle={toggleBookmark}
+                  />
+                )}
+                {/* Cover Page */}
+                {(page.type === "cover" || page.type === "back-cover") && (
+                  <div className="h-full bg-gradient-to-br from-red-600 via-red-700 to-red-800 flex flex-col justify-between p-8 text-white">
+                    <div className="flex-1 flex flex-col justify-center items-center text-center space-y-6">
+                      <div className="w-20 h-1 bg-yellow-400 rounded-full"></div>
+                      <h1
+                        className="text-2xl font-bold leading-tight tracking-tight"
+                        style={{ fontFamily: "'Times New Roman', serif" }}
+                      >
+                        {page.title}
+                      </h1>
+                      <div className="w-16 h-0.5 bg-yellow-400/50 rounded-full"></div>
+                      <h2
+                        className="text-base font-medium italic opacity-95 max-w-xs"
+                        style={{ fontFamily: "'Times New Roman', serif" }}
+                      >
+                        {page.subtitle}
+                      </h2>
+                    </div>
+                    <div className="text-center space-y-3">
+                      <p
+                        className="text-base font-medium"
+                        style={{ fontFamily: "'Times New Roman', serif" }}
+                      >
+                        {page.author}
+                      </p>
+                      <div className="text-4xl">
+                        {page.flag === "VN" ? "🇻🇳" : page.flag || "🇻🇳"}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Chapter Page */}
+                {page.type === "chapter" && (
+                  <div className="h-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex flex-col justify-center items-center text-center p-10 space-y-6">
+                    <div className="relative">
+                      <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-indigo-400 opacity-20 blur-2xl rounded-full"></div>
+                      <h1
+                        className="relative text-4xl font-extrabold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent"
+                        style={{ fontFamily: "'Times New Roman', serif" }}
+                      >
+                        {page.title}
+                      </h1>
+                    </div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
                     <h2
-                      className="text-base font-medium italic opacity-95 max-w-xs"
+                      className="text-xl font-semibold text-slate-700 max-w-sm leading-relaxed"
                       style={{ fontFamily: "'Times New Roman', serif" }}
                     >
                       {page.subtitle}
                     </h2>
+                    {page.content && (
+                      <p
+                        className="text-base text-slate-600 max-w-md leading-relaxed"
+                        style={{ fontFamily: "'Times New Roman', serif" }}
+                      >
+                        {page.content}
+                      </p>
+                    )}
                   </div>
-                  <div className="text-center space-y-3">
-                    <p
-                      className="text-base font-medium"
-                      style={{ fontFamily: "'Times New Roman', serif" }}
-                    >
-                      {page.author}
-                    </p>
-                    <div className="text-4xl">
-                      {page.flag === "VN" ? "🇻🇳" : page.flag || "🇻🇳"}
-                    </div>
-                  </div>
-                </div>
-              )}
+                )}
 
-              {/* Chapter Page */}
-              {page.type === "chapter" && (
-                <div className="h-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex flex-col justify-center items-center text-center p-10 space-y-6">
-                  <div className="relative">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-indigo-400 opacity-20 blur-2xl rounded-full"></div>
-                    <h1
-                      className="relative text-4xl font-extrabold bg-gradient-to-r from-red-600 to-red-700 bg-clip-text text-transparent"
-                      style={{ fontFamily: "'Times New Roman', serif" }}
-                    >
-                      {page.title}
-                    </h1>
-                  </div>
-                  <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full"></div>
-                  <h2
-                    className="text-xl font-semibold text-slate-700 max-w-sm leading-relaxed"
-                    style={{ fontFamily: "'Times New Roman', serif" }}
-                  >
-                    {page.subtitle}
-                  </h2>
-                  {page.content && (
-                    <p
-                      className="text-base text-slate-600 max-w-md leading-relaxed"
-                      style={{ fontFamily: "'Times New Roman', serif" }}
-                    >
-                      {page.content}
-                    </p>
-                  )}
-                </div>
-              )}
-
-              {/* Content Page */}
-              {(page.type === "content" || page.type === "conclusion") && (
-                <div className="h-full flex flex-col bg-white overflow-hidden">
-                  <div className="border-b-2 border-red-500 pt-4 pb-2 px-5 mb-2 flex-shrink-0">
-                    <h2
-                      className="text-[17px] font-bold text-red-600 text-center"
-                      style={{ fontFamily: "'Times New Roman', serif" }}
-                    >
-                      {page.title}
-                      {page.partInfo && (
-                        <span
-                          className="text-xs font-normal text-slate-500 ml-2"
-                          style={{ fontFamily: "'Times New Roman', serif" }}
-                        >
-                          ({page.partInfo})
-                        </span>
-                      )}
-                    </h2>
-                    <div className="flex justify-center items-center gap-2 mt-1">
-                      <div className="h-0.5 w-8 bg-gradient-to-r from-transparent to-red-300"></div>
-                      <div className="text-[10px] text-slate-400">
-                        Trang {page.id}
+                {/* Content Page */}
+                {(page.type === "content" || page.type === "conclusion") && (
+                  <div className="h-full flex flex-col bg-white overflow-hidden">
+                    <div className="border-b-2 border-red-500 pt-4 pb-2 px-5 mb-2 flex-shrink-0">
+                      <h2
+                        className="text-[17px] font-bold text-red-600 text-center"
+                        style={{ fontFamily: "'Times New Roman', serif" }}
+                      >
+                        {page.title}
+                        {page.partInfo && (
+                          <span
+                            className="text-xs font-normal text-slate-500 ml-2"
+                            style={{ fontFamily: "'Times New Roman', serif" }}
+                          >
+                            ({page.partInfo})
+                          </span>
+                        )}
+                      </h2>
+                      <div className="flex justify-center items-center gap-2 mt-1">
+                        <div className="h-0.5 w-8 bg-gradient-to-r from-transparent to-red-300"></div>
+                        <div className="text-[10px] text-slate-400">
+                          Trang {page.id}
+                        </div>
+                        <div className="h-0.5 w-8 bg-gradient-to-l from-transparent to-red-300"></div>
                       </div>
-                      <div className="h-0.5 w-8 bg-gradient-to-l from-transparent to-red-300"></div>
                     </div>
-                  </div>
-                  <div className="flex-1 overflow-hidden px-5 py-1">
-                    <div className="book-page-content h-full overflow-y-auto custom-scrollbar pr-2">
-                      <div style={{ fontFamily: "'Times New Roman', serif" }}>
-                        {renderContentWithImages(page.content)}
+                    <div className="flex-1 overflow-hidden px-5 py-1">
+                      <div
+                        className="book-page-content h-full overflow-y-auto custom-scrollbar pr-2"
+                        style={{ fontSize: "15px" }}
+                      >
+                        <div style={{ fontFamily: "'Times New Roman', serif" }}>
+                          {renderContentWithImages(page.content)}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
-          </div>
-        ))}
-      </HTMLFlipBook>
+          ))}
+        </HTMLFlipBook>
 
-      {/* Question Button Portal - render ngoài DOM tree cho cả 2 trang hiện tại */}
-      {/* Trang trái (currentPage) */}
-      <QuestionButton
-        pageId={allPages[currentPage]?.id}
-        currentPageIndex={currentPage}
-        questions={questions}
-        onClick={handleQuestionClick}
-        bookRef={flipBookRef}
-      />
-
-      {/* Trang phải (currentPage + 1) nếu có */}
-      {allPages[currentPage + 1] && (
+        {/* Question Button Portal - render ngoài DOM tree cho cả 2 trang hiện tại */}
+        {/* Trang trái (currentPage) */}
         <QuestionButton
-          pageId={allPages[currentPage + 1]?.id}
-          currentPageIndex={currentPage + 1}
+          pageId={allPages[currentPage]?.id}
+          currentPageIndex={currentPage}
           questions={questions}
           onClick={handleQuestionClick}
           bookRef={flipBookRef}
         />
-      )}
 
-      {/* Question Notebook Popup */}
-      {showNotebook && currentQuestion && (
-        <QuestionNotebook
-          question={currentQuestion}
-          onClose={() => setShowNotebook(false)}
+        {/* Trang phải (currentPage + 1) nếu có */}
+        {allPages[currentPage + 1] && (
+          <QuestionButton
+            pageId={allPages[currentPage + 1]?.id}
+            currentPageIndex={currentPage + 1}
+            questions={questions}
+            onClick={handleQuestionClick}
+            bookRef={flipBookRef}
+          />
+        )}
+
+        {/* Question Notebook Popup */}
+        {showNotebook && currentQuestion && (
+          <QuestionNotebook
+            question={currentQuestion}
+            onClose={() => setShowNotebook(false)}
+          />
+        )}
+
+        {/* ChatBot - AI Trợ lý */}
+        <ChatBot
+          onToggle={setChatOpen}
+          isOpen={chatOpen}
+          backendUrl={config.backendUrl}
         />
-      )}
-
-      {/* ChatBot - AI Trợ lý */}
-      <ChatBot
-        onToggle={setChatOpen}
-        isOpen={chatOpen}
-        backendUrl={config.backendUrl}
-      />
       </div>
     </div>
   );

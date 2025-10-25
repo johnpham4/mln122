@@ -54,8 +54,7 @@ export const splitContentIntoPages = (content, maxLines = 20) => {
   return pages;
 };// Tạo nhiều trang từ nội dung dài
 export const createMultiplePages = (title, content, startId, type = 'content') => {
-  const contentPages = splitContentIntoPages(content, 20); // 20 dòng mỗi trang - đơn giản và ổn định
-
+  const contentPages = splitContentIntoPages(content, 20); 
   return contentPages.map((pageContent, index) => ({
     id: startId + index,
     type: type,
