@@ -25,7 +25,6 @@ export const Part1_Introduction = (startId) => {
 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A01.2.1. Tính tất yếu của CNH, HĐH ở Việt Nam .................. 7
 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A01.2.2. Nội dung công nghiệp hóa, hiện đại hóa ở Việt Nam ..... 9
 
-
 2. Hội nhập kinh tế quốc tế ở Việt Nam ............................. 12
 
 \u00A0\u00A0\u00A0\u00A02.1. Khái niệm và nội dung hội nhập kinh tế quốc tế ............... 12
@@ -53,7 +52,7 @@ NGUỒN THAM KHẢO:
         Giáo trình Kinh tế chính trị Mác – Lênin (giáo trình tập huấn năm 2019 - Bộ GDĐT)
       `;
 
-  pages.push(...createMultiplePages("MỤC LỤC", tocContent, currentId));
+  pages.push(...createMultiplePages("MỤC LỤC", tocContent, currentId, 'content', 26));
 
   return pages;
 };
