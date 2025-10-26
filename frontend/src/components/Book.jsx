@@ -4,7 +4,6 @@ import HTMLFlipBook from "react-pageflip";
 import { Part1_Introduction } from "./parts/Part1_Introduction";
 import { Part2_TheoryFoundation } from "./parts/Part2_TheoryFoundation";
 import { Part3_VietnamSituation } from "./parts/Part3_VietnamSituation";
-import { Part5_Ref } from "./parts/Part5_Ref";
 import QuestionNotebook from "./QuestionNotebook";
 import QuestionButton from "./QuestionButton";
 import ChatBot from "./ChatBot";
@@ -124,16 +123,34 @@ function Book() {
 
     lines.forEach((line, index) => {
       if (line.includes("[IMAGE:")) {
-        // Parse image format: [IMAGE:filename.jpg|Caption text]
-        const match = line.match(/\[IMAGE:([^|]+)\|([^\]]+)\]/);
+        // Parse image format: [IMAGE:filename.jpg|Caption text|width:500px] hoặc [IMAGE:filename.jpg|Caption text]
+        const match = line.match(/\[IMAGE:([^|]+)\|([^|\]]+)(?:\|([^\]]+))?\]/);
         if (match) {
-          const [, filename, caption] = match;
+          const [, filename, caption, sizeStyle] = match;
+
+          // Parse size style (ví dụ: "width:500px" hoặc "width:80%;height:400px")
+          let styleObj = {};
+          if (sizeStyle) {
+            const styleParts = sizeStyle.split(";");
+            styleParts.forEach((part) => {
+              const [key, value] = part.split(":").map((s) => s.trim());
+              if (key && value) {
+                styleObj[key] = value;
+              }
+            });
+          }
+
           elements.push(
             <div key={index} className="my-3 text-center">
               <img
                 src={`/${filename}`}
                 alt={caption}
-                className="max-w-[80%] max-h-[150px] mx-auto object-contain border border-slate-200 rounded"
+                className="mx-auto object-contain border border-slate-200 rounded"
+                style={{
+                  maxWidth: styleObj.width || "80%",
+                  maxHeight: styleObj.height || "150px",
+                  ...styleObj,
+                }}
               />
               <div className="text-[13px] italic text-slate-600 mt-1">
                 {caption}
@@ -178,10 +195,7 @@ function Book() {
   const part3Pages = Part3_VietnamSituation(currentId);
   currentId += part3Pages.length;
 
-  const part5Pages = Part5_Ref(currentId);
-  currentId += part5Pages.length;
-
-  const allPages = [...part1Pages, ...part2Pages, ...part3Pages, ...part5Pages];
+  const allPages = [...part1Pages, ...part2Pages, ...part3Pages];
 
   // Xử lý khi click vào question button (từ portal)
   const handleQuestionClick = (pageId) => {
@@ -337,9 +351,6 @@ function Book() {
                       >
                         {page.author}
                       </p>
-                      <div className="text-4xl">
-                        {page.flag === "VN" ? "🇻🇳" : page.flag || "🇻🇳"}
-                      </div>
                     </div>
                   </div>
                 )}

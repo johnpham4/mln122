@@ -147,6 +147,69 @@ Biện pháp để xây dựng nền kinh tế độc lập, tự chủ là nhi�
 
 ---
 
-### Sách, giáo trình chính:
+## Làm thế nào để Việt Nam công nghiệp hoá theo hướng xanh – thông minh – sáng tạo?
 
-[cite_start]Giáo trình Kinh tế chính trị Mác – Lênin (giáo trình tập huấn năm 2019- Bộ GDĐT) [cite: 1]
+Để Việt Nam thực hiện theo hướng xanh - thông minh - sáng tạo về cơ bản chính là thực hiện “Công nghiệp hoá theo hướng hiện đại”.
+
+Quá trình này đòi hỏi Việt Nam cần thiết phải:
+
+- Đầu tiên là tiến từ nền sản xuất tiền công nghiệp sang nền sản xuất công nghiệp hiện đại tiên tiến.
+- Tiếp theo, yếu tố “Thông minh” và “Sáng tạo” ở đây cần phải ứng dụng mạnh mẽ thành tựu của CMCN 3.0 (như công nghệ thông tin, viễn thông, tự động hoá) và nghiên cứu, phát triển đối với trí tuệ nhân tạo, ứng dụng Al cùng công nghệ đổi mới và sáng tạo. Và yếu tố “Xanh” có thể thực hiện thông qua phát triển các lĩnh vực như “năng lượng tái tạo” (như thuỷ điện, gió mặt trời, địa nhiệt,....)
+
+Để đạt được các biện pháp nêu trên thì yêu cầu đặt ra ở đây là cần có “Nguồn vốn để đầu tư cho công nghệ hiện đại “ và “Nguồn nhân lực được đào tạo với chất lượng cao”.
+
+Cuối cùng điểm then chốt ở đây là “đẩy mạnh hội nhập kinh tế quốc tế” để đạt được hai yêu cầu trên. Việc hội nhập cho phép Việt Nam thu hút công nghệ và đầu tư bên ngoài, tiếp cận hệ thống tài liệu và học tập kinh nghiệm quản lý tiên tiến. Song song đó cần phải xây dựng chiến lược hội nhập hợp lý và phù hợp với thị trường trong nước, đảm bảo môi trường cạnh tranh bình đẳng từ đó tạo động lực cho các doanh nghiệp cùng đổi mới và sáng tạo, nâng cao sức cạnh tranh trong bối cảnh thời đại mới.
+
+Nguồn tham khảo trả lời câu hỏi:
+
+1.  [https://mst.gov.vn/giai-phap-nao-de-do-thi-xanh-thong-minh-tai-viet-nam-197155985.htm](https://www.google.com/url?q=https://mst.gov.vn/giai-phap-nao-de-do-thi-xanh-thong-minh-tai-viet-nam-197155985.htm&sa=D&source=editors&ust=1761478752376936&usg=AOvVaw2buTVq3cqceCRHKcw58FVm)
+2.  [https://www.tapchicongsan.org.vn/web/guest/kinh-te/-/2018/910402/chinh-sach-cong-nghiep-xanh-huong-toi-su-phat-trien-ben-vung-o-viet-nam.aspx](https://www.google.com/url?q=https://www.tapchicongsan.org.vn/web/guest/kinh-te/-/2018/910402/chinh-sach-cong-nghiep-xanh-huong-toi-su-phat-trien-ben-vung-o-viet-nam.aspx&sa=D&source=editors&ust=1761478752377283&usg=AOvVaw2q-V63P504ogMbKlt0v_1e)
+3.  [https://vioit.org.vn/vn/chien-luoc-chinh-sach/phat-trien-kinh-te-xanh-o-viet-nam--thuc-trang-va-giai-phap-5941.4050.html](https://www.google.com/url?q=https://vioit.org.vn/vn/chien-luoc-chinh-sach/phat-trien-kinh-te-xanh-o-viet-nam--thuc-trang-va-giai-phap-5941.4050.html&sa=D&source=editors&ust=1761478752377589&usg=AOvVaw3QQVbrYcfcHDxl5Trx7idz)
+
+## TRANG BÌA: Tìm hiểu quá trình từ các làng nghề Việt Nam đến các nhà máy 4.0 - Hành trình công nghiệp hoá của Việt Nam.
+
+Phần này với mong muốn giới thiệu đến độc giả về các làng nghề truyền thống Việt Nam của ông cha ta từ xa xưa. Từ đó thế hệ ngày nay đã làm như thế nào để gìn giữ và phát triển đưa các nét văn hoá truyền thống đó rộng rãi hơn?
+
+Các nhà máy phát triển sản phẩm mang nét cổ xưa đã được hình thành như thế nào? Niềm biết ơn và tự hào đến các làng nghề của Việt Nam được thể hiện ra sao trong suốt bề dày lịch sử phát triển đất nước?
+
+Ở đây chúng mình sẽ chia theo vị trí địa lý lần lượt là Bắc - Trung - Nam.
+
+Tại khu vực miền Bắc nổi trội là cái nôi của các làng nghề truyền thống, cổ truyền Việt Nam và có thể kể đến như:
+
+1.  Làng Gốm Bát Tràng ( Hà Nội ).
+2.  Làng Nón lá Chuông (Hà Nội)
+3.  Làng Quạt Chàng Sơn ( Hà Nội)
+4.  Làng Tranh Đông Hồ (Bắc Ninh)
+5.  Làng Đúc đồng Ngũ Xá (Bắc Ninh)
+6.  Làng lụa (Vạn Phúc) - Nổi tiếng với lụa Hà Đông
+7.  Làng nghề mây tre đan (Phú Vinh)
+
+Với Khu vực miền Trung các làng nghề nổi tiếng bao gồm:
+
+1.  Làng Đá mỹ nghệ - điêu khắc (Ngũ Hành Sơn, Đà Nẵng)
+2.  Làng Gốm Thanh Hà (Hội An)
+3.  Làng Nón lá Tây Hồ - Phú Vang ( Thừa Thiên Huế)
+4.  Làng dệt thổ cẩm Mỹ Nghiệp (Ninh Thuận)
+5.  Làng Gốm Bàu Trúc - hồn Chăm Cổ (Ninh Thuận)
+
+Tại miền Nam được biết đến với các làng nghề truyền thống như:
+
+1.  Làng Gốm sứ Lái Thiêu (Thuận An, Bình Dương)
+2.  Tranh sơn mài Tương Bình Hiệp (Bình Dương)
+3.  Làng lụa Tân Châu (An Giang)
+4.  Làng Dệt thổ cẩm Châu Giang - Khmer ( An Giang)
+5.  Làng chiếu Định Yên (Đồng Tháp)
+
+Làng nghề truyền thống là một phần không thể thiếu của di sản văn hoá Việt Nam tuy nhiên ngày nay các làng nghề đang vướng phải những cạnh tranh khốc liệt và đối mặt với những trở ngại đáng kể trên thị trường tiêu thụ sản phẩm công nghiệp.
+
+Hiển nhiên với bối cảnh thế giới phát triển với tốc độ nhanh chóng để gìn giữ, phát triển tinh hoa văn hoá truyền thống của dân tộc điều đó đòi hỏi chúng ta phải áp dụng vào những khâu sản xuất mới, tạo điều kiện và môi trường để đưa các sản phẩm văn hoá truyền thống của nước ta đến với bạn bè quốc tế.
+
+Các nhà máy, công ty được thành lập mang tinh thần kế thừa những làng nghề truyền thông và hỗ trợ phát triển giúp sản phẩm sản xuất hiện đại hoá trở thành mặt hàng dễ tiếp cận hơn với công chúng và cộng đồng quốc tế.
+
+Một số được chúng mình tìm hiểu và tra cứu có thể kể đến ở đây như:
+
+Nguồn tài liệu tham khảo:
+
+1.  [https://chus.vn/lang-nghe-truyen-thong-viet-nam-tao-nen-qua-tang-ban-sac-viet/?srsltid=AfmBOooavqTDNJU1XA7JSIU2ucQZ\\\_aTHu8U\\\_Ad25Wq-DK9JlnEetPsAw](https://www.google.com/url?q=https://chus.vn/lang-nghe-truyen-thong-viet-nam-tao-nen-qua-tang-ban-sac-viet/?srsltid%3DAfmBOooavqTDNJU1XA7JSIU2ucQZ_aTHu8U_Ad25Wq-DK9JlnEetPsAw&sa=D&source=editors&ust=1761478752544734&usg=AOvVaw26Viz27gpg2MEICUoKeQnh)
+2.  [https://mia.vn/cam-nang-du-lich/lang-nghe-truyen-thong-viet-nam-15321](https://www.google.com/url?q=https://mia.vn/cam-nang-du-lich/lang-nghe-truyen-thong-viet-nam-15321&sa=D&source=editors&ust=1761478752545134&usg=AOvVaw0Xdut6h0OXSF9mZ312H8Kq)
+3.  [https://baochinhphu.vn/lang-nghe-cung-phai-40-102248040.htm](https://www.google.com/url?q=https://baochinhphu.vn/lang-nghe-cung-phai-40-102248040.htm&sa=D&source=editors&ust=1761478752545483&usg=AOvVaw3O--1b8yeFfQP0l2TxejBr)

@@ -114,5 +114,213 @@ export const Part3_VietnamSituation = (startId) => {
   pages.push(...createMultiplePages("2.3. Phương hướng nâng cao hiệu quả", section2_3, currentId));
   currentId = startId + pages.length;
 
+  // Trang chương Phần 3
+  pages.push({
+    id: currentId++,
+    type: "chapter",
+    title: "3. LÀM THẾ NÀO ĐỂ VIỆT NAM CÔNG NGHIỆP HÓA THEO HƯỚNG XANH – THÔNG MINH – SÁNG TẠO?",
+    subtitle: "",
+    content: ""
+  });
+
+  // 3. Làm thế nào để Việt Nam CNH theo hướng xanh - thông minh - sáng tạo
+  const section3 = `
+        **Để Việt Nam thực hiện theo hướng xanh - thông minh - sáng tạo về cơ bản chính là thực hiện "Công nghiệp hoá theo hướng hiện đại".**
+
+        Quá trình này đòi hỏi Việt Nam cần thiết phải:
+
+        • Đầu tiên là tiến từ nền sản xuất tiền công nghiệp sang nền sản xuất công nghiệp hiện đại tiên tiến.
+
+        • Tiếp theo, yếu tố "Thông minh" và "Sáng tạo" ở đây cần phải ứng dụng mạnh mẽ thành tựu của CMCN 3.0 (như công nghệ thông tin, viễn thông, tự động hoá) và nghiên cứu, phát triển đối với trí tuệ nhân tạo, ứng dụng AI cùng công nghệ đổi mới và sáng tạo.
+
+        • Yếu tố "Xanh" có thể thực hiện thông qua phát triển các lĩnh vực như "năng lượng tái tạo" (như thuỷ điện, gió mặt trời, địa nhiệt,....)
+
+        Để đạt được các biện pháp nêu trên thì yêu cầu đặt ra ở đây là cần có "Nguồn vốn để đầu tư cho công nghệ hiện đại" và "Nguồn nhân lực được đào tạo với chất lượng cao".
+
+        Cuối cùng điểm then chốt ở đây là "đẩy mạnh hội nhập kinh tế quốc tế" để đạt được hai yêu cầu trên. Việc hội nhập cho phép Việt Nam thu hút công nghệ và đầu tư bên ngoài, tiếp cận hệ thống tài liệu và học tập kinh nghiệm quản lý tiên tiến. Song song đó cần phải xây dựng chiến lược hội nhập hợp lý và phù hợp với thị trường trong nước, đảm bảo môi trường cạnh tranh bình đẳng từ đó tạo động lực cho các doanh nghiệp cùng đổi mới và sáng tạo, nâng cao sức cạnh tranh trong bối cảnh thời đại mới.
+      `;
+
+  pages.push(...createMultiplePages("3. CNH xanh - thông minh - sáng tạo", section3, currentId, 'content', 20));
+  currentId = startId + pages.length;
+
+  // Trang chương Phần 4
+  pages.push({
+    id: currentId++,
+    type: "chapter",
+    title: "4. TÌM HIỂU QUÁ TRÌNH TỪ CÁC LÀNG NGHỀ VIỆT NAM ĐẾN CÁC NHÀ MÁY 4.0",
+    subtitle: "",
+    content: ""
+  });
+
+  // 4. Hành trình từ làng nghề đến nhà máy 4.0
+  const section4 = `
+        Phần này với mong muốn giới thiệu đến độc giả về các làng nghề truyền thống Việt Nam của ông cha ta từ xa xưa. Từ đó thế hệ ngày nay đã làm như thế nào để gìn giữ và phát triển đưa các nét văn hoá truyền thống đó rộng rãi hơn?
+
+        Các nhà máy phát triển sản phẩm mang nét cổ xưa đã được hình thành như thế nào? Niềm biết ơn và tự hào đến các làng nghề của Việt Nam được thể hiện ra sao trong suốt bề dày lịch sử phát triển đất nước?
+
+        Ở đây chúng mình sẽ chia theo vị trí địa lý lần lượt là Bắc - Trung - Nam.
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        **CÁC LÀNG NGHỀ TRUYỀN THỐNG Ở MIỀN BẮC:**
+        Tại khu vực miền Bắc nổi trội là cái nôi của các làng nghề truyền thống, cổ truyền Việt Nam và có thể kể đến như:
+        1. Làng Gốm Bát Tràng (Hà Nội)
+        [IMAGE:langgom.jpeg|Làng gốm Bát Tràng - Nét đẹp văn hóa truyền thống Việt Nam]
+        2. Làng Nón lá Chuông (Hà Nội)
+        [IMAGE:langnon.jpeg|Làng nón lá Chuông - Biểu tượng văn hóa Việt Nam|width:300px;height:200px]
+
+        3. Làng Quạt Chàng Sơn (Hà Nội)
+        [IMAGE:langquat.jpeg|Làng quạt Chàng Sơn - Nghệ thuật làm quạt truyền thống|width:300px;height:200px]
+
+        4. Làng Tranh Đông Hồ (Bắc Ninh)
+        [IMAGE:langtranhdongho.jpeg|Làng tranh Đông Hồ - Nghệ thuật tranh dân gian|width:300px;height:200px]
+
+        5. Làng Đúc đồng Ngũ Xá (Bắc Ninh)
+        [IMAGE:langducdong.jpeg|Làng Đúc đồng Ngũ Xá - Nghệ thuật đúc đồng truyền thống|width:300px;height:200px]
+        6. Làng lụa Vạn Phúc - Nổi tiếng với lụa Hà Đông
+        [IMAGE:langlua.jpeg|Làng lụa Vạn Phúc - Nét đẹp văn hóa truyền thống Việt Nam|width:300px;height:200px]
+
+        7. Làng nghề mây tre đan Phú Vinh
+        [IMAGE:langmay.jpeg|Làng nghề mây tre đan Phú Vinh - Nghệ thuật đan lát truyền thống|width:300px;height:200px]
+        
+
+
+
+
+
+
+
+        
+
+
+        **CÁC LÀNG NGHỀ TRUYỀN THỐNG Ở MIỀN TRUNG:**
+        1. Làng Đá mỹ nghệ - điêu khắc (Ngũ Hành Sơn, Đà Nẵng)
+        [IMAGE:langda.jpeg|Làng Đá mỹ nghệ - điêu khắc (Ngũ Hành Sơn, Đà Nẵng)|width:300px;height:200px]
+        2. Làng Gốm Thanh Hà (Hội An)
+        [IMAGE:langgomthanha.jpeg|Làng Gốm Thanh Hà (Hội An)|width:300px;height:200px]
+
+        3. Làng Nón lá Tây Hồ - Phú Vang (Thừa Thiên Huế)
+        [IMAGE:langnontayho.jpeg|Làng Nón lá Tây Hồ - Phú Vang (Thừa Thiên Huế)|width:300px;height:200px]
+        4. Làng dệt thổ cẩm Mỹ Nghiệp (Ninh Thuận)
+        [IMAGE:langdethocam.jpeg|Làng dệt thổ cẩm Mỹ Nghiệp (Ninh Thuận)|width:300px;height:200px]
+        
+
+        5. Làng Gốm Bàu Trúc - hồn Chăm Cổ (Ninh Thuận)
+        [IMAGE:langbautruc.jpeg|Làng Gốm Bàu Trúc - hồn Chăm Cổ (Ninh Thuận)|width:300px;height:200px]
+
+
+
+
+
+
+
+
+
+
+
+
+        **CÁC LÀNG NGHỀ TRUYỀN THỐNG Ở MIỀN NAM:**
+
+        Tại miền Nam được biết đến với các làng nghề truyền thống như:
+
+        1. Làng Gốm sứ Lái Thiêu (Thuận An, Bình Dương)
+        [IMAGE:langgomsulai.jpeg|Làng Gốm sứ Lái Thiêu (Thuận An, Bình Dương)|width:300px;height:200px]
+
+
+
+
+
+
+
+
+        2. Tranh sơn mài Tương Bình Hiệp (Bình Dương)
+        [IMAGE:langsonmai.jpeg|Tranh sơn mài Tương Bình Hiệp (Bình Dương)|width:320px;height:220px]
+        3. Làng lụa Tân Châu (An Giang)
+        [IMAGE:langluatanchau1.jpeg|Làng lụa Tân Châu (An Giang)]
+
+
+        4. Làng Dệt thổ cẩm Châu Giang - Khmer (An Giang)
+        [IMAGE:langdetchaugian.jpeg|Làng Dệt thổ cẩm Châu Giang - Khmer (An Giang)|width:300px;height:200px]
+        5. Làng chiếu Định Yên (Đồng Tháp)
+        [IMAGE:langchieudinhyen.jpeg|Làng chiếu Định Yên (Đồng Tháp)|width:300px;height:200px]
+
+
+        **THÁCH THỨC VÀ GIẢI PHÁP PHÁT TRIỂN:**
+
+        Làng nghề truyền thống là một phần không thể thiếu của di sản văn hoá Việt Nam tuy nhiên ngày nay các làng nghề đang vướng phải những cạnh tranh khốc liệt và đối mặt với những trở ngại đáng kể trên thị trường tiêu thụ sản phẩm công nghiệp.
+
+        Hiển nhiên với bối cảnh thế giới phát triển với tốc độ nhanh chóng để gìn giữ, phát triển tinh hoa văn hoá truyền thống của dân tộc điều đó đòi hỏi chúng ta phải áp dụng vào những khâu sản xuất mới, tạo điều kiện và môi trường để đưa các sản phẩm văn hoá truyền thống của nước ta đến với bạn bè quốc tế.
+
+        Các nhà máy, công ty được thành lập mang tinh thần kế thừa những làng nghề truyền thống và hỗ trợ phát triển giúp sản phẩm sản xuất hiện đại hoá trở thành mặt hàng dễ tiếp cận hơn với công chúng và cộng đồng quốc tế.
+      `;
+
+  pages.push(...createMultiplePages("4. Từ làng nghề đến nhà máy 4.0", section4, currentId, 'content', 20));
+  currentId = startId + pages.length;
+
+  // Trang chương Phần 5 - Nguồn tham khảo
+  pages.push({
+    id: currentId++,
+    type: "chapter",
+    title: "5. NGUỒN THAM KHẢO",
+    subtitle: "",
+    content: ""
+  });
+
+  // Nguồn tham khảo
+  const references = `
+        **SÁCH, GIÁO TRÌNH CHÍNH:**
+
+        Giáo trình Kinh tế chính trị Mác – Lênin (giáo trình tập huấn năm 2019 - Bộ Giáo dục và Đào tạo)
+
+
+        **TÀI LIỆU THAM KHẢO BỔ SUNG:**
+
+        **Phần 3: Làm thế nào để Việt Nam công nghiệp hóa theo hướng xanh – thông minh – sáng tạo?**
+
+        1. Giải pháp nào để đô thị xanh thông minh tại Việt Nam
+        https://mst.gov.vn/giai-phap-nao-de-do-thi-xanh-thong-minh-tai-viet-nam-197155985.htm
+
+        2. Chính sách công nghiệp xanh hướng tới sự phát triển bền vững ở Việt Nam
+        https://www.tapchicongsan.org.vn/web/guest/kinh-te/-/2018/910402/chinh-sach-cong-nghiep-xanh-huong-toi-su-phat-trien-ben-vung-o-viet-nam.aspx
+
+        3. Phát triển kinh tế xanh ở Việt Nam - Thực trạng và giải pháp
+        https://vioit.org.vn/vn/chien-luoc-chinh-sach/phat-trien-kinh-te-xanh-o-viet-nam--thuc-trang-va-giai-phap-5941.4050.html
+
+
+        **Phần 4: Tìm hiểu quá trình từ các làng nghề Việt Nam đến các nhà máy 4.0**
+
+        1. Làng nghề truyền thống Việt Nam - Tạo nên quà tặng bản sắc Việt
+        https://chus.vn/lang-nghe-truyen-thong-viet-nam-tao-nen-qua-tang-ban-sac-viet/
+
+        2. Làng nghề truyền thống Việt Nam
+        https://mia.vn/cam-nang-du-lich/lang-nghe-truyen-thong-viet-nam-15321
+
+        3. Làng nghề cũng phải 4.0
+        https://baochinhphu.vn/lang-nghe-cung-phai-40-102248040.htm
+      `;
+
+  pages.push(...createMultiplePages("5. Nguồn tham khảo", references, currentId, 'content', 18));
+  currentId = startId + pages.length;
+
+  // Trang bìa sau - giống trang bìa đầu
+  pages.push({
+    id: currentId++,
+    type: "cover",
+    title: "Thức giấc từ tro than: Công nghiệp xanh cho tương lai Việt Nam",
+    subtitle: "Tài liệu nghiên cứu - MLN122",
+    author: "Nhóm 5"
+  });
+
   return pages;
 };

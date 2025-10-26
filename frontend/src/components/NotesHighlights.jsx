@@ -44,23 +44,12 @@ function NotesHighlights({ currentPage }) {
   };
 
   const hasNote = notes[currentPage];
-  const hasHighlight = highlights[currentPage];
 
   return (
     <>
       {/* Floating Action Buttons */}
       <div className="fixed bottom-24 right-6 z-50 flex flex-col gap-3">
         {/* Highlight Button */}
-        <button
-          className={`p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${
-            hasHighlight
-              ? "bg-gradient-to-br from-yellow-400 to-orange-500 text-white"
-              : "bg-gradient-to-br from-slate-700 to-slate-800 text-slate-300 hover:from-yellow-400 hover:to-orange-500 hover:text-white"
-          }`}
-          title="Highlight trang"
-        >
-          <Highlighter className="w-5 h-5" />
-        </button>
 
         {/* Notes Button */}
         <button
