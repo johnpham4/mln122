@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { MessageCircle } from 'lucide-react';
 
 const ChatBot = ({ onToggle, isOpen, backendUrl = 'http://localhost:3001' }) => {
   const [messages, setMessages] = useState([
@@ -163,64 +164,34 @@ const ChatBot = ({ onToggle, isOpen, backendUrl = 'http://localhost:3001' }) => 
   };
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: '0',
-        right: '0',
-        width: '400px',
-        height: '100vh',
-        background: 'rgba(30, 30, 30, 0.95)', // Tăng độ mờ để không trong suốt quá
-        backdropFilter: 'blur(15px)', // Tăng blur
-        transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
-        transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        zIndex: 10000,
-        boxShadow: isOpen ? '-15px 0 40px rgba(0,0,0,0.4)' : 'none',
-        borderLeft: isOpen ? '1px solid rgba(60, 60, 60, 0.8)' : 'none'
-      }}
-    >
-      {/* Nút toggle chat */}
+    <>
+      {/* Chat toggle: fixed round icon placed above bookmark button (outside the sliding panel) */}
       {!isOpen && (
         <button
           onClick={() => onToggle?.(true)}
-          style={{
-            position: 'absolute',
-            left: '-60px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '50px',
-            height: '120px',
-            background: 'rgba(0, 122, 204, 0.9)', // Trong suốt một chút
-            backdropFilter: 'blur(5px)',
-            border: 'none',
-            borderRadius: '25px 0 0 25px',
-            color: 'white',
-            cursor: 'pointer',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            fontSize: '12px',
-            fontWeight: '600',
-            boxShadow: '-5px 0 15px rgba(0,0,0,0.3)',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.left = '-65px';
-            e.target.style.boxShadow = '-8px 0 25px rgba(0,0,0,0.4)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.left = '-60px';
-            e.target.style.boxShadow = '-5px 0 15px rgba(0,0,0,0.2)';
-          }}
+          className="fixed top-4 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+          title="Mở AI Trợ lý"
         >
-          <div style={{ fontSize: '20px' }}>�</div>
-          <div style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
-            AI Trợ lý
-          </div>
+          <MessageCircle className="w-6 h-6" />
         </button>
       )}
+
+      <div
+        style={{
+          position: 'fixed',
+          top: '0',
+          right: '0',
+          width: '400px',
+          height: '100vh',
+          background: 'rgba(30, 30, 30, 0.95)', // Tăng độ mờ để không trong suốt quá
+          backdropFilter: 'blur(15px)', // Tăng blur
+          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+          zIndex: 10000,
+          boxShadow: isOpen ? '-15px 0 40px rgba(0,0,0,0.4)' : 'none',
+          borderLeft: isOpen ? '1px solid rgba(60, 60, 60, 0.8)' : 'none'
+        }}
+      >
 
       {/* Chat content */}
       {isOpen && (
@@ -476,6 +447,7 @@ const ChatBot = ({ onToggle, isOpen, backendUrl = 'http://localhost:3001' }) => 
         }
       `}</style>
     </div>
+    </>
   );
 };
 
