@@ -32,87 +32,61 @@ function Book() {
     16: {
       question:
         "Quan hệ giữa khái niệm công nghiệp hóa và khái niệm cách mạng công nghiệp là gì?",
-      options: ["A. 0.5-1% GDP", "B. 1-1.5% GDP", "C. 2-3% GDP", "D. 4-5% GDP"],
+      options: ["A. Cách mạng công nghiệp là kết quả của quá trình công nghiệp hóa diễn ra lâu dài trong xã hội.", 
+        "B. Công nghiệp hóa và cách mạng công nghiệp là hai quá trình hoàn toàn tách biệt, không liên quan đến nhau.", 
+        "C. Cách mạng công nghiệp tạo ra cơ sở kỹ thuật và công nghệ mới, là động lực thúc đẩy quá trình công nghiệp hóa phát triển.", 
+        "D. Công nghiệp hóa là quá trình thay thế các cuộc các	h mạng công nghiệp bằng hình thức sản xuất hiện đại hơn."],
       correctAnswer: "C",
       explanation:
-        "Theo chương V, mục tiêu là tăng đầu tư R&D lên 2-3% GDP (hiện tại chỉ 0.44%), để thúc đẩy đổi mới sáng tạo và phát triển công nghệ.",
+        "Cách mạng công nghiệp là cơ sở và động lực của công nghiệp hóa, còn công nghiệp hóa là quá trình cụ thể hóa và mở rộng những thành tựu của các cuộc cách mạng công nghiệp vào thực tiễn sản xuất và phát triển kinh tế – xã hội.",
     },
-    18: {
-      title: "Câu hỏi về Năng suất lao động",
+    13: {
       question:
-        "Năng suất lao động công nghiệp Việt Nam so với Singapore là bao nhiêu?",
-      options: ["A. 1/3", "B. 1/5", "C. 1/10", "D. 1/15"],
-      correctAnswer: "C",
+        "Các mô hình công nghiệp hóa đã diễn ra trên thế giới là gì?",
+      options: ["A. Mô hình công nghiệp hóa cổ điển, mô hình công nghiệp hóa kiểu Liên Xô, mô hình công nghiệp hóa Nhật Bản và các nước công nghiệp mới (NICs).", 
+        "B. Mô hình công nghiệp hóa nông nghiệp, mô hình công nghiệp hóa hậu hiện đại, mô hình công nghiệp hóa xanh.", 
+        "C. Mô hình công nghiệp hóa cổ điển, mô hình công nghiệp hóa nông nghiệp và mô hình công nghiệp hóa xanh.", 
+        "D. Mô hình công nghiệp hóa kiểu Mỹ, mô hình công nghiệp hóa châu Phi và mô hình công nghiệp hóa Đông Nam Á."],
+      correctAnswer: "A",
       explanation:
-        "Theo chương II, năng suất lao động công nghiệp Việt Nam khoảng 4.200 USD/người/năm, chỉ bằng 1/10 so với Singapore, cho thấy còn nhiều dư địa để cải thiện.",
+        "Mô hình công nghiệp hóa cổ điển, mô hình công nghiệp hóa kiểu Liên Xô cũ, mô hình công nghiệp hóa Nhật bản & NICs. Mỗi mô hình phản ánh một con đường phát triển khác nhau nhưng đều hướng tới mục tiêu chung là nâng cao năng suất lao động và phát triển kinh tế hiện đại.",
+    },
+    17: {
+      question:
+        "Cách mạng công nghiệp và công nghiệp hóa có tác động như thế nào đối với sự phát triển kinh tế - xã hội?",
+      options: ["A. Làm giảm vai trò của lao động con người và chỉ tập trung vào phát triển máy móc.", 
+        "B. Thúc đẩy sự phát triển của lực lượng sản xuất, hoàn thiện quan hệ sản xuất và đổi mới phương thức quản lý, góp phần nâng cao đời sống xã hội.", 
+        "C. Chỉ tạo ra tiến bộ trong lĩnh vực khoa học – kỹ thuật, không ảnh hưởng nhiều đến kinh tế – xã hội.", 
+        "D. Làm cho nền kinh tế phụ thuộc hoàn toàn vào công nghệ nước ngoài."],
+      correctAnswer: "B",
+      explanation:
+        "Cách mạng công nghiệp và công nghiệp hóa là động lực then chốt thúc đẩy phát triển kinh tế – xã hội, giúp nâng cao năng suất lao động, đổi mới phương thức quản lý và cải thiện đời sống nhân dân, đồng thời mở ra thời kỳ phát triển hiện đại và hội nhập toàn cầu.",
     },
     19: {
-      title: "Câu hỏi về Hiệp định thương mại",
       question:
-        "RCEP - Hiệp định Đối tác Kinh tế Toàn diện Khu vực mà Việt Nam tham gia được ký vào năm nào?",
-      options: ["A. 2018", "B. 2020", "C. 2022", "D. 2023"],
-      correctAnswer: "C",
-      explanation:
-        "RCEP được ký kết vào năm 2022, tạo ra khu vực thương mại tự do lớn nhất thế giới với 2.2 tỷ người, chiếm 30% GDP toàn cầu.",
-    },
-    21: {
-      title: "Câu hỏi về Thuế carbon",
-      question:
-        "Mức thuế carbon mà Việt Nam dự kiến áp dụng từ năm 2030 là bao nhiêu?",
+        "Hội nhập kinh tế quốc tế là gì?",
       options: [
-        "A. 20 USD/tấn CO2",
-        "B. 30 USD/tấn CO2",
-        "C. 50 USD/tấn CO2",
-        "D. 100 USD/tấn CO2",
+        "A. Là quá trình một quốc gia khép kín nền kinh tế của mình để bảo vệ lợi ích trong nước.",
+        "B. Là quá trình một quốc gia mở rộng biên giới lãnh thổ để chiếm lĩnh thị trường thế giới.",
+        "C. Là quá trình một quốc gia gắn kết nền kinh tế của mình với nền kinh tế thế giới, dựa trên sự chia sẻ lợi ích và tuân thủ các chuẩn mực quốc tế chung.",
+        "D. Là việc một quốc gia phụ thuộc hoàn toàn vào các nền kinh tế phát triển để phát triển kinh tế trong nước.",
       ],
       correctAnswer: "C",
       explanation:
-        "Theo Kết luận, thuế carbon dự kiến là 50 USD/tấn CO2 từ năm 2030, cùng với ưu đãi thuế 50% cho doanh nghiệp xanh để thúc đẩy sản xuất bền vững.",
+        "Trong giáo trình kinh tế chính trị Mác - Lênin có nói: “Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung”",
     },
-    23: {
-      title: "Câu hỏi về Kinh tế số",
+    24: {
       question:
-        "Mục tiêu tỷ trọng kinh tế số trong GDP đến năm 2030 là bao nhiêu?",
-      options: ["A. 15%", "B. 20%", "C. 30%", "D. 40%"],
-      correctAnswer: "C",
-      explanation:
-        "Mục tiêu tỷ trọng kinh tế số đạt 30% GDP vào 2030, cùng với 80% doanh nghiệp áp dụng công nghệ số và 1 triệu kỹ sư công nghệ thông tin.",
-    },
-    25: {
-      title: "Câu hỏi về Giáo dục",
-      question:
-        "Mục tiêu đầu tư cho giáo dục từ ngân sách nhà nước là bao nhiêu?",
+        "Hội nhập kinh tế quốc tế có tác động tích cực như thế nào đến sự phát triển kinh tế - xã hội của mỗi quốc gia, đặc biệt là đối với Việt Nam?",
       options: [
-        "A. 10% ngân sách",
-        "B. 15% ngân sách",
-        "C. 20% ngân sách",
-        "D. 25% ngân sách",
+        "A. Giúp các quốc gia, đặc biệt là Việt Nam mở rộng thị trường, thu hút vốn đầu tư, tiếp nhận công nghệ hiện đại và thúc đẩy công nghiệp hoá, hiện đại hoá. ",
+        "B. Khiến nền kinh tế trong nước bị phụ thuộc hoàn toàn vào các nguồn lực bên ngoài.",
+        "C. Làm suy giảm năng lực cạnh tranh của doanh nghiệp trong nước do áp lực hội nhập.",
+        "D. Làm hạn chế cơ hội việc làm và khiến khoảng cách giàu nghèo gia tăng.",
       ],
-      correctAnswer: "C",
+      correctAnswer: "A",
       explanation:
-        "Theo kiến nghị, cần đầu tư ít nhất 20% ngân sách nhà nước cho giáo dục, tập trung phát triển giáo dục STEM và giáo dục nghề nghiệp.",
-    },
-    27: {
-      title: "Câu hỏi về Năng lượng tái tạo",
-      question:
-        "Mục tiêu tỷ lệ điện năng từ nguồn tái tạo vào năm 2050 là bao nhiêu?",
-      options: ["A. 30%", "B. 40%", "C. 50%", "D. 60%"],
-      correctAnswer: "C",
-      explanation:
-        "Theo Kết luận, mục tiêu là 50% điện năng từ nguồn tái tạo vào năm 2050, với đầu tư 50 tỷ USD cho năng lượng tái tạo đến 2030.",
-    },
-    30: {
-      title: "Câu hỏi về Tầm nhìn 2045",
-      question: "Mục tiêu của Việt Nam đến năm 2045 là gì?",
-      options: [
-        "A. Nước đang phát triển",
-        "B. Nước công nghiệp hiện đại",
-        "C. Nước phát triển có thu nhập cao",
-        "D. Nước nông nghiệp tiên tiến",
-      ],
-      correctAnswer: "C",
-      explanation:
-        "Mục tiêu đến 2045 là trở thành nước phát triển có thu nhập cao (trong khi mục tiêu 2030 là nước công nghiệp hiện đại với thu nhập trung bình cao).",
+        "Hội nhập kinh tế quốc tế mang lại nhiều tác động tích cực như: mở rộng thị trường tiêu thụ, thu hút vốn đầu tư nước ngoài, tiếp nhận khoa học – công nghệ hiện đại, thúc đẩy công nghiệp hoá và chuyển dịch cơ cấu kinh tế theo hướng hiệu quả hơn. Đồng thời, hội nhập giúp nâng cao chất lượng nguồn nhân lực, tạo thêm việc làm, cải thiện đời sống người dân và nâng cao vị thế quốc gia trên trường quốc tế.→ Đối với Việt Nam, đây là con đường tất yếu để phát huy lợi thế, mở rộng hợp tác và khẳng định vị thế đất nước trong thời kỳ toàn cầu hoá.",
     },
   };
 
