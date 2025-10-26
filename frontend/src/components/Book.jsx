@@ -4,6 +4,7 @@ import HTMLFlipBook from "react-pageflip";
 import { Part1_Introduction } from "./parts/Part1_Introduction";
 import { Part2_TheoryFoundation } from "./parts/Part2_TheoryFoundation";
 import { Part3_VietnamSituation } from "./parts/Part3_VietnamSituation";
+import { Part5_Ref } from "./parts/Part5_Ref";
 import QuestionNotebook from "./QuestionNotebook";
 import QuestionButton from "./QuestionButton";
 import ChatBot from "./ChatBot";
@@ -29,148 +30,9 @@ function Book() {
 
   // Định nghĩa câu hỏi cho các trang khác nhau
   const questions = {
-    3: {
-      title: "Câu hỏi về Mục lục",
-      question: "Cuốn sách này bao gồm bao nhiêu chương chính?",
-      options: ["A. 4 chương", "B. 5 chương", "C. 6 chương", "D. 7 chương"],
-      correctAnswer: "C",
-      explanation:
-        "Theo Mục lục, cuốn sách gồm 6 chương: Chương I (Cơ sở lý luận), Chương II (Thực trạng), Chương III (Hội nhập kinh tế), Chương IV (Công nghiệp hóa xanh), Chương V (Công nghiệp hóa thông minh), Chương VI (Giải pháp và định hướng).",
-    },
-    4: {
-      title: "Câu hỏi về Công nghiệp hóa theo Mác-Lênin",
-      question:
-        "Theo Marx, công nghiệp hóa không chỉ là sự thay đổi về kỹ thuật mà còn là cuộc cách mạng về điều gì?",
-      options: [
-        "A. Chỉ về máy móc thiết bị",
-        "B. Quan hệ sản xuất và cấu trúc xã hội",
-        "C. Chỉ về nông nghiệp",
-        "D. Về thương mại quốc tế",
-      ],
-      correctAnswer: "B",
-      explanation:
-        "Karl Marx đã chỉ ra rằng công nghiệp hóa không chỉ là sự thay đổi về kỹ thuật mà còn là cuộc cách mạng về quan hệ sản xuất và cấu trúc xã hội.",
-    },
-    5: {
-      title: "Câu hỏi về Nguyên lý phát triển",
-      question:
-        "Theo Lênin, nguyên lý nào là cơ sở để xây dựng nền kinh tế độc lập, tự chủ?",
-      options: [
-        "A. Ưu tiên phát triển công nghiệp nặng làm nền tảng",
-        "B. Chỉ phát triển công nghiệp nhẹ",
-        "C. Phụ thuộc hoàn toàn vào nước ngoài",
-        "D. Phát triển ngẫu nhiên không kế hoạch",
-      ],
-      correctAnswer: "A",
-      explanation:
-        "Theo Lênin, để xây dựng nền kinh tế độc lập, tự chủ, cần ưu tiên phát triển công nghiệp nặng làm nền tảng. Công nghiệp nặng sản xuất tư liệu sản xuất cho các ngành khác.",
-    },
-    6: {
-      title: "Câu hỏi về Tốc độ tăng trưởng",
-      question:
-        "GDP Việt Nam tăng trưởng bình quân bao nhiêu phần trăm mỗi năm trong hơn 35 năm đổi mới?",
-      options: ["A. 3-4%/năm", "B. 6-7%/năm", "C. 8-9%/năm", "D. 10-11%/năm"],
-      correctAnswer: "B",
-      explanation:
-        "Theo chương II, GDP Việt Nam tăng trưởng bình quân 6-7%/năm trong hơn 35 năm đổi mới, là tốc độ tăng trưởng ấn tượng và bền vững.",
-    },
-    7: {
-      title: "Câu hỏi về Thành tựu công nghiệp hóa",
-      question:
-        "Tỷ trọng công nghiệp-xây dựng trong GDP của Việt Nam đạt bao nhiêu theo dữ liệu trong chương?",
-      options: ["A. 25.5%", "B. 33.7%", "C. 45.2%", "D. 50.1%"],
-      correctAnswer: "B",
-      explanation:
-        "Theo chương II, tỷ trọng công nghiệp-xây dựng đạt 33.7% GDP, cho thấy sự chuyển dịch cơ cấu kinh tế từ nông nghiệp sang công nghiệp của Việt Nam.",
-    },
-    8: {
-      title: "Câu hỏi về Cơ cấu công nghiệp",
-      question:
-        "Ngành công nghiệp nào chiếm tỷ trọng cao nhất trong công nghiệp chế biến, chế tạo của Việt Nam?",
-      options: [
-        "A. Dệt may, da giày (15.3%)",
-        "B. Điện tử, viễn thông (28.5%)",
-        "C. Thực phẩm đồ uống (12.8%)",
-        "D. Cơ khí, kim loại (9.7%)",
-      ],
-      correctAnswer: "B",
-      explanation:
-        "Công nghiệp điện tử, viễn thông chiếm 28.5% trong công nghiệp chế biến, chế tạo, là ngành có tỷ trọng cao nhất, chủ yếu nhờ đầu tư FDI từ Samsung, Intel, LG.",
-    },
-    9: {
-      title: "Câu hỏi về Hội nhập WTO",
-      question: "Việt Nam chính thức gia nhập WTO vào năm nào?",
-      options: ["A. 1995 (ASEAN)", "B. 2000", "C. 2007", "D. 2018 (CPTPP)"],
-      correctAnswer: "C",
-      explanation:
-        "Việt Nam chính thức gia nhập WTO (Tổ chức Thương mại Thế giới) vào năm 2007, đánh dấu bước tiến quan trọng trong quá trình hội nhập kinh tế quốc tế.",
-    },
-    10: {
-      title: "Câu hỏi về Kim ngạch xuất khẩu",
-      question:
-        "Kim ngạch xuất khẩu của Việt Nam tăng từ bao nhiêu (năm 2000) lên 336.3 tỷ USD (năm 2021)?",
-      options: [
-        "A. 8.5 tỷ USD",
-        "B. 14.5 tỷ USD",
-        "C. 20.3 tỷ USD",
-        "D. 25.7 tỷ USD",
-      ],
-      correctAnswer: "B",
-      explanation:
-        "Theo chương III, kim ngạch xuất khẩu tăng từ 14.5 tỷ USD (2000) lên 336.3 tỷ USD (2021), tăng trưởng bình quân 15%/năm, cho thấy thành công của hội nhập kinh tế.",
-    },
-    11: {
-      title: "Câu hỏi về Năng lượng tái tạo",
-      question:
-        "Mục tiêu công suất điện mặt trời của Việt Nam đến năm 2030 là bao nhiêu?",
-      options: ["A. 10.000 MW", "B. 16.500 MW", "C. 18.600 MW", "D. 24.000 MW"],
-      correctAnswer: "C",
-      explanation:
-        "Theo chương IV về Công nghiệp hóa xanh, mục tiêu đến 2030 là đạt 18.600 MW điện mặt trời (hiện tại đã lắp đặt 16.500 MW), góp phần chuyển đổi năng lượng xanh.",
-    },
-    12: {
-      title: "Câu hỏi về Năng lượng gió",
-      question: "Tiềm năng điện gió ngoài khơi của Việt Nam là bao nhiêu?",
-      options: ["A. 6.000 MW", "B. 24.000 MW", "C. 35.000 MW", "D. 160.000 MW"],
-      correctAnswer: "D",
-      explanation:
-        "Tiềm năng điện gió ngoài khơi lên đến 160.000 MW (trong khi điện gió trên bờ là 24.000 MW), cho thấy tiềm năng to lớn của Việt Nam về năng lượng gió.",
-    },
-    13: {
-      title: "Câu hỏi về Giao thông xanh",
-      question: "Mục tiêu của Việt Nam về xe máy điện đến năm 2030 là gì?",
-      options: [
-        "A. 50% xe máy điện",
-        "B. 75% xe máy điện",
-        "C. 100% xe máy điện",
-        "D. Không có mục tiêu cụ thể",
-      ],
-      correctAnswer: "C",
-      explanation:
-        "Theo chương IV, mục tiêu là 100% xe máy điện vào năm 2030, thể hiện quyết tâm chuyển đổi giao thông xanh của Việt Nam.",
-    },
-    14: {
-      title: "Câu hỏi về Công nghiệp 4.0",
-      question:
-        "Robot và tự động hóa trong công nghiệp 4.0 có thể giảm bao nhiêu phần trăm lao động thủ công?",
-      options: ["A. 20-30%", "B. 30-50%", "C. 40-60%", "D. 60-80%"],
-      correctAnswer: "D",
-      explanation:
-        "Theo chương V, hệ thống Robot và tự động hóa có thể giảm 60-80% lao động thủ công, đồng thời ứng dụng AI giảm 30-50% thời gian sản xuất.",
-    },
-    15: {
-      title: "Câu hỏi về Chuyển đổi số",
-      question:
-        "Quản lý chuỗi cung ứng số có thể giảm bao nhiêu phần trăm chi phí logistics?",
-      options: ["A. 10-15%", "B. 20-30%", "C. 40-50%", "D. 60-70%"],
-      correctAnswer: "B",
-      explanation:
-        "Theo nội dung chuyển đổi số, quản lý chuỗi cung ứng số có thể giảm 20-30% chi phí logistics thông qua tối ưu hóa kho vận và dự báo nhu cầu.",
-    },
     16: {
-      title: "Câu hỏi về Đầu tư R&D",
       question:
-        "Mục tiêu tăng đầu tư R&D của Việt Nam là bao nhiêu phần trăm GDP?",
+        "Quan hệ giữa khái niệm công nghiệp hóa và khái niệm cách mạng công nghiệp là gì?",
       options: ["A. 0.5-1% GDP", "B. 1-1.5% GDP", "C. 2-3% GDP", "D. 4-5% GDP"],
       correctAnswer: "C",
       explanation:
@@ -316,7 +178,10 @@ function Book() {
   const part3Pages = Part3_VietnamSituation(currentId);
   currentId += part3Pages.length;
 
-  const allPages = [...part1Pages, ...part2Pages, ...part3Pages];
+  const part5Pages = Part5_Ref(currentId);
+  currentId += part5Pages.length;
+
+  const allPages = [...part1Pages, ...part2Pages, ...part3Pages, ...part5Pages];
 
   // Xử lý khi click vào question button (từ portal)
   const handleQuestionClick = (pageId) => {

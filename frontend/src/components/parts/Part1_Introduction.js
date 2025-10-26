@@ -45,6 +45,7 @@ export const Part1_Introduction = (startId) => {
 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A02.3.6. Xây dựng nền kinh tế độc lập, tự chủ ................. 25
 \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A02.3.7. Biện pháp xây dựng nền kinh tế độc lập tự chủ ........ 26
 
+\u00A0\u00A0\u00A0\u00A03. Nguồn tham khảo ...................... 32
 -------------------------------------------------------------------
 NGUỒN THAM KHẢO:
 

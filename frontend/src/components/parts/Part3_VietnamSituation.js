@@ -16,16 +16,15 @@ export const Part3_VietnamSituation = (startId) => {
   // 2.1. Khái niệm và nội dung hội nhập kinh tế quốc tế
   const section2_1 = `
         **2.1. KHÁI NIỆM VÀ NỘI DUNG HỘI NHẬP KINH TẾ QUỐC TẾ**
-
-        **2.1.1. Khái niệm và sự cần thiết khách quan hội nhập kinh tế quốc tế**
-
-        Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung"
-
-
+        [IMAGE:co.png|Cre: Từ bài viết của Tổng Bí thư Tô Lâm, nghĩ về tư duy hội nhập trong kỷ nguyên mới (baochinhphu.vn)]
+        **2.1.1. Khái niệm và sự cần thiết khách quan hội nhập kinh tế quốc tế**        
+        Trong giáo trình kinh tế chính trị Mác - Lênin có nói: "Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung".
         **2.1.2. Tính tất yếu khách quan của hội nhập kinh tế quốc tế**
-
+         [IMAGE:vn.png|Cre: Kinh tế Việt Nam trong bối cảnh toàn cầu hóa và hội nhập quốc tế (vietq.vn)]
         1) Do xu thế khách quan trong bối cảnh toàn cầu hóa kinh tế
         Hội nhập kinh tế quốc tế là xu thế tất yếu, xuất phát từ quy luật khách quan của quá trình toàn cầu hoá kinh tế. Toàn cầu hoá đã và đang tạo nên mối liên kết chặt chẽ và sự phụ thuộc lẫn nhau ngày càng gia tăng giữa các quốc gia, không chỉ trong lĩnh vực thương mại mà còn ở các lĩnh vực đầu tư, tài chính, khoa học – công nghệ và lao động. Trong bối cảnh đó, các yếu tố sản xuất như vốn, lao động, công nghệ, thông tin và hàng hoá được lưu thông trên phạm vi toàn cầu, hình thành nên một mạng lưới kinh tế thế giới thống nhất và có tính tương tác cao.
+
+       
 
         2) Hội nhập kinh tế quốc tế là phương thức phát triển phổ biến của các nước
         Hội nhập kinh tế quốc tế ngày nay được xem là phương thức phát triển phổ biến của các quốc gia, đặc biệt trong bối cảnh toàn cầu hoá sâu rộng. Đối với các nước đang và kém phát triển, hội nhập kinh tế quốc tế trở thành con đường quan trọng để tận dụng thời cơ, rút ngắn khoảng cách phát triển so với các nước công nghiệp tiên tiến. Thông qua quá trình này, các quốc gia có thể mở rộng và tiếp cận thị trường quốc tế, thu hút vốn đầu tư nước ngoài, tiếp nhận công nghệ hiện đại, đồng thời thúc đẩy quá trình công nghiệp hoá, tăng cường tích lũy nội lực cho nền kinh tế.
@@ -34,16 +33,11 @@ export const Part3_VietnamSituation = (startId) => {
 
 
 
-
-
-
-
         **2.1.3. Nội dung hội nhập kinh tế quốc tế**
-
         1) Chuẩn bị đầy đủ các điều kiện để thực hiện hội nhập thành công.
         Quá trình hội nhập không phải bằng mọi giá. Quá trình hội nhập phải được cân nhắc với lội trình và cách thức tối ưu.
-
         2) Thực hiện đa dạng các hình thức, các mức độ hội nhập kinh tế quốc tế
+        [IMAGE:Wto.png|Năm 2006, Việt Nam chính thức ký Nghị định thư gia nhập WTO.]
         Hội nhập kinh tế quốc tế là con đường có thể giúp cho các nước đang và kém phát triển có thể tận dụng thời cơ phát triển rút ngắn, thu hẹp khoảng cách với các nước tiên tiến, khắc phục nguy cơ tụt hậu ngày càng rõ rệt.
       `;
 
@@ -93,15 +87,11 @@ export const Part3_VietnamSituation = (startId) => {
 
 
         **2.3.3. Tích cực, chủ động tham gia vào các liên kết kinh tế quốc tế và thực hiện đầy đủ các cam kết**
-
         Việc tích cực, chủ động tham gia vào các liên kết kinh tế quốc tế và thực hiện đầy đủ các cam kết là biểu hiện của một quốc gia có trách nhiệm và bản lĩnh trong quá trình hội nhập. Khi Việt Nam chủ động tham gia các tổ chức, hiệp định và khu vực kinh tế như WTO, ASEAN, CPTPP, RCEP… không chỉ giúp mở rộng thị trường, thu hút đầu tư, tăng cường xuất khẩu, mà còn góp phần nâng cao năng lực cạnh tranh quốc gia. Đồng thời, việc thực hiện nghiêm túc các cam kết quốc tế thể hiện uy tín và tinh thần hợp tác của Việt Nam, qua đó tạo dựng niềm tin và sự tôn trọng từ cộng đồng quốc tế, giúp Việt Nam khẳng định vai trò, vị thế và hình ảnh tích cực trên trường quốc tế. Điều này cũng là tiền đề quan trọng để đất nước nâng tầm hội nhập toàn diện, tiến tới phát triển bền vững và tự chủ trong nền kinh tế toàn cầu hóa.
-
         [IMAGE:co3.png|Cre: Nâng cao hội nhập kinh tế quốc tế, thúc đẩy kinh tế phát triển nhanh và bền vững (baochinhphu.vn)]
 
         **2.3.4. Hoàn thiện thể chế kinh tế và pháp luật**
-
         Hoàn thiện thể chế kinh tế và pháp luật là yêu cầu cấp thiết nhằm bảo đảm cho quá trình hội nhập kinh tế quốc tế diễn ra hiệu quả và bền vững. Song song với việc hoàn thiện cơ chế thị trường, cần phải đổi mới cơ chế quản lý của Nhà nước theo hướng minh bạch, linh hoạt và phù hợp với chuẩn mực quốc tế. Bên cạnh đó, cần tiến hành rà soát, sửa đổi và hoàn thiện hệ thống pháp luật, đặc biệt là các quy định liên quan trực tiếp đến hội nhập kinh tế như luật đất đai, đầu tư, thương mại, doanh nghiệp, thuế, tài chính và tín dụng. Một hệ thống pháp luật đồng bộ, rõ ràng và ổn định sẽ tạo môi trường kinh doanh thuận lợi, bảo đảm quyền lợi cho doanh nghiệp và nhà đầu tư, đồng thời giúp nâng cao năng lực cạnh tranh của nền kinh tế Việt Nam trong bối cảnh toàn cầu hóa.
-
         [IMAGE:luat.png|Cre: thuvienphapluat.vn]
 
         **2.3.5. Nâng cao năng lực cạnh tranh quốc tế của nền kinh tế**
@@ -111,8 +101,8 @@ export const Part3_VietnamSituation = (startId) => {
 
         **2.3.6. Xây dựng nền kinh tế độc lập, tự chủ của Việt Nam**
         Nền kinh tế độc lập tự chủ là nền kinh tế không bị lệ thuộc, phụ thuộc vào nước khác, người khác, hoặc vào một tổ chức kinh tế nào đó về đường lối, chính sách phát triển, không bị bất cứ ai dung những điều kiện kinh tế, tài chính, thương mại, viện trợ… để áp đặt, khống chế, làm tổn hại chủ quyền quốc gia và lợi ích dân tộc
-
         [IMAGE:co5.png|Cre: Về xây dựng nền kinh tế độc lập tự chủ và chủ động, tích cực hội nhập quốc tế trong kỷ nguyên mới (btgdvtukhanhhoa.vn)]
+
 
 
 
@@ -123,15 +113,6 @@ export const Part3_VietnamSituation = (startId) => {
 
   pages.push(...createMultiplePages("2.3. Phương hướng nâng cao hiệu quả", section2_3, currentId));
   currentId = startId + pages.length;
-
-  // Trang bìa sau - giống trang bìa đầu
-  pages.push({
-    id: currentId++,
-    type: "cover",
-    title: "Chương 6: Công nghiệp hóa, hiện đại hóa và hội nhập kinh tế quốc tế của Việt Nam",
-    subtitle: "Giáo trình Kinh tế chính trị Mác – Lênin",
-    author: "Bộ Giáo dục và Đào tạo - Năm 2019"
-  });
 
   return pages;
 };

@@ -118,7 +118,6 @@ function TableOfContents({ allPages, onNavigate, currentPage }) {
                                     : "bg-slate-600 text-slate-300"
                                 }`}
                               >
-                                Chương {idx + 1}
                               </span>
                             </div>
                           )}
