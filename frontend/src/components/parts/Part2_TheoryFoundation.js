@@ -91,10 +91,13 @@ export const Part2_TheoryFoundation = (startId) => {
         Công nghiệp hoá, hiện đại hoá ở Việt Nam mang những đặc trưng riêng, phản ánh định hướng phát triển của đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội. Trước hết, Việt Nam tiến hành công nghiệp hoá, hiện đại hoá theo định hướng xã hội chủ nghĩa, nhằm thực hiện mục tiêu tổng quát là "dân giàu, nước mạnh, dân chủ, công bằng, văn minh". Quá trình này đồng thời gắn liền với sự phát triển của nền kinh tế tri thức, coi tri thức, khoa học – công nghệ và đổi mới sáng tạo là động lực then chốt của tăng trưởng.
         Bên cạnh đó, Việt Nam thực hiện công nghiệp hoá, hiện đại hoá trong điều kiện kinh tế thị trường định hướng xã hội chủ nghĩa, nghĩa là vừa tuân theo quy luật của thị trường, vừa bảo đảm vai trò định hướng, quản lý và điều tiết của Nhà nước vì lợi ích chung của nhân dân. Đặc biệt, quá trình này diễn ra trong bối cảnh toàn cầu hoá kinh tế sâu rộng, khi Việt Nam chủ động và tích cực hội nhập kinh tế quốc tế, tận dụng cơ hội từ hợp tác, đầu tư và chuyển giao công nghệ để rút ngắn khoảng cách phát triển với các quốc gia tiên tiến.
         [IMAGE:Nhamay.png|Công nghiệp hóa ở Việt Nam và quá trình phát triển kinh tế xã hội]
-         **1.2.2. Nội dung công nghiệp hóa, hiện đại hóa ở Việt Nam**
-        1. Tạo lập những điều kiện để có thể thực hiện chuyển đổi từ nền sản xuất – xã hội lạc hậu sang nền sản xuất – xã hội tiến bộ.
+        
+        
+        
+        **1.2.2. Nội dung công nghiệp hóa, hiện đại hóa ở Việt Nam**
+        1) Tạo lập những điều kiện để có thể thực hiện chuyển đổi từ nền sản xuất – xã hội lạc hậu sang nền sản xuất – xã hội tiến bộ.
         Nội dung quan trọng hàng đầu để thực hiện thành công công nghiệp hóa, hiện đại hóa là phải thực hiện tạo lập các điều kiện cần thiết trên tất cả các mặt của đời sống sản xuất xã hội
-        2. Thực hiện các nhiệm vụ để chuyển đổi nền sản xuất – xã hội lạc hậu sang nền sản xuất – xã hội hiện đại.
+        2) Thực hiện các nhiệm vụ để chuyển đổi nền sản xuất – xã hội lạc hậu sang nền sản xuất – xã hội hiện đại.
         Công nghiệp hoá, hiện đại hoá ở Việt Nam là quá trình thực hiện các nhiệm vụ trọng tâm nhằm chuyển đổi nền sản xuất – xã hội lạc hậu sang nền sản xuất – xã hội hiện đại, phù hợp với yêu cầu phát triển của thời đại mới. Trước hết, Việt Nam đẩy mạnh ứng dụng các thành tựu khoa học và công nghệ tiên tiến, đặc biệt là những công nghệ mang tính đột phá của Cách mạng công nghiệp 4.0 như trí tuệ nhân tạo, dữ liệu lớn, tự động hoá và chuyển đổi số, để nâng cao năng suất và chất lượng sản phẩm.
         Đồng thời, đất nước chuyển đổi cơ cấu kinh tế theo hướng hiện đại, hợp lý và hiệu quả, phát triển hài hoà giữa các ngành công nghiệp, nông nghiệp và dịch vụ, gắn sản xuất với nhu cầu của thị trường và xu thế hội nhập quốc tế. Bên cạnh đó, Việt Nam từng bước hoàn thiện quan hệ sản xuất, bảo đảm sự phù hợp với trình độ phát triển của lực lượng sản xuất, qua đó thúc đẩy tiến bộ xã hội và nâng cao đời sống nhân dân. Toàn bộ quá trình này hướng tới mục tiêu xây dựng nền kinh tế độc lập, tự chủ, năng động và sẵn sàng thích ứng với những tác động nhanh chóng của bối cảnh Cách mạng công nghiệp lần thứ tư.
         [IMAGE:nhamay2.png|Tác động của quá trình công nghiệp hóa ở nước ta]
