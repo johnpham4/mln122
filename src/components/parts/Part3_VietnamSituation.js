@@ -22,6 +22,8 @@ export const Part3_VietnamSituation = (startId) => {
         Kết thúc chiến tranh, nước ta thống nhất miền Bắc – Nam dưới chính quyền Cộng hòa dân chủ. Chiến thắng này được bạn bè thế giới ghi nhận: báo L'Humanité (Pháp) ngày 25/7/1954 đã chạy trang nhất ca ngợi kết quả kháng chiến của Việt Nam.
 
         Kháng chiến toàn quốc chống Pháp đã mở đầu cho giai đoạn mới của cách mạng nước ta, đặt nền móng cho thắng lợi sau này trong cuộc kháng chiến chống Mỹ.
+
+        [IMAGE:dbp_french_prisoners.jpg|Tù binh Pháp bị áp giải sau trận Điện Biên Phủ (1954) – Nguồn: Wikimedia Commons]
       `;
 
   pages.push(...createMultiplePages("4. Kết luận chung", section4, currentId));
@@ -53,10 +55,25 @@ export const Part3_VietnamSituation = (startId) => {
 
         **HÌNH ẢNH:**
 
-        1. Lực lượng Việt Minh áp giải quân Pháp bị bắt sau chiến thắng Điện Biên Phủ (1954)
+        1. Chủ tịch Hồ Chí Minh và Đại tướng Võ Nguyên Giáp (1945)
+        Nguồn: Wikimedia Commons – Giap-Ho.jpg
+
+        2. Hồ Chí Minh và Marius Moutet ký Tạm ước Việt-Pháp (1946)
+        Nguồn: Wikimedia Commons – Vietnam France modus vivendi
+
+        3. Dân công các dân tộc vận chuyển hàng ra mặt trận
+        Nguồn: Wikimedia Commons
+
+        4. Toàn cảnh thung lũng Điện Biên Phủ (1953)
+        Nguồn: Wikimedia Commons
+
+        5. Lực lượng Việt Minh áp giải quân Pháp bị bắt sau chiến thắng Điện Biên Phủ (1954)
         Nguồn: Wikimedia Commons – Victory in Battle of Dien Bien Phu
 
-        2. Trang nhất báo L'Humanité (25/7/1954) tán dương chiến thắng tại Đông Dương
+        6. Tù binh Pháp bị áp giải sau trận Điện Biên Phủ (1954)
+        Nguồn: Wikimedia Commons – Dien Bien Phu 1954 French prisoners
+
+        7. Trang nhất báo L'Humanité (25/7/1954) tán dương chiến thắng tại Đông Dương
         Nguồn: Wikimedia Commons – Huma Paix Viet Nam
       `;
 

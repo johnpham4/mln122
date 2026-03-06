@@ -24,6 +24,8 @@ export const Part2_TheoryFoundation = (startId) => {
         Khi Pháp phớt lờ cam kết, ngày 23/11/1946 chúng nã pháo Hà Nội, gây thương vong lớn; ngay sau đó quân dân Việt Nam đã đứng lên kháng chiến (bắt đầu được tính từ chiến tranh bùng phát ở Hà Nội tháng 12/1946). Chính trong hoàn cảnh khó khăn này, Đảng ta đã phát động phong trào toàn dân kháng chiến.
 
         Ngày 19/12/1946, Chủ tịch Hồ Chí Minh ra **"Lời kêu gọi toàn quốc kháng chiến"**: "Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước!… Hỡi đồng bào toàn quốc!… Hễ là người Việt Nam thì phải đoàn kết lại đánh thực dân Pháp, cứu nước!".
+
+        [IMAGE:hochiminh_giap_1945.jpg|Chủ tịch Hồ Chí Minh và Đại tướng Võ Nguyên Giáp (1945) – Nguồn: Wikimedia Commons]
       `;
 
   pages.push(...createMultiplePages("1. Mở đầu", section1, currentId));
@@ -36,6 +38,8 @@ export const Part2_TheoryFoundation = (startId) => {
         Sau khi lời kêu gọi được công bố, cả nước bước vào cuộc kháng chiến toàn diện. Đảng đặt nhiệm vụ trọng tâm là **"toàn dân, toàn diện, lâu dài"** đánh đuổi giặc Pháp. Lực lượng vũ trang nhân dân được tổ chức thành ba chiến khu (Việt Bắc, Việt Trung, Việt Nam) cùng hệ thống chính quyền kháng chiến ở nông thôn và đô thị.
 
         Đảng Cộng sản Đông Dương phát động phong trào tự lực cánh sinh, phát huy sản xuất để nuôi quân, củng cố hậu phương. Triển khai kháng chiến, cán bộ cốt cán (Bác Hồ, Tổng Tư lệnh Võ Nguyên Giáp, Trường Chinh…) chỉ đạo liên tục từ chiến trường đến chiến khu.
+
+        [IMAGE:hochiminh_moutet_1946.jpg|Hồ Chí Minh và Marius Moutet ký Tạm ước Việt-Pháp (1946) – Nguồn: Wikimedia Commons]
 
         Trong giai đoạn 1947–1950, ta chủ yếu củng cố căn cứ địa và tiến hành phản công nhỏ lẻ. Tiêu biểu là **Chiến dịch Việt Bắc thu-đông 1947**, khi Pháp huy động gần 10.000 quân áp sát cơ quan đầu não tại Cao – Bắc – Lạng. Quân ta dưới quyền Chỉ huy trưởng Giáp đã tổ chức đánh địch rút lui, tiêu hao sinh lực đối phương, bảo vệ thành công căn cứ Việt Bắc. Đồng thời, kháng chiến ở đồng bằng Bắc Bộ tiếp diễn dưới hình thức chiến tranh du kích.
 
@@ -69,7 +73,11 @@ export const Part2_TheoryFoundation = (startId) => {
 
         Đặc biệt, Ban Chấp hành Trung ương khóa II đã tiến hành cuộc **cải cách ruộng đất** từng bước ở vùng căn cứ, nhằm giải quyết mâu thuẫn ruộng đất và tranh thủ nhân dân các tỉnh Bắc Bộ. Đến cuối năm 1953, chính sách này được hoàn thành về cơ bản, tạo sự đồng thuận trong quần chúng nông thôn.
 
+        [IMAGE:dancong_vanhuyen.jpg|Dân công các dân tộc vận chuyển hàng ra mặt trận – Nguồn: Wikimedia Commons]
+
         **Chiến dịch Điện Biên Phủ (1954):** Đến năm 1953, trước âm mưu của Tướng Navarre gom quân, biến Điện Biên Phủ thành "điểm quyết chiến" của địch, Bộ Chính trị chỉ đạo chuyển hướng tác chiến. Từ Đông Xuân 1953–1954, Quân đội ta mở rộng chiến dịch phối hợp.
+
+        [IMAGE:dbp_valley_aerial.jpg|Toàn cảnh thung lũng Điện Biên Phủ (1953) – Nguồn: Wikimedia Commons]
 
         Đỉnh cao là **Chiến dịch Điện Biên Phủ (3–5/1954)**. Trận này ta huy động tổng lực tiêu diệt hơn vạn quân Pháp. Quân ta đặt đại liên bắn cháy hầm chỉ huy, cuối cùng Trung đoàn 316 treo lá cờ chiến thắng trên hầm chỉ huy De Castries. Thắng lợi vang dội này đã kết thúc kháng chiến chống Pháp.
 
