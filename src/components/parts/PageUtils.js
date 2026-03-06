@@ -1,61 +1,60 @@
 // Utility functions để chia trang tự động - Hỗ trợ hình ảnh
-export const splitContentIntoPages = (content, maxLines = 20) => {
+// Ước lượng số dòng hiển thị thực tế dựa trên số ký tự
+// Trang rộng ~452px (500 - 2*24px padding), font 14px → ~55 ký tự/dòng
+const estimateVisualLines = (text) => {
+  const trimmed = text.trim();
+  if (!trimmed) return 0.5;
+  const CHARS_PER_LINE = 55;
+  return Math.ceil(trimmed.length / CHARS_PER_LINE) + 0.5;
+};
+
+export const splitContentIntoPages = (content, maxVisualLines = 25) => {
   if (!content) {
     return [content];
   }
 
-  // Tách thành các dòng
   const lines = content.split('\n');
-
-  // Nếu ít dòng, không cần chia
-  if (lines.length <= maxLines) {
-    return [content];
-  }
-
   const pages = [];
   let currentPageLines = [];
-  let currentLineCount = 0;
+  let currentVisualCount = 0;
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
 
-    // Kiểm tra nếu là hình ảnh (format đặc biệt)
     if (line.includes('[IMAGE:')) {
-      // Hình ảnh tốn 12 dòng (hình lớn + chú thích + khoảng trắng)
-      const imageLines = 12;
+      // Hình ảnh: max-height 300px + caption + margin ≈ 14 dòng visual
+      const imageVisual = 14;
 
-      // Nếu thêm hình vào trang hiện tại sẽ quá, tạo trang mới
-      if (currentLineCount + imageLines > maxLines && currentPageLines.length > 0) {
+      if (currentVisualCount + imageVisual > maxVisualLines && currentPageLines.length > 0) {
         pages.push(currentPageLines.join('\n'));
         currentPageLines = [line];
-        currentLineCount = imageLines;
+        currentVisualCount = imageVisual;
       } else {
         currentPageLines.push(line);
-        currentLineCount += imageLines;
+        currentVisualCount += imageVisual;
       }
     } else {
-      // Dòng text thông thường tốn 1 dòng
-      if (currentLineCount + 1 > maxLines && currentPageLines.length > 0) {
+      const lineVisual = estimateVisualLines(line);
+
+      if (currentVisualCount + lineVisual > maxVisualLines && currentPageLines.length > 0) {
         pages.push(currentPageLines.join('\n'));
         currentPageLines = [line];
-        currentLineCount = 1;
+        currentVisualCount = lineVisual;
       } else {
         currentPageLines.push(line);
-        currentLineCount += 1;
+        currentVisualCount += lineVisual;
       }
     }
   }
 
-  // Thêm trang cuối
   if (currentPageLines.length > 0) {
     pages.push(currentPageLines.join('\n'));
   }
 
-  // Lọc bỏ các trang trống (chỉ có whitespace)
   return pages.filter(page => page.trim().length > 0);
 };// Tạo nhiều trang từ nội dung dài
-export const createMultiplePages = (title, content, startId, type = 'content', maxLines = 12) => {
-  const contentPages = splitContentIntoPages(content, maxLines);
+export const createMultiplePages = (title, content, startId, type = 'content', maxVisualLines = 25) => {
+  const contentPages = splitContentIntoPages(content, maxVisualLines);
   return contentPages.map((pageContent, index) => ({
     id: startId + index,
     type: type,
