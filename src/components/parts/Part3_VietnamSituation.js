@@ -17,11 +17,9 @@ export const Part3_VietnamSituation = (startId) => {
   const section4 = `
         **4. KẾT LUẬN CHUNG**
 
-        Cuộc kháng chiến chống Pháp (1946–1954) là thắng lợi vĩ đại khẳng định quyền độc lập, thống nhất của Việt Nam. Dưới sự lãnh đạo sáng suốt của Đảng Cộng sản và Chủ tịch Hồ Chí Minh, nhân dân ta đã kiên cường đánh bại giai cấp thực dân xâm lược.
+        Cuộc kháng chiến chống Pháp (1946–1954) là thắng lợi vĩ đại khẳng định quyền độc lập, thống nhất của dân tộc. Dưới sự lãnh đạo của Đảng và Chủ tịch Hồ Chí Minh, nhân dân ta đã kiên cường đánh bại thực dân, mở đầu giai đoạn mới cho cách mạng Việt Nam.
 
-        Kết thúc chiến tranh, nước ta thống nhất miền Bắc – Nam dưới chính quyền Cộng hòa dân chủ. Chiến thắng này được bạn bè thế giới ghi nhận: báo L'Humanité (Pháp) ngày 25/7/1954 đã chạy trang nhất ca ngợi kết quả kháng chiến của Việt Nam.
-
-        Kháng chiến toàn quốc chống Pháp đã mở đầu cho giai đoạn mới của cách mạng nước ta, đặt nền móng cho thắng lợi sau này trong cuộc kháng chiến chống Mỹ.
+        Chiến thắng được bạn bè quốc tế ghi nhận; báo L'Humanité (Pháp) ngày 25/7/1954 chạy trang nhất ca ngợi thắng lợi kháng chiến. Thành quả này đặt nền móng vững chắc cho cuộc kháng chiến chống Mỹ sau đó.
 
         [IMAGE:dbp_french_prisoners.jpg|Tù binh Pháp bị áp giải sau trận Điện Biên Phủ (1954) – Nguồn: Wikimedia Commons]
       `;
