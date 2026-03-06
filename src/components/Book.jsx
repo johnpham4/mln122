@@ -10,6 +10,7 @@ import BookmarkPanel, { BookmarkButton } from "./BookmarkPanel";
 import TableOfContents from "./TableOfContents";
 import FontSizeControl from "./FontSizeControl";
 import NotesHighlights from "./NotesHighlights";
+import PageNavigator from "./PageNavigator";
 
 function Book() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -69,7 +70,42 @@ function Book() {
     const lines = content.split("\n");
     const elements = [];
 
+    // Helper function để tìm page index chứa hình ảnh cụ thể
+    const findPageWithImage = (imageFilename) => {
+      return allPages.findIndex(page => 
+        page.content && page.content.includes(`[IMAGE:${imageFilename}|`)
+      );
+    };
+
     lines.forEach((line, index) => {
+      // Check for clickable links first: [LINK:text|imageFilename]
+      if (line.includes("[LINK:")) {
+        const match = line.match(/\[LINK:([^|]+)\|([^\]]+)\]/);
+        if (match) {
+          const [, linkText, imageFilename] = match;
+          const targetPageIndex = findPageWithImage(imageFilename);
+          
+          elements.push(
+            <div key={index} className="mb-1.5 pl-3">
+              <button
+                onClick={() => {
+                  if (targetPageIndex >= 0) {
+                    navigateToPage(targetPageIndex);
+                  } else {
+                    console.warn(`Image ${imageFilename} not found in any page`);
+                  }
+                }}
+                className="text-left text-blue-600 hover:text-blue-800 hover:underline cursor-pointer transition-colors duration-200 font-medium"
+                style={{ background: 'none', border: 'none', padding: 0 }}
+              >
+                {linkText}
+              </button>
+            </div>
+          );
+          return;
+        }
+      }
+
       if (line.includes("[IMAGE:")) {
         // Parse image format: [IMAGE:filename.jpg|Caption text|width:500px] hoặc [IMAGE:filename.jpg|Caption text]
         const match = line.match(/\[IMAGE:([^|]+)\|([^|\]]+)(?:\|([^\]]+))?\]/);
@@ -97,12 +133,12 @@ function Book() {
                   className="mx-auto object-contain rounded"
                   style={{
                     maxWidth: styleObj.width || "95%",
-                    maxHeight: styleObj.height || "300px",
+                    maxHeight: styleObj.height || "280px",
                     ...styleObj,
                   }}
                 />
               </div>
-              <div className="text-[11px] italic text-slate-500 mt-2 px-4 leading-snug">
+              <div className="text-[10px] italic text-slate-500 mt-2 px-4 leading-snug">
                 {caption}
               </div>
             </div>
@@ -282,6 +318,13 @@ function Book() {
         {/* Notes & Highlights */}
         <NotesHighlights currentPage={currentPage} />
 
+        {/* Page Navigator */}
+        <PageNavigator
+          totalPages={allPages.length}
+          onNavigate={navigateToPage}
+          currentPage={currentPage}
+        />
+
         <HTMLFlipBook
           ref={flipBookRef}
           width={500}
@@ -391,7 +434,7 @@ function Book() {
                     </div>
                     <div className="flex-1 overflow-hidden px-6 py-2">
                       <div
-                        className="book-page-content h-full overflow-y-auto custom-scrollbar pr-2"
+                        className="book-page-content h-full overflow-hidden pr-2"
                         style={{ fontSize: "14px", lineHeight: "1.7" }}
                       >
                         <div style={{ fontFamily: "'Crimson Text', 'Times New Roman', Georgia, serif" }}>

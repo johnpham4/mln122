@@ -11,7 +11,7 @@ body,
 html {
   height: 100dvh;
   width: 100dvw;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 50%, #b45309 100%);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -48,10 +48,10 @@ html {
 }
 
 .page {
-  background: #ffffff;
-  border: 1px solid #ddd;
+  background: linear-gradient(to bottom, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #d97706;
   border-radius: 3px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .page-content {
@@ -64,7 +64,7 @@ html {
 
 /* Cover Page Styles */
 .cover, .back-cover {
-  background: linear-gradient(135deg, #da251c 0%, #b71c1c 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #b45309 100%);
   color: white;
   display: flex;
   flex-direction: column;
@@ -72,6 +72,7 @@ html {
   align-items: center;
   text-align: center;
   padding: 40px 30px;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.3);
 }
 
 .cover-content {
@@ -83,19 +84,21 @@ html {
 }
 
 .cover-title h1 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.4;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  color: #fef3c7;
 }
 
 .cover-title h2 {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
   font-style: italic;
-  opacity: 0.9;
+  opacity: 0.95;
+  color: #fde68a;
 }
 
 .cover-author {
@@ -109,18 +112,31 @@ html {
 }
 
 .vietnam-flag {
-  font-size: 30px;
+  font-size: 40px;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+  }
 }
 
 /* Chapter Page Styles */
 .chapter {
-  background: linear-gradient(145deg, #f8f9fa 0%, #e9ecef 100%);
+  background: linear-gradient(145deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 40px 30px;
+  border: 3px solid #b45309;
+  box-shadow: inset 0 0 50px rgba(180, 83, 9, 0.1);
 }
 
 .chapter-content {
@@ -132,19 +148,21 @@ html {
 }
 
 .chapter-number {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-  color: #da251c;
+  color: #991b1b;
   margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .chapter-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #2c3e50;
-  line-height: 1.4;
+  font-size: 19px;
+  font-weight: 700;
+  color: #7c2d12;
+  line-height: 1.5;
   margin-bottom: 25px;
   text-align: center;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
 
 .chapter-text {
@@ -164,7 +182,7 @@ html {
 
 /* Content Page Styles */
 .content, .conclusion {
-  padding: 18px 20px 25px 20px; /* Tăng margin bottom từ 15px lên 25px */
+  padding: 15px 18px 20px 18px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -172,17 +190,19 @@ html {
 }
 
 .section-title {
-  font-size: 16px;
-  font-weight: 600;
-  color: #da251c;
-  margin-bottom: 10px; /* Giảm từ 15px xuống 10px */
+  font-size: 17px;
+  font-weight: 700;
+  color: #991b1b;
+  margin-bottom: 8px;
   text-align: center;
-  border-bottom: 2px solid #da251c;
-  padding-bottom: 6px; /* Giảm từ 8px xuống 6px */
+  border-bottom: 3px solid #dc2626;
+  padding-bottom: 6px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(254, 243, 199, 0.5) 100%);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .part-info {
-  font-size: 12px;
+  font-size: 11px;
   color: #666;
   font-weight: 400;
 }
@@ -191,15 +211,22 @@ html {
   flex: 1;
   overflow: hidden;
   padding-right: 5px;
-  padding-bottom: 8px; /* Giảm padding để trang đầy hơn */
-  height: calc(100% - 60px); /* Giảm khoảng trống */
+  padding-bottom: 5px;
+  height: calc(100% - 55px);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ẩn scrollbar */
+.section-content::-webkit-scrollbar {
+  display: none;
 }
 
 .section-content pre {
   font-family: "Crimson Text", serif;
-  font-size: 15px; /* Thay đổi từ 12px thành 15px mặc định */
-  line-height: 1.4;
-  color: #2c3e50;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #3f1d0d;
   white-space: pre-wrap;
   word-wrap: break-word;
   margin: 0;
@@ -207,17 +234,34 @@ html {
   height: 100%;
   overflow: hidden;
   display: block;
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.05);
+}
+
+/* Ẩn scrollbar cho tất cả elements trong page */
+.page, .page-content, .content, .conclusion {
+  overflow: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.page::-webkit-scrollbar,
+.page-content::-webkit-scrollbar,
+.content::-webkit-scrollbar,
+.conclusion::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Image styles trong nội dung */
 .content-image {
   text-align: center;
-  margin: 12px 0;
+  margin: 10px 0;
 }
 
 .content-image img {
   max-width: 95%;
-  max-height: 300px;
+  max-height: 280px;
   object-fit: contain;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -225,10 +269,10 @@ html {
 }
 
 .image-caption {
-  font-size: 11px;
+  font-size: 10px;
   font-style: italic;
   color: #888;
-  margin-top: 6px;
+  margin-top: 5px;
   text-align: center;
   line-height: 1.3;
 }
@@ -237,14 +281,15 @@ html {
   position: absolute;
   bottom: 8px;
   right: 15px;
-  font-size: 10px;
-  color: #7f8c8d;
-  font-weight: 500;
-  background: rgba(255,255,255,0.9);
-  padding: 3px 6px;
-  border-radius: 3px;
+  font-size: 11px;
+  color: #92400e;
+  font-weight: 600;
+  background: rgba(254, 243, 199, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
   z-index: 10;
-  border: 1px solid rgba(127, 140, 141, 0.2);
+  border: 1px solid #d97706;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 /* Table of Contents Specific */
@@ -268,21 +313,22 @@ html {
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #fbbf24, #fcd34d);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   z-index: 100;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 20px rgba(251, 191, 36, 0.5);
   transition: all 0.3s ease;
   animation: pulse 2s infinite;
-  pointer-events: auto; /* Đảm bảo button có thể click */
-  user-select: none; /* Ngăn selection text */
+  border: 2px solid #fff;
+  pointer-events: auto;
+  user-select: none;
 }
 
 .question-button:hover {
@@ -291,9 +337,9 @@ html {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 0 0 0 rgba(255, 215, 0, 0.7); }
-  70% { box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 0 0 10px rgba(255, 215, 0, 0); }
-  100% { box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 0 0 0 rgba(255, 215, 0, 0); }
+  0% { box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 20px rgba(251, 191, 36, 0.5), 0 0 0 0 rgba(251, 191, 36, 0.7); }
+  70% { box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 20px rgba(251, 191, 36, 0.5), 0 0 0 15px rgba(251, 191, 36, 0); }
+  100% { box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 0 20px rgba(251, 191, 36, 0.5), 0 0 0 0 rgba(251, 191, 36, 0); }
 }
 
 /* Question Button Isolated - trong page nhưng cách ly event */
@@ -381,12 +427,13 @@ html {
 }
 
 .notebook-header {
-  background: linear-gradient(135deg, #da251c, #b71c1c);
+  background: linear-gradient(135deg, #dc2626, #991b1b, #b45309);
   color: white;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .notebook-header h2 {
@@ -454,7 +501,7 @@ html {
 }
 
 .submit-btn, .retry-btn {
-  background: linear-gradient(135deg, #da251c, #b71c1c);
+  background: linear-gradient(135deg, #dc2626, #991b1b);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -463,10 +510,13 @@ html {
   font-size: 14px;
   margin-top: 15px;
   transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .submit-btn:hover, .retry-btn:hover {
-  background: linear-gradient(135deg, #b71c1c, #8d1510);
+  background: linear-gradient(135deg, #991b1b, #7f1d1d);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transform: translateY(-1px);
 }
 
 .submit-btn:disabled {

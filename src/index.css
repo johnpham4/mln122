@@ -30,14 +30,22 @@ body {
 /* Book Container Styles */
 .book-container {
   position: relative;
-  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.6));
 }
 
 .page {
-  background: white;
-  border: 1px solid rgb(226 232 240);
+  background: linear-gradient(to bottom, #fffbeb 0%, #fef3c7 100%);
+  border: 1px solid #d97706;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.page::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .page-content {
@@ -46,6 +54,15 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.page-content::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 /* Animation Keyframes */

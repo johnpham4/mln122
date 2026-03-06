@@ -15,76 +15,85 @@ export const Part2_TheoryFoundation = (startId) => {
 
   // 1. Mở đầu
   const section1 = `
-        **1. MỞ ĐẦU**
+        **1. Mở đầu**
 
-        Cuối Thế chiến II, Nhật đầu hàng (8/1945) tạo cơ hội cho Việt Minh giành chính quyền tại Hà Nội, Bác Hồ tuyên bố độc lập ngày 2/9/1945. Tuy nhiên Pháp trở lại Đông Dương, chiếm lại Nam Bộ và tìm cách khôi phục quyền cai trị, dẫn đến tình thế "hai Việt Nam" – miền Bắc do Việt Minh kiểm soát và miền Nam do chính quyền thân Pháp nắm giữ.
+        Cuối Chiến tranh thế giới thứ hai, phát xít Nhật đầu hàng Đồng minh vào tháng 8 năm 1945 đã tạo ra thời cơ thuận lợi cho cách mạng Việt Nam. Dưới sự lãnh đạo của Đảng và Mặt trận Việt Minh, nhân dân ta đã tiến hành Cách mạng Tháng Tám năm 1945, giành chính quyền trên phạm vi cả nước. Ngày 2/9/1945, tại Quảng trường Ba Đình (Hà Nói), Chủ tịch Hồ Chí Minh long trọng đọc Tuyên ngôn Độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa, mở ra kỷ nguyên độc lập cho dân tộc.
 
-        Tháng 3/1946, Pháp và Hồ Chí Minh ký hiệp định sơ bộ tại Paris, hứa trao cho Việt Nam vị thế "liên bang tự do" trong Liên hiệp Pháp nhưng thực chất vẫn đòi khôi phục thực dân.
+        Tuy nhiên, nền độc lập non trẻ của nước ta ngay lập tức phải đối mặt với nhiều khó khăn, thách thức. Thực dân Pháp với tham vọng khôi phục ách thống trị đã quay trở lại Đông Dương. Từ tháng 9/1945, quân Pháp nổ súng chiếm lại Nam Bộ và từng bước mở rộng phạm vi kiểm soát. Trước tình thế đó, Chính phủ Việt Nam chủ trương tạm thời hòa hoãn với Pháp nhằm tranh thủ thời gian củng cố lực lượng và tránh phải đối đầu quân sự khi đất nước còn nhiều khó khăn.
 
-        Khi Pháp phớt lờ cam kết, ngày 23/11/1946 chúng nã pháo Hà Nội, gây thương vong lớn; ngay sau đó quân dân Việt Nam đã đứng lên kháng chiến (bắt đầu được tính từ chiến tranh bùng phát ở Hà Nội tháng 12/1946). Chính trong hoàn cảnh khó khăn này, Đảng ta đã phát động phong trào toàn dân kháng chiến.
+        Tháng 3/1946, Chính phủ Việt Nam và Pháp ký Hiệp định Sơ bộ, theo đó Pháp công nhận Việt Nam là một quốc gia tự do trong Liên hiệp Pháp. Tuy nhiên trên thực tế, thực dân Pháp vẫn tiếp tục thực hiện âm mưu tái chiếm và mở rộng chiến tranh. Nhiều hành động khiêu khích quân sự liên tiếp xảy ra tại các địa phương. Đỉnh điểm là ngày 23/11/1946, quân Pháp nổ súng tấn công Hải Phòng, gấy nhiều thương vong cho nhân dân.
 
-        Ngày 19/12/1946, Chủ tịch Hồ Chí Minh ra **"Lời kêu gọi toàn quốc kháng chiến"**: "Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước!… Hỡi đồng bào toàn quốc!… Hễ là người Việt Nam thì phải đoàn kết lại đánh thực dân Pháp, cứu nước!".
 
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        Trước tình hình đó, mọi nỗ lực hòa hoãn không còn hiệu quả. Ngày 19/12/1946, Chủ tịch Hồ Chí Minh ra **"Lời kêu gọi Toàn quốc kháng chiến"**, khẳng định quyết tâm bảo vệ độc lập dân tộc:
+
+        "Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ… Hễ là người Việt Nam thì phải đứng lên đánh thực dân Pháp để cứu Tổ quốc."
+
+        Từ thời điểm này, cuộc kháng chiến chống thực dân Pháp của nhân dân Việt Nam chính thức bùng nổ, mở đầu cho cuộc đấu tranh lâu dài, gian khổ nhưng đầy anh dũng của dân tộc nhằm bảo vệ nền độc lập và chủ quyền của đất nước.
         [IMAGE:hochiminh_giap_1945.jpg|Chủ tịch Hồ Chí Minh và Đại tướng Võ Nguyên Giáp (1945) – Nguồn: Wikimedia Commons]
+
+        
       `;
 
-  pages.push(...createMultiplePages("1. Mở đầu", section1, currentId));
+  pages.push(...createMultiplePages("MỞ ĐẦU", section1, currentId));
   currentId = startId + pages.length;
 
   // 2. Kháng chiến chống Pháp (1946–1950)
   const section2 = `
-        **2. KHÁNG CHIẾN CHỐNG PHÁP (1946–1950)**
+        **CUỘC KHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP (1946–1950)**
+        **2.1. Cuộc kháng chiến toàn diện**
+        Sau khi Lời kêu gọi Toàn quốc kháng chiến được công bố ngày 19/12/1946, nhân dân cả nước bước vào cuộc kháng chiến chống thực dân Pháp. Dưới sự lãnh đạo của Đảng, đường lối kháng chiến được xác định với phương châm toàn dân, toàn diện, lâu dài và tự lực cánh sinh, nhằm huy động sức mạnh của toàn dân tộc để đánh bại kẻ thù.
 
-        Sau khi lời kêu gọi được công bố, cả nước bước vào cuộc kháng chiến toàn diện. Đảng đặt nhiệm vụ trọng tâm là **"toàn dân, toàn diện, lâu dài"** đánh đuổi giặc Pháp. Lực lượng vũ trang nhân dân được tổ chức thành ba chiến khu (Việt Bắc, Việt Trung, Việt Nam) cùng hệ thống chính quyền kháng chiến ở nông thôn và đô thị.
+        Trong những năm đầu, nhiệm vụ trọng tâm là xây dựng và củng cố lực lượng kháng chiến. Các cơ quan lãnh đạo của Đảng và Chính phủ chuyển lên căn cứ địa Việt Bắc, trở thành trung tâm chỉ đạo kháng chiến. Lực lượng vũ trang nhân dân từng bước được tổ chức và phát triển, kết hợp với chiến tranh du kích rộng khắp. Nhân dân tích cực tăng gia sản xuất, bảo đảm hậu cần cho cuộc kháng chiến lâu dài.
+        
+        **2.2. Chiến dịch Việt Bắc Thu – Đông 1947**
+        Từ năm 1947 đến năm 1950, quân và dân ta vừa củng cố căn cứ địa, vừa tiến hành nhiều hoạt động quân sự nhằm tiêu hao sinh lực địch. Tiêu biểu là **Chiến dịch Việt Bắc Thu – Đông năm 1947**, khi thực dân Pháp huy động lực lượng lớn tấn công lên căn cứ Việt Bắc với mục tiêu tiêu diệt cơ quan đầu não của cuộc kháng chiến. Tuy nhiên, quân và dân ta đã chủ động tổ chức phản công, buộc quân Pháp phải rút lui, qua đó bảo vệ vững chắc căn cứ địa cách mạng và làm thất bại âm mưu "đánh nhanh thắng nhanh" của địch.
 
-        Đảng Cộng sản Đông Dương phát động phong trào tự lực cánh sinh, phát huy sản xuất để nuôi quân, củng cố hậu phương. Triển khai kháng chiến, cán bộ cốt cán (Bác Hồ, Tổng Tư lệnh Võ Nguyên Giáp, Trường Chinh…) chỉ đạo liên tục từ chiến trường đến chiến khu.
-
-        [IMAGE:hochiminh_moutet_1946.jpg|Hồ Chí Minh và Marius Moutet ký Tạm ước Việt-Pháp (1946) – Nguồn: Wikimedia Commons]
-
-        Trong giai đoạn 1947–1950, ta chủ yếu củng cố căn cứ địa và tiến hành phản công nhỏ lẻ. Tiêu biểu là **Chiến dịch Việt Bắc thu-đông 1947**, khi Pháp huy động gần 10.000 quân áp sát cơ quan đầu não tại Cao – Bắc – Lạng. Quân ta dưới quyền Chỉ huy trưởng Giáp đã tổ chức đánh địch rút lui, tiêu hao sinh lực đối phương, bảo vệ thành công căn cứ Việt Bắc. Đồng thời, kháng chiến ở đồng bằng Bắc Bộ tiếp diễn dưới hình thức chiến tranh du kích.
-
-        **Bước ngoặt 1949 – Chiến dịch Biên giới 1950:** Năm 1949 chứng kiến bước ngoặt quan trọng: Cách mạng Trung Quốc thành công (10/1949) và Liên Xô, Trung Quốc lần lượt công nhận chính thể Việt Nam Dân chủ Cộng hòa (Trung Quốc ngày 1/10/1949, Liên Xô ngày 18/1/1950). Sự kiện này giúp ta có thêm viện trợ quân sự, chính trị.
-
-        Năm 1950, Chủ tịch Bảo Đại trở về Việt Nam công bố thành lập "Quốc gia Việt Nam" bù nhìn, nhưng không lôi kéo được nhân tâm.
-
-        Ngày 16/9/1950, Quân đội ta mở **Chiến dịch Biên giới thu-đông 1950**. Chiến dịch kéo dài 29 ngày đêm đã giải vây căn cứ Việt Bắc, phá tan phòng tuyến Pháp ở các cứ điểm Cao Bằng – Lạng Sơn, mở thông biên giới với Trung Quốc nhận viện trợ. Chiến thắng Biên giới 1950 là bước chuyển mình đưa kháng chiến ta từ thế giữ cự lâu dài sang chủ động tiến công.
+        [IMAGE:luoc-do-chien-dich-viet-bac-thu-dong-1947.jpg|Lược đồ Chiến dịch Việt Bắc Thu-Đông 1947|width:97%;height:230px]
+        **2.3. Bước ngoặt 1949 – Chiến dịch Biên giới 1950**
+        Đến cuối những năm 1940, tình hình quốc tế có nhiều chuyển biến thuận lợi. Cách mạng Trung Quốc thành công năm 1949, và sau đó Trung Quốc và Liên Xô lần lượt công nhận và thiết lập quan hệ ngoại giao với Việt Nam Dân chủ Cộng hòa, tạo điều kiện quan trọng cho cuộc kháng chiến.
+        Trên cơ sở đó, ngày 16/9/1950, quân đội ta mở Chiến dịch Biên giới Thu – Đông 1950 nhằm tiêu diệt sinh lực địch và phá vỡ hệ thống phòng thủ của Pháp trên tuyến biên giới Việt – Trung. Sau 29 ngày đêm chiến đấu, quân ta đã phá tan phòng tuyến Cao Bằng – Lạng Sơn và mở thông biên giới với Trung Quốc. Chiến thắng Biên giới 1950 đã đưa cuộc kháng chiến từ thế phòng ngự sang chủ động tiến công.
       `;
 
-  pages.push(...createMultiplePages("2. Kháng chiến chống Pháp (1946–1950)", section2, currentId));
+  pages.push(...createMultiplePages("2. CUỘC KHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP", section2, currentId));
   currentId = startId + pages.length;
 
   // 3. Tăng tốc kháng chiến đến thắng lợi (1951–1954)
   const section3 = `
-        **3. TĂNG TỐC KHÁNG CHIẾN ĐẾN THẮNG LỢI (1951–1954)**
+        **ĐẨY MẠNH KHÁNG CHIẾN ĐẾN THẮNG LỢI (1951 - 1954)**
+        **3.1. Đại hội đại biểu toàn quốc lần II của Đảng**
+        Trong bối cảnh cuộc kháng chiến chống thực dân Pháp bước vào giai đoạn mới, từ ngày 11 đến 19/2/1951, Đảng triệu tập Đại hội đại biểu toàn quốc lần thứ II tại căn cứ Việt Bắc (Tuyên Quang). Đại hội có 158 đại biểu chính thức, đại diện cho hơn 700 nghìn đảng viên.
+        Đại hội quyết định đổi tên Đảng Cộng sản Đông Dương thành Đảng Lao động Việt Nam, đưa Đảng ra hoạt động công khai và xác định nhiệm vụ trung tâm của cách mạng là đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất đất nước. Đại hội cũng đề ra nhiều chủ trương quan trọng nhằm củng cố lực lượng kháng chiến về chính trị, quân sự và kinh tế.
+        **3.2. Các chiến dịch lớn: Hòa Bình và Tây Bắc**
+        Sau Đại hội II, quân và dân ta liên tiếp mở nhiều chiến dịch lớn nhằm tiêu diệt sinh lực địch và mở rộng vùng giải phóng.
+        Tiêu biểu là Chiến dịch Hòa Bình (12/1951 – 2/1952). Mục tiêu của chiến dịch là phá vỡ phòng tuyến sông Đà và tiêu diệt lực lượng Pháp chiếm đóng tại Hòa Bình. Sau gần ba tháng chiến đấu, quân ta buộc quân Pháp phải rút lui, làm thất bại kế hoạch quân sự của đối phương.
+        Năm 1952, quân ta tiếp tục mở Chiến dịch Tây Bắc, giải phóng nhiều vùng rộng lớn, phá vỡ âm mưu chia cắt chiến trường của Pháp. Cùng với đó, phong trào chiến tranh du kích ở đồng bằng và trung du Bắc Bộ ngày càng phát triển, tạo thế trận ngày càng có lợi cho ta.
+        [IMAGE:tay-bac.jpg|Bản đồ Chiến dịch Tây Bắc (14/10 – 12/12/1952).|width:97%;height:240px]
+        **3.3. Đỉnh cao: Chiến dịch Điện Biên Phủ (1954)**
+        Năm 1953, thực dân Pháp dưới sự chỉ huy của tướng Navarre xây dựng tập đoàn cứ điểm Điện Biên Phủ nhằm biến nơi đây thành pháo đài quân sự mạnh nhất ở Đông Dương.
+        Trước tình hình đó, Bộ Chính trị quyết định mở Chiến dịch Điện Biên Phủ (3–5/1954). Sau 56 ngày đêm chiến đấu quyết liệt, quân và dân ta đã tiêu diệt và bắt sống toàn bộ tập đoàn cứ điểm của Pháp, bắt sống tướng De Castries cùng nhiều sĩ quan cao cấp.
+        Chiến thắng Điện Biên Phủ trở thành thắng lợi quyết định của cuộc kháng chiến chống thực dân Pháp, tạo điều kiện buộc Pháp phải ký Hiệp định Genève năm 1954, chấm dứt chiến tranh và lập lại hòa bình ở Đông Dương.
+        [IMAGE:dbp_valley_aerial.jpg|Toàn cảnh thung lũng Điện Biên Phủ (1953) – Nguồn: Wikimedia Commons|width:90%;height:220px]
 
-        **Đại hội đại biểu toàn quốc lần II:** Đầu năm 1951, hoàn cảnh mới trên chiến trường (Trung Quốc giúp, Pháp mở chiến dịch quy mô) đã được Đảng thảo luận. Từ ngày 11 đến 19/2/1951, Đại hội đại biểu toàn quốc lần II họp ở căn cứ Việt Bắc (Tuyên Quang). Đại hội II thu hút 158 đại biểu chính thức, đại diện cho 766.349 đảng viên.
-
-        Dưới sự chủ trì của Chủ tịch Hồ Chí Minh, Đại hội xác định đối tượng chiến đấu: "đế quốc xâm lược và phong kiến" trên miền Bắc, cùng "đế quốc Mỹ" ở miền Nam (gây rối). Đại hội đã quyết định đổi tên Đảng Cộng sản Đông Dương thành **Đảng Lao động Việt Nam** và cho phép Đảng hoạt động công khai trở lại.
-
-        Tại đại hội này, Trường Chinh báo cáo chính trị khẳng định nhiệm vụ của kháng chiến: **"đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất hoàn toàn cho dân tộc, xóa bỏ tàn tích phong kiến… làm cho người cày có ruộng, phát triển chế độ dân chủ nhân dân, tạo cơ sở cho chủ nghĩa xã hội ở Việt Nam"**.
-
-        **Chiến dịch Hòa Bình và Tây Bắc:** Các kế hoạch quân sự trọng điểm được Đảng Bộ Tổng chỉ huy và Chính phủ triển khai. Từ cuối 1951 đến đầu 1952, ta mở các chiến dịch tiêu biểu như **Hòa Bình (12/1951–2/1952)**. Mục tiêu của Hòa Bình là tiêu diệt lực lượng Pháp chiếm đóng Hòa Bình, bẻ gãy tuyến phòng ngự Sông Đà, đồng thời tạo điều kiện đẩy mạnh du kích xuống đồng bằng Bắc Bộ.
-
-        Theo lịch sử, "Chiến dịch Hòa Bình… nhằm tiêu diệt sinh lực địch, đánh bại kế hoạch chiếm đóng Hòa Bình của Pháp, phá vỡ phòng tuyến Sông Đà và tạo điều kiện phát triển chiến tranh du kích ở đồng bằng Bắc Bộ". Sau gần 3 tháng chiến đấu gian khổ, ta giành thắng lợi, buộc quân Pháp phải rút lui.
-
-        Tiếp đó năm 1952, quân ta mở chiến dịch quy mô tại **Tây Bắc**, tiêu diệt sinh lực địch, phá tan kế hoạch chia cắt nước ta của Pháp tại vùng dân tộc Thái. Song song đó, nhiều trận đánh ác liệt liên tục diễn ra ở trung du, như chiến dịch Tây Bắc và đòn lửa đạn vào các cứ điểm đông dương – quốc lộ. Việc phối hợp tác chiến giữa các chiến khu ngày càng nhịp nhàng.
-
-        Về chính trị – dân sinh, sau Đại hội II, Đảng tổ chức chỉnh đốn nội bộ Đảng và quân đội, tăng cường giáo dục lý luận, thi đua sản xuất, chuẩn bị mặt trận hậu phương. Nhân dân tích cực gia tăng sản xuất lương thực, công trường, trường học ở khắp nơi hoạt động bình thường, góp phần cung cấp nhu cầu chiến đấu.
-
-        Đặc biệt, Ban Chấp hành Trung ương khóa II đã tiến hành cuộc **cải cách ruộng đất** từng bước ở vùng căn cứ, nhằm giải quyết mâu thuẫn ruộng đất và tranh thủ nhân dân các tỉnh Bắc Bộ. Đến cuối năm 1953, chính sách này được hoàn thành về cơ bản, tạo sự đồng thuận trong quần chúng nông thôn.
-
-        [IMAGE:dancong_vanhuyen.jpg|Dân công các dân tộc vận chuyển hàng ra mặt trận – Nguồn: Wikimedia Commons]
-
-        **Chiến dịch Điện Biên Phủ (1954):** Đến năm 1953, trước âm mưu của Tướng Navarre gom quân, biến Điện Biên Phủ thành "điểm quyết chiến" của địch, Bộ Chính trị chỉ đạo chuyển hướng tác chiến. Từ Đông Xuân 1953–1954, Quân đội ta mở rộng chiến dịch phối hợp.
-
-        [IMAGE:dbp_valley_aerial.jpg|Toàn cảnh thung lũng Điện Biên Phủ (1953) – Nguồn: Wikimedia Commons]
-
-        Đỉnh cao là **Chiến dịch Điện Biên Phủ (3–5/1954)**. Trận này ta huy động tổng lực tiêu diệt hơn vạn quân Pháp. Quân ta đặt đại liên bắn cháy hầm chỉ huy, cuối cùng Trung đoàn 316 treo lá cờ chiến thắng trên hầm chỉ huy De Castries. Thắng lợi vang dội này đã kết thúc kháng chiến chống Pháp.
-
-        [IMAGE:dbp_image_1.png|Lực lượng Việt Minh áp giải quân Pháp bị bắt sau chiến thắng Điện Biên Phủ (1954)]
+        [IMAGE:dbp_image_1.png|Lá cờ “Quyết chiến quyết thắng” trên hầm De Castries|width:90%;height:220px]
       `;
 
-  pages.push(...createMultiplePages("3. Tăng tốc kháng chiến (1951–1954)", section3, currentId));
+  pages.push(...createMultiplePages("3. ĐẨY MẠNH KHÁNG CHIẾN ĐẾN THẮNG LỢI", section3, currentId));
 
   return pages;
 };
