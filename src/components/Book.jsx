@@ -144,6 +144,41 @@ function Book() {
             </div>
           );
         }
+      } else if (line.includes("[VIDEO:")) {
+        // Parse video format: [VIDEO:videoId|Caption|start:3]
+        const match = line.match(/\[VIDEO:([^|]+)\|([^|\]]+)(?:\|([^\]]+))?\]/);
+        if (match) {
+          const [, videoId, caption, params] = match;
+          
+          // Parse parameters like "start:3"
+          let startTime = 0;
+          if (params) {
+            const startMatch = params.match(/start:(\d+)/);
+            if (startMatch) {
+              startTime = parseInt(startMatch[1]);
+            }
+          }
+
+          elements.push(
+            <div key={index} className="my-6 text-center">
+              <div className="inline-block w-full max-w-lg">
+                <div className="relative w-full rounded-lg overflow-hidden shadow-2xl border-4 border-red-500" style={{ paddingBottom: "56.25%" }}>
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${videoId}?start=${startTime}`}
+                    title={caption}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <div className="text-[11px] italic text-slate-600 mt-3 px-4 leading-snug font-semibold">
+                  🎬 {caption}
+                </div>
+              </div>
+            </div>
+          );
+        }
       } else if (line.trim()) {
         // Parse markdown bold and italic formatting
         const parseFormatting = (text) => {

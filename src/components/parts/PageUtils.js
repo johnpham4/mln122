@@ -33,6 +33,18 @@ export const splitContentIntoPages = (content, maxVisualLines = 34) => {
         currentPageLines.push(line);
         currentVisualCount += imageVisual;
       }
+    } else if (line.includes('[VIDEO:')) {
+      // Video: 16:9 ratio + caption + margin ≈ 15 dòng visual (lớn hơn image)
+      const videoVisual = 15;
+
+      if (currentVisualCount + videoVisual > maxVisualLines && currentPageLines.length > 0) {
+        pages.push(currentPageLines.join('\n'));
+        currentPageLines = [line];
+        currentVisualCount = videoVisual;
+      } else {
+        currentPageLines.push(line);
+        currentVisualCount += videoVisual;
+      }
     } else {
       const lineVisual = estimateVisualLines(line);
 

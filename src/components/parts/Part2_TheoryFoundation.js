@@ -45,7 +45,7 @@ export const Part2_TheoryFoundation = (startId) => {
         "Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm nô lệ… Hễ là người Việt Nam thì phải đứng lên đánh thực dân Pháp để cứu Tổ quốc."
 
         Từ thời điểm này, cuộc kháng chiến chống thực dân Pháp của nhân dân Việt Nam chính thức bùng nổ, mở đầu cho cuộc đấu tranh lâu dài, gian khổ nhưng đầy anh dũng của dân tộc nhằm bảo vệ nền độc lập và chủ quyền của đất nước.
-        [IMAGE:hochiminh_giap_1945.jpg|Chủ tịch Hồ Chí Minh và Đại tướng Võ Nguyên Giáp (1945) – Nguồn: Wikimedia Commons]
+        [IMAGE:hochiminh_giap_1945.jpg|Chủ tịch Hồ Chí Minh và Đại tướng Võ Nguyên Giáp (1945)]
 
         
       `;
@@ -55,7 +55,7 @@ export const Part2_TheoryFoundation = (startId) => {
 
   // 2. Kháng chiến chống Pháp (1946–1950)
   const section2 = `
-        **CUỘC KHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP (1946–1950)**
+        **Cuộc kháng chiến chống thực dân Pháp (1946–1950)**
         **2.1. Cuộc kháng chiến toàn diện**
         Sau khi Lời kêu gọi Toàn quốc kháng chiến được công bố ngày 19/12/1946, nhân dân cả nước bước vào cuộc kháng chiến chống thực dân Pháp. Dưới sự lãnh đạo của Đảng, đường lối kháng chiến được xác định với phương châm toàn dân, toàn diện, lâu dài và tự lực cánh sinh, nhằm huy động sức mạnh của toàn dân tộc để đánh bại kẻ thù.
 
@@ -75,23 +75,22 @@ export const Part2_TheoryFoundation = (startId) => {
 
   // 3. Tăng tốc kháng chiến đến thắng lợi (1951–1954)
   const section3 = `
-        **ĐẨY MẠNH KHÁNG CHIẾN ĐẾN THẮNG LỢI (1951 - 1954)**
+        **Đẩy mạnh cuộc kháng chiến đến thắng lợi (1951 - 1954)**
         **3.1. Đại hội đại biểu toàn quốc lần II của Đảng**
-        Trong bối cảnh cuộc kháng chiến chống thực dân Pháp bước vào giai đoạn mới, từ ngày 11 đến 19/2/1951, Đảng triệu tập Đại hội đại biểu toàn quốc lần thứ II tại căn cứ Việt Bắc (Tuyên Quang). Đại hội có 158 đại biểu chính thức, đại diện cho hơn 700 nghìn đảng viên.
+        Trong bối cảnh cuộc kháng chiến chống thực dân Pháp bước vào giai đoạn mới, từ ngày 11 đến 19/2/1951, Đảng triệu tập Đại hội đại biểu toàn quốc lần thứ II tại căn cứ Việt Bắc (Tuyên Quang). Đại hội có 158 đại biểu chính thức và 53 đại biểu dự khuyết, đại diện cho khoảng 760.000 đảng viên trong cả nước.
         Đại hội quyết định đổi tên Đảng Cộng sản Đông Dương thành Đảng Lao động Việt Nam, đưa Đảng ra hoạt động công khai và xác định nhiệm vụ trung tâm của cách mạng là đánh đuổi đế quốc xâm lược, giành độc lập và thống nhất đất nước. Đại hội cũng đề ra nhiều chủ trương quan trọng nhằm củng cố lực lượng kháng chiến về chính trị, quân sự và kinh tế.
         **3.2. Các chiến dịch lớn: Hòa Bình và Tây Bắc**
-        Sau Đại hội II, quân và dân ta liên tiếp mở nhiều chiến dịch lớn nhằm tiêu diệt sinh lực địch và mở rộng vùng giải phóng.
-        Tiêu biểu là Chiến dịch Hòa Bình (12/1951 – 2/1952). Mục tiêu của chiến dịch là phá vỡ phòng tuyến sông Đà và tiêu diệt lực lượng Pháp chiếm đóng tại Hòa Bình. Sau gần ba tháng chiến đấu, quân ta buộc quân Pháp phải rút lui, làm thất bại kế hoạch quân sự của đối phương.
+        Sau Đại hội II, quân và dân ta liên tiếp mở nhiều chiến dịch lớn nhằm tiêu diệt sinh lực địch và mở rộng vùng giải phóng. Tiêu biểu là Chiến dịch Hòa Bình (12/1951 – 2/1952). Mục tiêu là phá vỡ phòng tuyến sông Đà và tiêu diệt lực lượng Pháp chiếm đóng tại Hòa Bình. Sau gần ba tháng chiến đấu, quân ta buộc quân Pháp phải rút lui, làm thất bại kế hoạch quân sự của đối phương.
         Năm 1952, quân ta tiếp tục mở Chiến dịch Tây Bắc, giải phóng nhiều vùng rộng lớn, phá vỡ âm mưu chia cắt chiến trường của Pháp. Cùng với đó, phong trào chiến tranh du kích ở đồng bằng và trung du Bắc Bộ ngày càng phát triển, tạo thế trận ngày càng có lợi cho ta.
         [IMAGE:tay-bac.jpg|Bản đồ Chiến dịch Tây Bắc (14/10 – 12/12/1952).|width:97%;height:240px]
         **3.3. Đỉnh cao: Chiến dịch Điện Biên Phủ (1954)**
-        Năm 1953, thực dân Pháp dưới sự chỉ huy của tướng Navarre xây dựng tập đoàn cứ điểm Điện Biên Phủ nhằm biến nơi đây thành pháo đài quân sự mạnh nhất ở Đông Dương.
-        Trước tình hình đó, Bộ Chính trị quyết định mở Chiến dịch Điện Biên Phủ (3–5/1954). Sau 56 ngày đêm chiến đấu quyết liệt, quân và dân ta đã tiêu diệt và bắt sống toàn bộ tập đoàn cứ điểm của Pháp, bắt sống tướng De Castries cùng nhiều sĩ quan cao cấp.
-        Chiến thắng Điện Biên Phủ trở thành thắng lợi quyết định của cuộc kháng chiến chống thực dân Pháp, tạo điều kiện buộc Pháp phải ký Hiệp định Genève năm 1954, chấm dứt chiến tranh và lập lại hòa bình ở Đông Dương.
-        [IMAGE:dbp_valley_aerial.jpg|Toàn cảnh thung lũng Điện Biên Phủ (1953) – Nguồn: Wikimedia Commons|width:90%;height:220px]
+        Năm 1953, thực dân Pháp dưới sự chỉ huy của tướng Navarre xây dựng tập đoàn cứ điểm Điện Biên Phủ nhằm biến nơi đây thành pháo đài quân sự mạnh nhất ở Đông Dương. Trước tình hình đó, Bộ Chính trị quyết định mở Chiến dịch Điện Biên Phủ (3–5/1954). Sau 56 ngày đêm chiến đấu quyết liệt, quân và dân ta đã tiêu diệt và bắt sống toàn bộ tập đoàn cứ điểm của Pháp, bắt sống tướng De Castries cùng nhiều sĩ quan cao cấp.
+        Chiến thắng Điện Biên Phủ trở thành thắng lợi quyết định của cuộc kháng chiến chống thực dân Pháp, tạo điều kiện quan trọng để Hội nghị Genève năm 1954 đi đến việc ký kết Hiệp định Genève về chấm dứt chiến tranh, lập lại hòa bình ở Đông Dương.
 
         [IMAGE:dbp_image_1.png|Lá cờ “Quyết chiến quyết thắng” trên hầm De Castries|width:90%;height:220px]
-      `;
+        [VIDEO:S_hDDUgXCNo|Tài liệu lịch sử|start:3]
+      
+        `;
 
   pages.push(...createMultiplePages("3. ĐẨY MẠNH KHÁNG CHIẾN ĐẾN THẮNG LỢI", section3, currentId));
 

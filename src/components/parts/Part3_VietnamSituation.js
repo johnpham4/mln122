@@ -17,9 +17,8 @@ export const Part3_VietnamSituation = (startId) => {
   const section4 = `
         **4. KẾT LUẬN CHUNG**
         Cuộc kháng chiến chống thực dân Pháp (1946–1954) là thắng lợi vĩ đại của dân tộc Việt Nam trong sự nghiệp đấu tranh giành độc lập và chủ quyền quốc gia. Dưới sự lãnh đạo đúng đắn của Đảng Cộng sản Việt Nam và Chủ tịch Hồ Chí Minh, nhân dân ta đã phát huy tinh thần đoàn kết, ý chí kiên cường và sức mạnh toàn dân tộc để đánh bại thực dân Pháp xâm lược.
-        Chiến thắng Điện Biên Phủ năm 1954 đã buộc Pháp phải ký Hiệp định Genève, chấm dứt chiến tranh ở Đông Dương. Theo hiệp định, Việt Nam tạm thời bị chia cắt thành hai miền ở vĩ tuyến 17, tạo tiền đề cho cuộc đấu tranh tiếp theo nhằm thống nhất đất nước.
-        Thắng lợi của cuộc kháng chiến chống Pháp không chỉ khẳng định đường lối lãnh đạo đúng đắn của Đảng mà còn cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới, mở ra giai đoạn mới trong lịch sử cách mạng Việt Nam.
-        [IMAGE:dbp_french_prisoners.jpg|Tù binh Pháp bị áp giải sau trận Điện Biên Phủ (1954) – Nguồn: Wikimedia Commons|width:90%;height:200px]
+        Chiến thắng Điện Biên Phủ năm 1954 trở thành thắng lợi quyết định của cuộc kháng chiến chống thực dân Pháp, buộc Pháp phải ký Hiệp định Genève năm 1954, chấm dứt chiến tranh ở Đông Dương. Theo hiệp định, Việt Nam tạm thời bị chia cắt thành hai miền ở vĩ tuyến 17, tạo tiền đề cho cuộc đấu tranh tiếp theo nhằm thống nhất đất nước. Thắng lợi cuộc kháng chiến chống Pháp không chỉ khẳng định đường lối lãnh đạo đúng đắn của Đảng mà còn cổ vũ mạnh mẽ phong trào giải phóng dân tộc trên thế giới, mở ra giai đoạn mới trong lịch sử cách mạng Việt Nam.
+        [IMAGE:dbp_french_prisoners.jpg|Tù binh Pháp bị áp giải sau trận Điện Biên Phủ (1954)|width:90%;height:190px]
 
 
       `;
