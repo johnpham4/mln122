@@ -172,9 +172,11 @@ function Book() {
                     allowFullScreen
                   ></iframe>
                 </div>
-                <div className="text-[11px] italic text-slate-600 mt-3 px-4 leading-snug font-semibold">
-                  🎬 {caption}
-                </div>
+                {caption && caption.trim() && (
+                  <div className="text-[11px] italic text-slate-600 mt-3 px-4 leading-snug font-semibold">
+                    🎬 {caption}
+                  </div>
+                )}
               </div>
             </div>
           );

@@ -66,7 +66,11 @@ export const Part3_VietnamSituation = (startId) => {
 
         Nguồn: Wikimedia Commons
 
-        [LINK:5. Lá cờ "Quyết chiến quyết thắng" trên hầm De Castries|dbp_image_1.png]
+        [LINK:5. Bắt sống tướng De Castries, chiến dịch Điện Biên Phủ toàn thắng|bat-song-tuong-de-castries.jpg]
+
+        Nguồn: Quân Đội Nhân Dân
+
+        [LINK:6. Lá cờ "Quyết chiến quyết thắng" trên hầm De Castries|dbp_image_1.png]
 
         Nguồn: Wikimedia Commons 
       `;

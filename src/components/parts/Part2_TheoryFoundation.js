@@ -73,6 +73,32 @@ export const Part2_TheoryFoundation = (startId) => {
   pages.push(...createMultiplePages("2. CUỘC KHÁNG CHIẾN CHỐNG THỰC DÂN PHÁP", section2, currentId));
   currentId = startId + pages.length;
 
+  // Trang 8 - Giới thiệu Chiến dịch Việt Bắc + video
+  pages.push({
+    id: currentId++,
+    type: "content",
+    title: "",
+    content: `
+        **2.4 Video tài liệu về Chiến dịch Việt Bắc Thu – Đông 1947**
+        Để trực quan hơn về diễn biến của cuộc kháng chiến trong giai đoạn đầu, video dưới đây giới thiệu tư liệu lịch sử về Chiến dịch Việt Bắc Thu – Đông năm 1947, một chiến dịch quan trọng làm thất bại kế hoạch tấn công quy mô lớn của thực dân Pháp vào căn cứ địa Việt Bắc.
+        [VIDEO:S_hDDUgXCNo| ]
+        Qua những thước phim tư liệu, có thể thấy rõ sự phối hợp giữa bộ đội chủ lực và lực lượng du kích trong việc đánh trả các cuộc tiến công của quân Pháp. Thắng lợi của chiến dịch đã bảo vệ vững chắc căn cứ địa Việt Bắc và làm phá sản chiến lược “đánh nhanh thắng nhanh” của thực dân Pháp trong giai đoạn đầu cuộc kháng chiến.`
+  });
+  
+
+  // Trang 9 - Video Chiến dịch Biên giới Thu – Đông 1950
+  pages.push({
+    id: currentId++,
+    type: "content", 
+    title: "",
+    content: `
+        **2.5 Video tài liệu về Chiến dịch Biên giới Thu – Đông 1950**
+        Đoạn phim dưới đây tái hiện diễn biến của Chiến dịch Biên giới Thu – Đông 1950, một chiến dịch quan trọng của quân đội Việt Nam trong cuộc kháng chiến chống thực dân Pháp. 
+        [VIDEO:UvGFxDek3zM| ]
+        Qua những thước phim tư liệu, có thể thấy rõ các trận đánh quyết liệt của quân đội Việt Nam tại các cứ điểm quan trọng như Đông Khê trên tuyến Đường số 4. Chiến thắng của chiến dịch đã phá vỡ hệ thống phòng thủ của Pháp ở khu vực biên giới, mở thông biên giới Việt – Trung và tạo điều kiện để Việt Nam nhận được sự giúp đỡ từ các nước xã hội chủ nghĩa. Đồng thời, chiến thắng này giúp quân ta giành thế chủ động trên chiến trường Bắc Bộ.    
+`
+  });
+
   // 3. Tăng tốc kháng chiến đến thắng lợi (1951–1954)
   const section3 = `
         **Đẩy mạnh cuộc kháng chiến đến thắng lợi (1951 - 1954)**
@@ -86,13 +112,14 @@ export const Part2_TheoryFoundation = (startId) => {
         **3.3. Đỉnh cao: Chiến dịch Điện Biên Phủ (1954)**
         Năm 1953, thực dân Pháp dưới sự chỉ huy của tướng Navarre xây dựng tập đoàn cứ điểm Điện Biên Phủ nhằm biến nơi đây thành pháo đài quân sự mạnh nhất ở Đông Dương. Trước tình hình đó, Bộ Chính trị quyết định mở Chiến dịch Điện Biên Phủ (3–5/1954). Sau 56 ngày đêm chiến đấu quyết liệt, quân và dân ta đã tiêu diệt và bắt sống toàn bộ tập đoàn cứ điểm của Pháp, bắt sống tướng De Castries cùng nhiều sĩ quan cao cấp.
         Chiến thắng Điện Biên Phủ trở thành thắng lợi quyết định của cuộc kháng chiến chống thực dân Pháp, tạo điều kiện quan trọng để Hội nghị Genève năm 1954 đi đến việc ký kết Hiệp định Genève về chấm dứt chiến tranh, lập lại hòa bình ở Đông Dương.
-
         [IMAGE:dbp_image_1.png|Lá cờ “Quyết chiến quyết thắng” trên hầm De Castries|width:90%;height:220px]
-        [VIDEO:S_hDDUgXCNo|Tài liệu lịch sử|start:3]
-      
+        [IMAGE:bat-song-tuong-de-castries.jpg|Bắt sống tướng De Castries, chiến dịch Điện Biên Phủ toàn thắng|width:98%;height:240px]
         `;
 
   pages.push(...createMultiplePages("3. ĐẨY MẠNH KHÁNG CHIẾN ĐẾN THẮNG LỢI", section3, currentId));
+  currentId = startId + pages.length;
+
+  
 
   return pages;
 };
