@@ -26,7 +26,7 @@ export const Part3_VietnamSituation = (startId) => {
         [IMAGE:dbp_french_prisoners.jpg|Tù binh Pháp bị áp giải sau trận Điện Biên Phủ (1954) – Nguồn: Wikimedia Commons]
       `;
 
-  pages.push(...createMultiplePages("4. Kết luận chung", section4, currentId));
+  pages.push(...createMultiplePages("4. Kết luận chung", section4, currentId, 'content', 50));
   currentId = startId + pages.length;
 
   // Trang riêng cho hình ảnh L'Humanité
@@ -34,7 +34,7 @@ export const Part3_VietnamSituation = (startId) => {
         [IMAGE:dbp_image_2.png|Trang nhất báo L'Humanité (25/7/1954) tán dương chiến thắng tại Đông Dương]
       `;
 
-  pages.push(...createMultiplePages("4. Kết luận chung (tiếp)", imageContent, currentId, 'content', 20));
+  pages.push(...createMultiplePages("4. Kết luận chung (tiếp)", imageContent, currentId, 'content', 50));
   currentId = startId + pages.length;
 
   // Trang chương Nguồn tham khảo
@@ -77,7 +77,7 @@ export const Part3_VietnamSituation = (startId) => {
         Nguồn: Wikimedia Commons – Huma Paix Viet Nam
       `;
 
-  pages.push(...createMultiplePages("5. Nguồn tham khảo", references, currentId, 'content', 18));
+  pages.push(...createMultiplePages("5. Nguồn tham khảo", references, currentId, 'content', 35));
   currentId = startId + pages.length;
 
   // Trang bìa sau
