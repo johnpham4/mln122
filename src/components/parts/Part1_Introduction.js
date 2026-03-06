@@ -34,7 +34,7 @@ export const Part1_Introduction = (startId) => {
 5. Nguồn tham khảo ................................................ 16
       `;
 
-  pages.push(...createMultiplePages("MỤC LỤC", tocContent, currentId, 'content', 26));
+  pages.push(...createMultiplePages("MỤC LỤC", tocContent, currentId, 'content', 100));
 
   return pages;
 };
