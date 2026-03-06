@@ -6,21 +6,15 @@ import { Part2_TheoryFoundation } from "./parts/Part2_TheoryFoundation";
 import { Part3_VietnamSituation } from "./parts/Part3_VietnamSituation";
 import QuestionNotebook from "./QuestionNotebook";
 import QuestionButton from "./QuestionButton";
-import ChatBot from "./ChatBot";
 import BookmarkPanel, { BookmarkButton } from "./BookmarkPanel";
 import TableOfContents from "./TableOfContents";
 import FontSizeControl from "./FontSizeControl";
 import NotesHighlights from "./NotesHighlights";
-import config from "../config/environment";
 
 function Book() {
   const [currentPage, setCurrentPage] = useState(0);
   const [showNotebook, setShowNotebook] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [chatOpen, setChatOpen] = useState(false);
-
-  // Debug log để kiểm tra state
-  console.log("Chat is open:", chatOpen);
   const [bookmarks, setBookmarks] = useState(() => {
     const saved = localStorage.getItem("bookmarks");
     return saved ? JSON.parse(saved) : [];
@@ -29,64 +23,44 @@ function Book() {
 
   // Định nghĩa câu hỏi cho các trang khác nhau
   const questions = {
-    16: {
+    5: {
       question:
-        "Quan hệ giữa khái niệm công nghiệp hóa và khái niệm cách mạng công nghiệp là gì?",
-      options: ["A. Cách mạng công nghiệp là kết quả của quá trình công nghiệp hóa diễn ra lâu dài trong xã hội.", 
-        "B. Công nghiệp hóa và cách mạng công nghiệp là hai quá trình hoàn toàn tách biệt, không liên quan đến nhau.", 
-        "C. Cách mạng công nghiệp tạo ra cơ sở kỹ thuật và công nghệ mới, là động lực thúc đẩy quá trình công nghiệp hóa phát triển.", 
-        "D. Công nghiệp hóa là quá trình thay thế các cuộc các	h mạng công nghiệp bằng hình thức sản xuất hiện đại hơn."],
-      correctAnswer: "C",
-      explanation:
-        "Cách mạng công nghiệp là cơ sở và động lực của công nghiệp hóa, còn công nghiệp hóa là quá trình cụ thể hóa và mở rộng những thành tựu của các cuộc cách mạng công nghiệp vào thực tiễn sản xuất và phát triển kinh tế – xã hội.",
-    },
-    13: {
-      question:
-        "Các mô hình công nghiệp hóa đã diễn ra trên thế giới là gì?",
-      options: ["A. Mô hình công nghiệp hóa cổ điển, mô hình công nghiệp hóa kiểu Liên Xô, mô hình công nghiệp hóa Nhật Bản và các nước công nghiệp mới (NICs).", 
-        "B. Mô hình công nghiệp hóa nông nghiệp, mô hình công nghiệp hóa hậu hiện đại, mô hình công nghiệp hóa xanh.", 
-        "C. Mô hình công nghiệp hóa cổ điển, mô hình công nghiệp hóa nông nghiệp và mô hình công nghiệp hóa xanh.", 
-        "D. Mô hình công nghiệp hóa kiểu Mỹ, mô hình công nghiệp hóa châu Phi và mô hình công nghiệp hóa Đông Nam Á."],
+        "Ngày 19/12/1946, Chủ tịch Hồ Chí Minh ra lời kêu gọi gì?",
+      options: [
+        "A. Lời kêu gọi toàn quốc kháng chiến.",
+        "B. Lời kêu gọi tổng khởi nghĩa.",
+        "C. Lời kêu gọi hòa bình với Pháp.",
+        "D. Lời kêu gọi cải cách ruộng đất.",
+      ],
       correctAnswer: "A",
       explanation:
-        "Mô hình công nghiệp hóa cổ điển, mô hình công nghiệp hóa kiểu Liên Xô cũ, mô hình công nghiệp hóa Nhật bản & NICs. Mỗi mô hình phản ánh một con đường phát triển khác nhau nhưng đều hướng tới mục tiêu chung là nâng cao năng suất lao động và phát triển kinh tế hiện đại.",
+        "Ngày 19/12/1946, Chủ tịch Hồ Chí Minh ra 'Lời kêu gọi toàn quốc kháng chiến': 'Không! Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước!'.",
     },
-    17: {
+    8: {
       question:
-        "Cách mạng công nghiệp và công nghiệp hóa có tác động như thế nào đối với sự phát triển kinh tế - xã hội?",
-      options: ["A. Làm giảm vai trò của lao động con người và chỉ tập trung vào phát triển máy móc.", 
-        "B. Thúc đẩy sự phát triển của lực lượng sản xuất, hoàn thiện quan hệ sản xuất và đổi mới phương thức quản lý, góp phần nâng cao đời sống xã hội.", 
-        "C. Chỉ tạo ra tiến bộ trong lĩnh vực khoa học – kỹ thuật, không ảnh hưởng nhiều đến kinh tế – xã hội.", 
-        "D. Làm cho nền kinh tế phụ thuộc hoàn toàn vào công nghệ nước ngoài."],
+        "Chiến dịch Biên giới thu-đông 1950 có ý nghĩa gì?",
+      options: [
+        "A. Kết thúc hoàn toàn kháng chiến chống Pháp.",
+        "B. Đưa kháng chiến ta từ thế giữ cự lâu dài sang chủ động tiến công, mở thông biên giới với Trung Quốc.",
+        "C. Buộc Pháp phải ký hiệp định đình chiến ngay lập tức.",
+        "D. Giải phóng hoàn toàn miền Bắc Việt Nam.",
+      ],
       correctAnswer: "B",
       explanation:
-        "Cách mạng công nghiệp và công nghiệp hóa là động lực then chốt thúc đẩy phát triển kinh tế – xã hội, giúp nâng cao năng suất lao động, đổi mới phương thức quản lý và cải thiện đời sống nhân dân, đồng thời mở ra thời kỳ phát triển hiện đại và hội nhập toàn cầu.",
+        "Chiến dịch kéo dài 29 ngày đêm đã giải vây căn cứ Việt Bắc, phá tan phòng tuyến Pháp ở các cứ điểm Cao Bằng – Lạng Sơn, mở thông biên giới với Trung Quốc nhận viện trợ.",
     },
-    19: {
+    12: {
       question:
-        "Hội nhập kinh tế quốc tế là gì?",
+        "Đại hội đại biểu toàn quốc lần II (1951) đã quyết định điều gì quan trọng?",
       options: [
-        "A. Là quá trình một quốc gia khép kín nền kinh tế của mình để bảo vệ lợi ích trong nước.",
-        "B. Là quá trình một quốc gia mở rộng biên giới lãnh thổ để chiếm lĩnh thị trường thế giới.",
-        "C. Là quá trình một quốc gia gắn kết nền kinh tế của mình với nền kinh tế thế giới, dựa trên sự chia sẻ lợi ích và tuân thủ các chuẩn mực quốc tế chung.",
-        "D. Là việc một quốc gia phụ thuộc hoàn toàn vào các nền kinh tế phát triển để phát triển kinh tế trong nước.",
+        "A. Quyết định thành lập Quân đội nhân dân Việt Nam.",
+        "B. Đổi tên Đảng Cộng sản Đông Dương thành Đảng Lao động Việt Nam và cho phép Đảng hoạt động công khai trở lại.",
+        "C. Quyết định ký hiệp định hòa bình với Pháp.",
+        "D. Quyết định tiến hành tổng khởi nghĩa trên toàn quốc.",
       ],
-      correctAnswer: "C",
+      correctAnswer: "B",
       explanation:
-        "Trong giáo trình kinh tế chính trị Mác - Lênin có nói: “Hội nhập kinh tế quốc tế của một quốc gia là quá trình quốc gia đó thực hiện gắn kết nền kinh tế của mình với nền kinh tế thế giới dựa trên sự chia sẻ lợi ích đồng thời tuân thủ các chuẩn mực quốc tế chung”",
-    },
-    24: {
-      question:
-        "Hội nhập kinh tế quốc tế có tác động tích cực như thế nào đến sự phát triển kinh tế - xã hội của mỗi quốc gia, đặc biệt là đối với Việt Nam?",
-      options: [
-        "A. Giúp các quốc gia, đặc biệt là Việt Nam mở rộng thị trường, thu hút vốn đầu tư, tiếp nhận công nghệ hiện đại và thúc đẩy công nghiệp hoá, hiện đại hoá. ",
-        "B. Khiến nền kinh tế trong nước bị phụ thuộc hoàn toàn vào các nguồn lực bên ngoài.",
-        "C. Làm suy giảm năng lực cạnh tranh của doanh nghiệp trong nước do áp lực hội nhập.",
-        "D. Làm hạn chế cơ hội việc làm và khiến khoảng cách giàu nghèo gia tăng.",
-      ],
-      correctAnswer: "A",
-      explanation:
-        "Hội nhập kinh tế quốc tế mang lại nhiều tác động tích cực như: mở rộng thị trường tiêu thụ, thu hút vốn đầu tư nước ngoài, tiếp nhận khoa học – công nghệ hiện đại, thúc đẩy công nghiệp hoá và chuyển dịch cơ cấu kinh tế theo hướng hiệu quả hơn. Đồng thời, hội nhập giúp nâng cao chất lượng nguồn nhân lực, tạo thêm việc làm, cải thiện đời sống người dân và nâng cao vị thế quốc gia trên trường quốc tế.→ Đối với Việt Nam, đây là con đường tất yếu để phát huy lợi thế, mở rộng hợp tác và khẳng định vị thế đất nước trong thời kỳ toàn cầu hoá.",
+        "Tại Đại hội II (11-19/2/1951, Tuyên Quang), dưới sự chủ trì của Chủ tịch Hồ Chí Minh, Đại hội đã quyết định đổi tên Đảng Cộng sản Đông Dương thành Đảng Lao động Việt Nam.",
     },
   };
 
@@ -115,40 +89,74 @@ function Book() {
           }
 
           elements.push(
-            <div key={index} className="my-3 text-center">
-              <img
-                src={`/${filename}`}
-                alt={caption}
-                className="mx-auto object-contain border border-slate-200 rounded"
-                style={{
-                  maxWidth: styleObj.width || "80%",
-                  maxHeight: styleObj.height || "150px",
-                  ...styleObj,
-                }}
-              />
-              <div className="text-[13px] italic text-slate-600 mt-1">
+            <div key={index} className="my-4 text-center">
+              <div className="inline-block border border-slate-300 rounded-md shadow-md overflow-hidden bg-slate-50 p-1">
+                <img
+                  src={`/${filename}`}
+                  alt={caption}
+                  className="mx-auto object-contain rounded"
+                  style={{
+                    maxWidth: styleObj.width || "95%",
+                    maxHeight: styleObj.height || "300px",
+                    ...styleObj,
+                  }}
+                />
+              </div>
+              <div className="text-[11px] italic text-slate-500 mt-2 px-4 leading-snug">
                 {caption}
               </div>
             </div>
           );
         }
       } else if (line.trim()) {
-        // Parse markdown bold formatting **text**
-        const parseBold = (text) => {
-          const parts = text.split(/(\*\*[^*]+\*\*)/);
+        // Parse markdown bold and italic formatting
+        const parseFormatting = (text) => {
+          const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/);
           return parts.map((part, i) => {
             if (part.startsWith("**") && part.endsWith("**")) {
-              return <strong key={i}>{part.slice(2, -2)}</strong>;
+              return <strong key={i} className="text-slate-800">{part.slice(2, -2)}</strong>;
+            }
+            if (part.startsWith("*") && part.endsWith("*") && !part.startsWith("**")) {
+              return <em key={i}>{part.slice(1, -1)}</em>;
             }
             return part;
           });
         };
 
-        elements.push(
-          <p key={index} className="mb-1 text-justify">
-            {parseBold(line)}
-          </p>
-        );
+        // Detect heading types
+        const trimmed = line.trim();
+        // Main section heading: purely bold, e.g. **3. TITLE**
+        const isSectionHeading = trimmed.startsWith("**") && trimmed.endsWith("**") && /^\*\*\d+\./.test(trimmed);
+        // Sub-heading: bold line like **Chiến dịch Hòa Bình:**
+        const isSubHeading = trimmed.startsWith("**") && trimmed.endsWith("**") && !isSectionHeading;
+        const isNumberedItem = /^\s*\d+\)/.test(trimmed);
+        const isBulletItem = trimmed.startsWith("•");
+
+        if (isSectionHeading) {
+          elements.push(
+            <p key={index} className="mb-2 mt-3 text-[14.5px] font-bold text-red-700">
+              {parseFormatting(line)}
+            </p>
+          );
+        } else if (isSubHeading) {
+          elements.push(
+            <p key={index} className="mb-1.5 mt-2 font-semibold text-slate-800">
+              {parseFormatting(line)}
+            </p>
+          );
+        } else if (isNumberedItem || isBulletItem) {
+          elements.push(
+            <p key={index} className="mb-1.5 text-justify leading-relaxed pl-3">
+              {parseFormatting(line)}
+            </p>
+          );
+        } else {
+          elements.push(
+            <p key={index} className="mb-1.5 text-justify leading-relaxed" style={{ textIndent: '1.5em' }}>
+              {parseFormatting(line)}
+            </p>
+          );
+        }
       } else {
         elements.push(<div key={index} className="h-1"></div>);
       }
@@ -252,10 +260,7 @@ function Book() {
     <div className="flex w-full h-screen overflow-hidden">
       <div
         className="flex-1 flex items-center justify-center"
-        style={{
-          marginLeft: chatOpen ? "-300px" : "0px",
-          transition: "margin-left 0.3s ease-in-out",
-        }}
+        style={{}}
       >
         {/* Table of Contents */}
         <TableOfContents
@@ -361,36 +366,35 @@ function Book() {
 
                 {/* Content Page */}
                 {(page.type === "content" || page.type === "conclusion") && (
-                  <div className="h-full flex flex-col bg-white overflow-hidden">
-                    <div className="border-b-2 border-red-500 pt-4 pb-2 px-5 mb-2 flex-shrink-0">
+                  <div className="h-full flex flex-col overflow-hidden" style={{ background: 'linear-gradient(to bottom, #fffefb, #faf8f3)' }}>
+                    <div className="border-b border-red-400 pt-3 pb-1.5 px-6 mb-1 flex-shrink-0">
                       <h2
-                        className="text-[17px] font-bold text-red-600 text-center"
-                        style={{ fontFamily: "'Times New Roman', serif" }}
+                        className="text-[15px] font-bold text-red-700 text-center tracking-wide"
+                        style={{ fontFamily: "'Crimson Text', 'Times New Roman', Georgia, serif" }}
                       >
                         {page.title}
                         {page.partInfo && (
                           <span
-                            className="text-xs font-normal text-slate-500 ml-2"
-                            style={{ fontFamily: "'Times New Roman', serif" }}
+                            className="text-[10px] font-normal text-slate-400 ml-2"
                           >
                             ({page.partInfo})
                           </span>
                         )}
                       </h2>
                       <div className="flex justify-center items-center gap-2 mt-1">
-                        <div className="h-0.5 w-8 bg-gradient-to-r from-transparent to-red-300"></div>
-                        <div className="text-[10px] text-slate-400">
-                          Trang {page.id}
+                        <div className="h-px w-12 bg-gradient-to-r from-transparent via-red-300 to-transparent"></div>
+                        <div className="text-[9px] text-slate-400 italic">
+                          — {page.id} —
                         </div>
-                        <div className="h-0.5 w-8 bg-gradient-to-l from-transparent to-red-300"></div>
+                        <div className="h-px w-12 bg-gradient-to-r from-transparent via-red-300 to-transparent"></div>
                       </div>
                     </div>
-                    <div className="flex-1 overflow-hidden px-5 py-1">
+                    <div className="flex-1 overflow-hidden px-6 py-2">
                       <div
                         className="book-page-content h-full overflow-y-auto custom-scrollbar pr-2"
-                        style={{ fontSize: "15px" }}
+                        style={{ fontSize: "14px", lineHeight: "1.7" }}
                       >
-                        <div style={{ fontFamily: "'Times New Roman', serif" }}>
+                        <div style={{ fontFamily: "'Crimson Text', 'Times New Roman', Georgia, serif" }}>
                           {renderContentWithImages(page.content)}
                         </div>
                       </div>
@@ -431,12 +435,6 @@ function Book() {
           />
         )}
 
-        {/* ChatBot - AI Trợ lý */}
-        <ChatBot
-          onToggle={setChatOpen}
-          isOpen={chatOpen}
-          backendUrl={config.backendUrl}
-        />
       </div>
     </div>
   );

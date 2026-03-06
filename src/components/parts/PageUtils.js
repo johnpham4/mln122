@@ -21,8 +21,8 @@ export const splitContentIntoPages = (content, maxLines = 20) => {
 
     // Kiểm tra nếu là hình ảnh (format đặc biệt)
     if (line.includes('[IMAGE:')) {
-      // Hình ảnh tốn 8 dòng (hình + chú thích + khoảng trắng)
-      const imageLines = 8;
+      // Hình ảnh tốn 12 dòng (hình lớn + chú thích + khoảng trắng)
+      const imageLines = 12;
 
       // Nếu thêm hình vào trang hiện tại sẽ quá, tạo trang mới
       if (currentLineCount + imageLines > maxLines && currentPageLines.length > 0) {
@@ -51,7 +51,8 @@ export const splitContentIntoPages = (content, maxLines = 20) => {
     pages.push(currentPageLines.join('\n'));
   }
 
-  return pages;
+  // Lọc bỏ các trang trống (chỉ có whitespace)
+  return pages.filter(page => page.trim().length > 0);
 };// Tạo nhiều trang từ nội dung dài
 export const createMultiplePages = (title, content, startId, type = 'content', maxLines = 12) => {
   const contentPages = splitContentIntoPages(content, maxLines); 
